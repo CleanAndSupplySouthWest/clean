@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Clean And Supply - Store</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0);
+            padding-top: 40px; /* Add padding top to adjust for fixed header */
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #fff; /* Change background color if needed */
+            padding: 10px; /* Add padding for better spacing */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add shadow for header */
+        }
+        #back-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+            background-color: rgba(36, 36, 36, 0.418);
+            color: rgba(255, 255, 255, 0.575);
+            padding: 1px 10px; /* Adjust padding as needed */
+            border-radius: 2px;
+            font-size: 2px;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        #back-btn.hidden {
+            opacity: 0;
+        }
+        .product-section .image img {
+            max-width: 40px; /* Set maximum width for product images */
+            height: auto; /* Maintain aspect ratio */
+            cursor: pointer; /* Add cursor pointer */
+        }
+        /* Modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1001; /* Place modal above everything */
+            padding-top: 100px; /* Location of the modal */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scrolling if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 700px; /* Max width of the modal content */
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #search-bar-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+            background-color: rgba(36, 36, 36, 0.418);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #search-bar {
+            width: 300px; /* Set width for the search bar */
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            color: rgb(9, 255, 0); /* Change font color to blue */
+        }
+        .highlight {
+            background-color: rgb(51, 255, 0); /* Highlight color */
+        }
+        /* Center h3 elements */
+        .product-column h3 {
+            text-align: center;
+        }
+        #want-list-container {
+            position: fixed;
+            top: 90px;
+            right: 10px;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add shadow for container */
+            max-height: 100px; /* Limit height to show only first two items */
+            overflow: hidden; /* Hide overflowing items */
+            transition: max-height 0.3s ease-in-out;
+        }
+        #want-list-container:hover {
+            max-height: 300px; /* Expand height on hover to show all items */
+            overflow: auto; /* Enable scrolling when hovered */
+        }
+        #want-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #want-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        #want-list li .remove-btn {
+            color: red;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        #subtotal {
+            font-weight: bold;
+        }
+        #vat-total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Clean And Supply Store</h1>
+            <p>Welcome to our store! Browse our products below.</p>
+        </div>
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" id="back-btn" class="logo">Back</a>
+        </header>
+
+        <!-- Search bar container -->
+        <div id="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Search products..." oninput="searchProducts()">
+            <!-- Want List Container -->
+            <div id="want-list-container">
+                <ul id="want-list"></ul>
+                <p id="subtotal">total: £0.00</p>
+                <p id="vat-total">VAT (20%): £0.00</p>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Section for Dishwashing products -->
+            <section id="Dishwashing" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>Dishwashing</h2>
+                    </header>
+                    <!-- Liquid Detergent -->
+                    <article class="post" data-title="Liquid Detergent" data-category="Dishwashing 020822X5" data-image="images/Washing Up Liquid.jpg">
+                        <h3><a href="#">Liquid Detergent</a></h3>
+                        <header class="major">
+                            <p>Washing Up Liquid 5L</p>
+                            <span class="price">£9.56 SKU:020822X5</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Washing Up Liquid.jpg" alt="Washing UP Liquid" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article> 
+                    <!-- Concentrated Detergent -->
+                    <article class="post" data-title="Concentrated Detergent" data-category="Dishwashing 021432X5 Liquid Detergent" data-image="images/Washing Up Liquid.jpg">
+                        <h3><a href="#">Concentrated Detergent</a></h3>
+                        <header class="major">
+                            <p>Concentrated Washing Up Liquid 5L</p>
+                            <span class="price">£10.84 SKU:021432X5</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/concentrated detergent.jfif" alt="Concentrated Detergent" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- D3 Washing Up Liquid -->
+                    <article class="post" data-title="D4 Green Washing Up Liquid" data-category="Dishwashing 7035" data-image="images/D4.jpg">
+                        <h3><a href="#">D4 Washing Up Liquid</a></h3>
+                        <header class="major">
+                            <p>Ecological Washing Up Liquid 5L</p>
+                            <span class="price">£8.36 SKU:7035</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/D4.jpg" alt="D4 Green Washing Up Liquid" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- D4 Premium Green Washing Up Liquid -->
+                    <article class="post" data-title="D4 Premium Green Washing Up Liquid" data-category="Dishwashing 7071" data-image="images/D4.jpg">
+                        <h3><a href="#">D4 Premium Washing Up Liquid</a></h3>
+                        <header class="major">
+                            <p>Ecological Concentrated Washing Up Liquid 5L</p>
+                            <span class="price">£11.70 SKU:7071</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/D4.jpg" alt="D4 Premium Green Washing Up Liquid" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- D1 Washing Up Liquid -->
+                    <article class="post" data-title="D1 Premium Green Washing Up Liquid" data-category="Dishwashing 7018" data-image="images/D1.jpg">
+                        <h3><a href="#">D1 Washing Up Liquid</a></h3>
+                        <header class="major">
+                            <p>Handy Sized Washing Up Liquid 500ml</p>
+                            <span class="price">£1.82 SKU:7018</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/D1.jpg" alt="D4 Premium Green Washing Up Liquid" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Dish-Bac -->
+                    <article class="post" data-title="Dish-Bac" data-category="Dishwashing 221" data-image="images/DishBac1L.png">
+                        <h3><a href="#">Dish-Bac</a></h3>
+                        <header class="major">
+                            <p>Ecological Concentrated Washing Up Liquid 1L</p>
+                            <span class="price">£3.64 SKU:221</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/DishBac1L.png" alt="Dish-Bac" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Dish-Bac -->
+                    <article class="post" data-title="Dish-Bac" data-category="Dishwashing 221" data-image="images/DishBac5L.png">
+                        <h3><a href="#">Dish-Bac</a></h3>
+                        <header class="major">
+                            <p>Ecological Concentrated Washing Up Liquid 5L</p>
+                            <span class="price">£11.94 SKU:221</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Dish Bac - 5L.png" alt="Dish-Bac" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Citrol -->
+                    <article class="post" data-title="Citrol" data-category="Dishwashing 401" data-image="images/Citrol.png">
+                        <h3><a href="#">Citrol</a></h3>
+                        <header class="major">
+                            <p>Citrus Washing Up Liquid 1L</p>
+                            <span class="price">£3.29 SKU:401</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Citrol - 1L.png" alt="Citrol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Citrol -->
+                    <article class="post" data-title="Citrol" data-category="Dishwashing 401" data-image="images/Citrol.png">
+                        <h3><a href="#">Citrol</a></h3>
+                        <header class="major">
+                            <p>Citrus Washing Up Liquid 5L</p>
+                            <span class="price">£12.25 SKU:401</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Citrol - 5L.png" alt="Citrol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Hand Dish Ultra -->
+                    <article class="post" data-title="Green'R Hand Dish Ultra" data-category="Dishwashing 490" data-image="images/Green'R Hand Dish Ultra.png">
+                        <h3><a href="#">Green'R Hand Dish Ultra 1L</a></h3>
+                        <header class="major">
+                            <p>Ecological Concentrated Washing Up Liquid 1L</p>
+                            <span class="price">£3.28 SKU:490</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Hand Dish Ultra - 1L.png" alt="Citrol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Hand Dish Ultra -->
+                    <article class="post" data-title="Green'R Hand Dish Ultra" data-category="Dishwashing 490" data-image="images/Green'R Hand Dish Ultra.png">
+                        <h3><a href="#">Green'R Hand Dish Ultra 5L</a></h3>
+                        <header class="major">
+                            <p>Ecological Concentrated Washing Up Liquid 1L</p>
+                            <span class="price">£14.68 SKU:490</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Hand Dish Ultra - 5L.png" alt="Citrol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- UB40 -->
+                    <article class="post" data-title="UB40" data-category="Dishwashing 994" data-image="images/UB40.png">
+                        <h3><a href="#">UB40</a></h3>
+                        <header class="major">
+                            <p>Super Concentrated Washing Up Liquid 2L</p>
+                            <span class="price">£13.28 SKU:401</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB40 - 2L.png" alt="UB40" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- C4 Machine Dishwash-->
+                    <article class="post" data-title="C4 Machine Dishwash" data-category="Dishwashing 7011" data-image="images/.png">
+                        <h3><a href="#">C4 Machine Dishwash</a></h3>
+                        <header class="major">
+                            <p>Machine Dishwash 5L</p>
+                            <span class="price">£12.94 SKU:7011</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/" alt="C4 Machine Dishwash" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Dishi-->
+                    <article class="post" data-title="Dishi" data-category="Dishwashing 314" data-image="images/Dishi.png">
+                        <h3><a href="#">Dishi</a></h3>
+                        <header class="major">
+                            <p>Machine Dishwash 5L</p>
+                            <span class="price">£9.12 SKU:314</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Dishi - 5L.png" alt="C4 Machine Dishwash" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Rapier-->
+                    <article class="post" data-title="Rapier" data-category="Dishwashing 303" data-image="images/Rapier.png">
+                        <h3><a href="#">Rapier</a></h3>
+                        <header class="major">
+                            <p>Premium Auto Machine Dishwash 5L</p>
+                            <span class="price">£14.84 SKU:303</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Rapier - 5L.png" alt="Rapier" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Rapier-->
+                    <article class="post" data-title="Rapier" data-category="Dishwashing 303" data-image="images/Rapier.png">
+                        <h3><a href="#">Rapier</a></h3>
+                        <header class="major">
+                            <p>Premium Auto Machine Dishwash 20L</p>
+                            <span class="price">£54.34 SKU:303</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Rapier - 20L.png" alt="Rapier" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Autodish S-->
+                    <article class="post" data-title="Green'R Autodish S" data-category="Dishwashing 376" data-image="images/Green'R Autodish S.png">
+                        <h3><a href="#">Green'R Autodish S</a></h3>
+                        <header class="major">
+                            <p>Ecological Auto Machine Dishwash 5L</p>
+                            <span class="price">£13.50 SKU:376</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Autodish S - 5L.png" alt="Rapier" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Autodish S-->
+                    <article class="post" data-title="Green'R Autodish S" data-category="Dishwashing 376" data-image="images/Green'R Autodish S.png">
+                        <h3><a href="#">Green'R Autodish S</a></h3>
+                        <header class="major">
+                            <p>Ecological Auto Machine Dishwash 20L</p>
+                            <span class="price">£58.00 SKU:376</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Autodish S - 20L.png" alt="Rapier" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Blue Label Rinse Aid -->
+                    <article class="post" data-title="Blue Label Rinse Aid" data-category="Dishwashing RA005" data-image="images/Blue Label Rinse Aid.png">
+                        <h3><a href="#">Blue Label Rinse Aid</a></h3>
+                        <header class="major">
+                            <p>Rinse Aid 5L</p>
+                            <span class="price">£6.84 SKU:RA005</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/.png" alt="Blue Label Rinse Aid" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Rinse Aid -->
+                    <article class="post" data-title="Rinse Aid" data-category="Dishwashing 407" data-image="images/Rinse Aid.png">
+                        <h3><a href="#">Rinse Aid</a></h3>
+                        <header class="major">
+                            <p>Premium Rinse Aid 5L</p>
+                            <span class="price">£13.26 SKU:407</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Rinse Aid - 5L.png" alt="Rinse Aid" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Auto Glasswash -->
+                    <article class="post" data-title="Auto Glasswash" data-category="Dishwashing 318" data-image="images/Auto Glasswash.png">
+                        <h3><a href="#">Auto Glasswash</a></h3>
+                        <header class="major">
+                            <p>Premium Auto Glasswah Detergent 5L</p>
+                            <span class="price">£15.89 SKU:318</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Auto Glasswash - 5L.png" alt="Auto Glasswash" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Trak -->
+                     <article class="post" data-title="Trak" data-category="Dishwashing 249" data-image="images/Trak.png">
+                        <h3><a href="#">Trak</a></h3>
+                        <header class="major">
+                            <p>Cleaner Destainer & Deodoriser 5L</p>
+                            <span class="price">£14.93 SKU:249</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Trak - 5L.png" alt="Trak" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Trak -->
+                     <article class="post" data-title="Trak" data-category="Dishwashing 249" data-image="images/Trak.png">
+                        <h3><a href="#">Trak</a></h3>
+                        <header class="major">
+                            <p>Cleaner Destainer & Deodoriser 20L</p>
+                            <span class="price">£48.75 SKU:249</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/trak.png" alt="Trak" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Clarifi -->
+                     <article class="post" data-title="Clarifi" data-category="Dishwashing 369" data-image="images/Clarifi.png">
+                        <h3><a href="#">Clarifi</a></h3>
+                        <header class="major">
+                            <p>Drinking Glass Renovator 5L</p>
+                            <span class="price">£13.05 SKU:369</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Clarifi - 5L.png" alt="Clarifi" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- PHOS -->
+                     <article class="post" data-title="PHOS" data-category="Dishwashing 508" data-image="images/PHOS.png">
+                        <h3><a href="#">PHOS</a></h3>
+                        <header class="major">
+                            <p>Food Plant Descaler 5L</p>
+                            <span class="price">£15.73 SKU:508</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Phos - 5L.png" alt="PHOS" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Osmos Dishwasher Tablets -->
+                     <article class="post" data-title="Osmos Dishwasher Tablets" data-category="Dishwashing OSM-DTAB-100" data-image="images/Osmos Dishwasher Tablets.png">
+                        <h3><a href="#">Osmos Dishwasher Tablets</a></h3>
+                        <header class="major">
+                            <p>Dishwasher Tablets 100 per tub</p>
+                            <span class="price">£21.06 SKU:OSM-DTAB-100</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/" alt="Osmos Dishwasher Tablets" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                                                         
+                </div>
+            </section>
+
+            <!-- Section for Washrooms -->
+            <section id="Washrooms" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>Washrooms</h2>
+                    </header>
+                    <!-- Apeal -->
+                    <article class="post" data-title="Apeal" data-category="Apeal 251" data-image="images/Apeal.png">
+                        <h3><a href="#">Apeal</a></h3>
+                        <header class="major">
+                            <p>Daily Washroom Cleaner- Fresh Apple Fragrance, 750ml</p>
+                            <span class="price">£3.72 SKU:251</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Apeal - 750ml.png" alt="Apeal" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Apeal -->
+                    <article class="post" data-title="Apeal" data-category="Washrooms 251" data-image="images/Apeal.png">
+                        <h3><a href="#">Apeal</a></h3>
+                        <header class="major">
+                            <p>Daily Washroom Cleaner- Fresh Apple Fragrance, 5L</p>
+                            <span class="price">£13.09 SKU:251</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Apeal - 5L.png" alt="Apeal" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- C3 -->
+                    <article class="post" data-title="C3" data-category="Washrooms 533" data-image="images/C3.webp">
+                        <h3><a href="#">C3</a></h3>
+                        <header class="major">
+                            <p>Washroom Cleaner 1L</p>
+                            <span class="price">£5.56 SKU:533</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C3 - 1ltr.png" alt="C3" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- C3 -->
+                    <article class="post" data-title="C3" data-category="Washrooms 533" data-image="images/C3.webp">
+                        <h3><a href="#">C3</a></h3>
+                        <header class="major">
+                            <p>Washroom Cleaner 5L</p>
+                            <span class="price">£16.97 SKU:533</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C3 - 5L.png" alt="C3" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- UltraFresh -->
+                    <article class="post" data-title="UltraFresh" data-category="Washrooms 808" data-image="images/UltraFresh.png">
+                        <h3><a href="#"> UltraFresh</a></h3>
+                        <header class="major">
+                            <p>Perfumed Cleaner and Disinfectant- Long Lasting Pine Fragrance, 1L</p>
+                            <span class="price">£3.09 SKU:808</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Ultrafresh - 1L.png" alt="UltraFresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- UltraFresh -->
+                    <article class="post" data-title="UltraFresh" data-category="Washrooms 808" data-image="images/UltraFresh.png">
+                        <h3><a href="#">UltraFresh</a></h3>
+                        <header class="major">
+                            <p>Perfumed Cleaner and Disinfectant- Long Lasting Pine Fragrance, 5L</p>
+                            <span class="price">£10.94 SKU:808</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Ultrafresh - 5L.png" alt="UltraFresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Lance -->
+                    <article class="post" data-title="Lance" data-category="Washrooms 524" data-image="images/Lance.png">
+                        <h3><a href="#">Lance</a></h3>
+                        <header class="major">
+                            <p>Foaming Limescale Remover 750ml</p>
+                            <span class="price">£3.64 SKU:524</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Lance - 750ml.png" alt="Lance" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Drastik -->
+                    <article class="post" data-title="Drastik" data-category="Washrooms 252" data-image="images/Drastik.png">
+                        <h3><a href="#">Drastik</a></h3>
+                        <header class="major">
+                            <p>Mould and Mildew Remover 750ml</p>
+                            <span class="price">£3.97 SKU:252</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Drastik - 750ml.png" alt="Drastik" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- SinkIt -->
+                    <article class="post" data-title="SinkIt" data-category="Washrooms 298" data-image="images/SinkIt.png">
+                        <h3><a href="#">SinkIt</a></h3>
+                        <header class="major">
+                            <p>Ready to use Sanitary Cleaner 750ml</p>
+                            <span class="price">£3.64 SKU:298</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/SinkIT - 750ml.png" alt="SinkIt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- UB30 -->
+                    <article class="post" data-title="UB30" data-category="Washrooms 993" data-image="images/UB30.png">
+                        <h3><a href="#">UB30</a></h3>
+                        <header class="major">
+                            <p>Toilet and Washroom Cleaner 2L</p>
+                            <span class="price">£3.64 SKU:993</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB30 - 2L.png" alt="UB30" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Sanit +C -->
+                    <article class="post" data-title="Green'R Sanit +C" data-category="Washrooms 507" data-image="images/Green'R Sanit +C.png">
+                        <h3><a href="#">Green'R Sanit +C</a></h3>
+                        <header class="major">
+                            <p>Ecological Concentrated Washroom Cleaner 1L</p>
+                            <span class="price">£5.44 SKU:507</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Sanit +C - 1L.png" alt="Green'R Sanit +C" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Sanit +C -->
+                    <article class="post" data-title="Green'R Sanit +C" data-category="Washrooms 507" data-image="images/Green'R Sanit +C.png">
+                        <h3><a href="#">Green'R Sanit +C</a></h3>
+                        <header class="major">
+                            <p>Ecological Concentrated Washroom Cleaner 5L</p>
+                            <span class="price">£16.92 SKU:507</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Sanit +C - 5L.png" alt="Green'R Sanit +C" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R WC Fresh -->
+                    <article class="post" data-title="Green'R WC Fresh" data-category="Washrooms 550" data-image="images/Green'R WC Fresh.png">
+                        <h3><a href="#">Green'R WC Fresh</a></h3>
+                        <header class="major">
+                            <p>Ecological Toilet Cleaner & Descaler 1L</p>
+                            <span class="price">£3.62 SKU:550</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R WC Fresh - 1L.png" alt="Green'R WC Fresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R WC Fresh -->
+                    <article class="post" data-title="Green'R WC Fresh" data-category="Washrooms 550" data-image="images/Green'R WC Fresh.png">
+                        <h3><a href="#">Green'R WC Fresh</a></h3>
+                        <header class="major">
+                            <p>Ecological Toilet Cleaner & Descaler 5L</p>
+                            <span class="price">£13.47 SKU:550</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R WC Fresh - 5L.png" alt="Green'R WC Fresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Zakol -->
+                    <article class="post" data-title="Zakol" data-category="Washrooms 501" data-image="images/Zakol.png">
+                        <h3><a href="#">Zakol</a></h3>
+                        <header class="major">
+                            <p>Acidic Toilet Cleaner/Descaler 1L</p>
+                            <p>NOT SUITABLE FOR USE ON STAINLESS STEEL</p>
+                            <span class="price">£2.96 SKU:501</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Zakol - 1L.png" alt="Zakol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Zakol -->
+                    <article class="post" data-title="Zakol" data-category="Washrooms 501" data-image="images/Zakol.png">
+                        <h3><a href="#">Zakol</a></h3>
+                        <header class="major">
+                            <p>Acidic Toilet Cleaner/Descaler 5L</p>
+                            <p>NOT SUITABLE FOR USE ON STAINLESS STEEL</p>
+                            <span class="price">£9.95 SKU:501</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Zakol - 5L.png" alt="Zakol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Acid Wash 80 -->
+                    <article class="post" data-title="Acid Wash 80" data-category="Washrooms 502" data-image="images/Acid Wash 80.png">
+                        <h3><a href="#">Acid Wash 80</a></h3>
+                        <header class="major">
+                            <p>Extra Strength Acidic Cleaner 1L</p>
+                            <p>NOT SUITABLE FOR USE ON STAINLESS STEEL</p>
+                            <span class="price">£3.97 SKU:502</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Acid Wash 80 - 1L.png" alt="Acid Wash 80" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Acid Wash 80 -->
+                    <article class="post" data-title="Acid Wash 80" data-category="Washrooms 502" data-image="images/Acid Wash 80.png">
+                        <h3><a href="#">Acid Wash 80</a></h3>
+                        <header class="major">
+                            <p>Extra Strength Acidic Cleaner 5L</p>
+                            <p>NOT SUITABLE FOR USE ON STAINLESS STEEL</p>
+                            <span class="price">£11.26 SKU:502</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Acid Wash 80 - 5L.png" alt="Acid Wash 80" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- STC -->
+                    <article class="post" data-title="STC" data-category="Washrooms 510" data-image="images/STC.png">
+                        <h3><a href="#">STC</a></h3>
+                        <header class="major">
+                            <p>Acidic Toilet and Washroom Cleaner 1L</p>
+                            <span class="price">£2.92 SKU:510</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/STC - 1L.png" alt="STC" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- STC -->
+                    <article class="post" data-title="STC" data-category="Washrooms 510" data-image="images/STC.png">
+                        <h3><a href="#">STC</a></h3>
+                        <header class="major">
+                            <p>Acidic Toilet and Washroom Cleaner 5L</p>
+                            <span class="price">£9.68 SKU:510</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/STC - 5L.png" alt="STC" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Urika -->
+                    <article class="post" data-title="Urika" data-category="Washrooms 525" data-image="images/Urika.png">
+                        <h3><a href="#">Urika</a></h3>
+                        <header class="major">
+                            <p>Strong Descaler and Cleaner 1L</p>
+                            <span class="price">£4.96 SKU:525</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Urika - 1L.png" alt="Urika" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Urika -->
+                    <article class="post" data-title="Urika" data-category="Washrooms 525" data-image="images/Urika.png">
+                        <h3><a href="#">Urika</a></h3>
+                        <header class="major">
+                            <p>Strong Descaler and Cleaner 5L</p>
+                            <span class="price">£16.86 SKU:525</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Urika - 5L.png" alt="Urika" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Scale-It -->
+                    <article class="post" data-title="Scale-It" data-category="Washrooms 598" data-image="images/Scale-It.png">
+                        <h3><a href="#">Scale-It</a></h3>
+                        <header class="major">
+                            <p>Sanitary Cleaner and Descaler 1L</p>
+                            <span class="price">£2.71 SKU:598</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/ScaleIt - 1L.png" alt="Scale-It" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Scale-It -->
+                    <article class="post" data-title="Scale-It" data-category="Washrooms 598" data-image="images/Scale-It.png">
+                        <h3><a href="#">Scale-It</a></h3>
+                        <header class="major">
+                            <p>Sanitary Cleaner and Descaler 5L</p>
+                            <span class="price">£9.21 SKU:598</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/ScaleIT - 5L.png" alt="Scale-It" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                </div>
+            </section>
+            <!-- Section for Food Safe Products -->
+            <section id="Food Safe Products" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>Food Safe Products</h2>
+                    </header>
+                    <!-- Trio 100 -->
+                    <article class="post" data-title="Trio 100" data-category="Food Safe Products Trio 100 201" data-image="images/Trio 100.png">
+                        <h3><a href="#">Trio 100</a></h3>
+                        <header class="major">
+                            <p>Sanitiser Concentrate 5L</p>
+                            <span class="price">£11.92 SKU:201</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Trio 100 - 5L.png" alt="Trio 100" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Lufragerm Plus RTU -->
+                    <article class="post" data-title="Lufragerm Plus RTU" data-category="Lufragerm Plus RTU 242" data-image="images/Lufragerm Plus RTU.webp">
+                        <h3><a href="#">Lufragerm Plus RTU</a></h3>
+                        <header class="major">
+                            <p>Ready to use Bactericidal Cleaner Liquid 750ml</p>
+                            <span class="price">£3.29 SKU:242</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/AX - 750ml.png" alt="Lufragerm Plus RTU" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Lufragerm Plus RTU -->
+                    <article class="post" data-title="Lufragerm Plus RTU" data-category="Lufragerm Plus RTU 242" data-image="images/Lufragerm Plus RTU.webp">
+                        <h3><a href="#">Lufragerm Plus RTU</a></h3>
+                        <header class="major">
+                            <p>Ready to use Bactericidal Cleaner Liquid 5L</p>
+                            <span class="price">£10.63 SKU:242</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/AX - 5L.png" alt="Lufragerm Plus RTU" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
+                    <!-- Sola Bac -->
+                    <article class="post" data-title="Sola Bac" data-category="Sola Bac 319" data-image="images/Sola Bac.webp">
+                        <h3><a href="#">Sola Bac</a></h3>
+                        <header class="major">
+                            <p>Heavy Duty Bactericidal 5L</p>
+                            <span class="price">£12.65 SKU:319</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Sola Bac - 5L.png" alt="Sola Bac" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Sola Bac -->
+                    <article class="post" data-title="Sola Bac" data-category="Sola Bac 319" data-image="images/Sola Bac.webp">
+                        <h3><a href="#">Sola Bac</a></h3>
+                        <header class="major">
+                            <p>Heavy Duty Bactericidal 20L</p>
+                            <span class="price">£43.15 SKU:319</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Sola Bac - 20L.png" alt="Sola Bac" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
+                    <!-- UB20 -->
+                    <article class="post" data-title="UB20" data-category="UB20 992" data-image="images/UB20.png">
+                        <h3><a href="#">UB20</a></h3>
+                        <header class="major">
+                            <p>Sanitiser - Super Concentrated 2L</p>
+                            <span class="price">£12.94 SKU:992</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB20 - 2L.png" alt="UB20" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Trak -->
+                    <article class="post" data-title="Trak" data-category="Trak 249" data-image="images/Trak.png">
+                        <h3><a href="#">Trak</a></h3>
+                        <header class="major">
+                            <p>Cleaner Destainer & Deodoriser 5L</p>
+                            <span class="price">£14.93 SKU:249</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Trak - 5L.png" alt="Trak" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Trak -->
+                    <article class="post" data-title="Trak" data-category="Trak 249" data-image="images/Trak.png">
+                        <h3><a href="#">Trak</a></h3>
+                        <header class="major">
+                            <p>Cleaner Destainer & Deodoriser 20L</p>
+                            <span class="price">£48.75 SKU:249</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Trak.png" alt="Trak" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
+                    <!-- Foam Cleaner -->
+                    <article class="post" data-title="Foam Cleaner" data-category="Foam Cleaner 249" data-image="images/Foam Cleaner.png">
+                        <h3><a href="#">Foam Cleaner</a></h3>
+                        <header class="major">
+                            <p>Bactericidal Foaming Cleanser 750ml</p>
+                            <span class="price">£3.72 SKU:249</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Foam Cleaner - 750ml.png" alt="Foam Cleaner" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Foam Cleaner -->
+                    <article class="post" data-title="Foam Cleaner" data-category="Foam Cleaner 249" data-image="images/Foam Cleaner.png">
+                        <h3><a href="#">Foam Cleaner</a></h3>
+                        <header class="major">
+                            <p>Bactericidal Foaming Cleanser 5L</p>
+                            <span class="price">£12.18 SKU:249</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Foam Cleaner - 5L.png" alt="Foam Cleaner" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Foam Cleaner -->
+                     <article class="post" data-title="Foam Cleaner" data-category="Foam Cleaner 249" data-image="images/Foam Cleaner.png">
+                        <h3><a href="#">Foam Cleaner</a></h3>
+                        <header class="major">
+                            <p>Bactericidal Foaming Cleanser 5L</p>
+                            <span class="price">£12.18 SKU:249</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Foam Cleaner - 5L.png" alt="Foam Cleaner" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Vanquish -->
+                    <article class="post" data-title="Vanquish" data-category="Vanquish 304" data-image="images/Vanquish.png">
+                        <h3><a href="#">Vanquish</a></h3>
+                        <header class="major">
+                            <p>Heavy Duty Oven Cleaner 1L</p>
+                            <span class="price">£4.92 SKU:304</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Vanquish - 1L.png" alt="Vanquish" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Vanquish -->
+                    <article class="post" data-title="Vanquish" data-category="Vanquish 304" data-image="images/Vanquish.png">
+                        <h3><a href="#">Vanquish</a></h3>
+                        <header class="major">
+                            <p>Heavy Duty Oven Cleaner 5L</p>
+                            <span class="price">£16.10 SKU:304</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Vanquish - 5L.png" alt="Vanquish" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Pro-Roc -->
+                    <article class="post" data-title="Pro-Roc" data-category="Pro-Roc 364" data-image="images/Pro-Roc.png">
+                        <h3><a href="#">Pro-Roc</a></h3>
+                        <header class="major">
+                            <p>Professional Rapid Oven Cleaner 750ml</p>
+                            <span class="price">£4.97 SKU:364</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Pro-Roc - 750ml.png" alt="Pro-Roc" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Pro-Roc -->
+                    <article class="post" data-title="Pro-Roc" data-category="Pro-Roc 364" data-image="images/Pro-Roc.png">
+                        <h3><a href="#">Pro-Roc</a></h3>
+                        <header class="major">
+                            <p>Professional Rapid Oven Cleaner 5L</p>
+                            <span class="price">£13.34 SKU:364</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Pro-Roc - 5L.png" alt="Pro-Roc" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Ubik 2000 -->
+                    <article class="post" data-title="Ubik 2000" data-category="Ubik 2000 301" data-image="images/Ubik 2000.png">
+                        <h3><a href="#">Ubik 2000</a></h3>
+                        <header class="major">
+                            <p>Universal Cleaner Concentrate 5L</p>
+                            <span class="price">£14.26 SKU:301</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Ubik 2000 - 5L.png" alt="Ubik 2000" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Ubik 2000 -->
+                    <article class="post" data-title="Ubik 2000" data-category="Ubik 2000 301" data-image="images/Ubik 2000.png">
+                        <h3><a href="#">Ubik 2000</a></h3>
+                        <header class="major">
+                            <p>Universal Cleaner Concentrate 20L</p>
+                            <span class="price">£42.81 SKU:301</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Ubik 20L.JPG" alt="Ubik 2000" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Indus -->
+                    <article class="post" data-title="Green'R Indus 1L" data-category="Green'R Indus 338" data-image="images/Green'R Indus.png">
+                        <h3><a href="#">Green'R Indus 1L</a></h3>
+                        <header class="major">
+                            <p>Ecological Degreaser Concentrate 1L</p>
+                            <span class="price">£5.18 SKU:338</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Indus - .png" alt="Green'R Indus" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Indus -->
+                    <article class="post" data-title="Green'R Indus 5L" data-category="Green'R Indus 338" data-image="images/Green'R Indus.png">
+                        <h3><a href="#">Green'R Indus 5L</a></h3>
+                        <header class="major">
+                            <p>Ecological Degreaser Concentrate 5L</p>
+                            <span class="price">£14.93 SKU:338</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Copy of GREEN_R Indus- .png" alt="Green'R Indus" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                   
+                </div>
+            </section>
+        </div>
+    </div>
+
+            <!-- Modal -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
+            <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script>
+                const imagesDirectory = 'images/';
+                const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+                // Function to find the closest matching image file for each product
+                function findProductImages() {
+                    const articles = document.querySelectorAll('.post[data-title]');
+                    articles.forEach(article => {
+                        const productName = article.dataset.title;
+                        imageExtensions.forEach(extension => {
+                            const imageUrl = `${imagesDirectory}${productName}.${extension}`;
+                            const img = new Image();
+                            img.src = imageUrl;
+                            img.onload = () => {
+                                article.querySelector('.image img').src = imageUrl;
+                            };
+                        });
+                    });
+                }
+
+                // Open modal function
+                function openModal(event, image) {
+                    event.preventDefault();
+                    var modal = document.getElementById("imageModal");
+                    var modalImg = document.getElementById("modalImage");
+                    modal.style.display = "block";
+                    modalImg.src = image.querySelector("img").src;
+                }
+
+                // Close modal function
+                function closeModal() {
+                    var modal = document.getElementById("imageModal");
+                    modal.style.display = "none";
+                }
+
+                // Function to filter products based on search input and category
+                function searchProducts() {
+                    var input, filter, sections, articles, i, j, txtValue;
+                    input = document.getElementById('search-bar');
+                    filter = input.value.toUpperCase();
+                    sections = document.getElementsByClassName('product-section');
+                    
+                    for (i = 0; i < sections.length; i++) {
+                        articles = sections[i].getElementsByTagName('article');
+                        for (j = 0; j < articles.length; j++) {
+                            var title = articles[j].dataset.title.toUpperCase();
+                            var category = articles[j].dataset.category.toUpperCase();
+                            txtValue = articles[j].textContent || articles[j].innerText;
+                            if (title.indexOf(filter) > -1 || category.indexOf(filter) > -1) {
+                                articles[j].style.display = "";
+                            } else {
+                                articles[j].style.display = "none";
+                            }
+                        }
+                    }
+                }
+
+                // Function to add items to want list
+                function addToWantList(button) {
+                    var article = button.closest('article');
+                    var itemName = article.dataset.title;
+                    var itemPriceText = article.querySelector('header.major > span.price').textContent;
+                    var itemPrice = parseFloat(itemPriceText.match(/£([\d.]+)/)[1]); // Extract price from text
+
+                    var wantList = document.getElementById('want-list');
+                    var subtotalElement = document.getElementById('subtotal');
+                    var subtotal = parseFloat(subtotalElement.textContent.replace('Subtotal: £', '')) || 0;
+
+                    // Create remove button
+                    var removeBtn = document.createElement('span');
+                    removeBtn.textContent = 'x';
+                    removeBtn.className = 'remove-btn';
+                    removeBtn.onclick = function() {
+                        wantList.removeChild(listItem);
+                        updateSubtotal(-itemPrice);
+                        updateVAT(subtotal - itemPrice); // Update VAT after removing item
+                    };
+
+                    // Create list item
+                    var listItem = document.createElement('li');
+                    listItem.textContent = itemName + ' - £' + itemPrice.toFixed(2);
+                    listItem.prepend(removeBtn);
+                    wantList.appendChild(listItem);
+
+                    // Update subtotal and VAT
+                    updateSubtotal(itemPrice);
+                    updateVAT(subtotal + itemPrice); // Update VAT after adding item
+                }
+
+                // Function to update subtotal
+                function updateSubtotal(amount) {
+                    var subtotalElement = document.getElementById('subtotal');
+                    var subtotal = parseFloat(subtotalElement.textContent.replace('Subtotal: £', '')) || 0;
+                    subtotal += amount;
+                    subtotalElement.textContent = 'Subtotal: £' + subtotal.toFixed(2);
+                }
+
+                // Function to update VAT total
+                function updateVAT(subtotal) {
+                    var vatTotal = subtotal * 0.2;
+                    var vatTotalElement = document.getElementById('vat-total');
+                    vatTotalElement.textContent = 'VAT (20%): £' + vatTotal.toFixed(2);
+                }
+
+                // Attach click event to "Add to Want List" buttons
+                document.addEventListener('DOMContentLoaded', function() {
+                    var addToWantListButtons = document.querySelectorAll('.add-to-want-list-btn');
+                    addToWantListButtons.forEach(function(button) {
+                        button.addEventListener('click', function() {
+                            addToWantList(button);
+                        });
+                    });
+                    // Find product images
+                    findProductImages();
+                });
+            </script>
+
+</body>
+</html>
