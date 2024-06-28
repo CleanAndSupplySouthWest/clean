@@ -26,10 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send email
     if (mail($to, $subject, $body, $headers)) {
-        header("Location: elements.html?status=success");
+        echo "success";
     } else {
-        header("Location: elements.html?status=error");
+        echo "error";
     }
-    exit();
 }
 ?>

@@ -127,7 +127,7 @@
                 <!-- Form -->
                 <h2>Form</h2>
 
-                <form method="post" action="send_email.php" onsubmit="return validateForm()">
+                <form id="contactForm" method="post" action="send_email.php">
                     <div class="row gtr-uniform">
                         <div class="col-6 col-12-xsmall">
                             <input type="text" name="name" id="name" value="" placeholder="Name" required/>
@@ -165,7 +165,7 @@
                         <!-- Break -->
                         <div class="col-12">
                             <ul class="actions">
-                                <li><input type="submit" value="Send Message" class="primary" /></li>
+                                <li><input type="button" value="Send Message" class="primary" onclick="sendMessage()" /></li>
                                 <li><input type="reset" value="Reset" /></li>
                             </ul>
                         </div>
@@ -208,13 +208,23 @@
             return true;
         }
 
-        <?php if (isset($_GET['status'])): ?>
-            <?php if ($_GET['status'] == 'success'): ?>
-                showNotification("Email sent successfully!", "green");
-            <?php else: ?>
-                showNotification("Failed to send email.", "red");
-            <?php endif; ?>
-        <?php endif; ?>
+        function sendMessage() {
+            if (validateForm()) {
+                var formData = $("#contactForm").serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "send_email.php",
+                    data: formData,
+                    success: function(response) {
+                        if (response.trim() === 'success') {
+                            showNotification("Email sent successfully!", "green");
+                        } else {
+                            showNotification("Failed to send email.", "red");
+                        }
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
