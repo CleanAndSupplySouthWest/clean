@@ -10,6 +10,80 @@
         body {
             background-color: pink;
         }
+        /* Popup container */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 9999; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        /* Popup content */
+        .popup-content {
+            background-color: #fefefe57;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            position: relative;
+        }
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Popup content */
+        .popup-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 100%;
+            max-width: 1100px; /* Adjust as needed */
+            position: relative;
+        }
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Image styling */
+        .enlargeable-image {
+            cursor: pointer;
+            transition: transform 0.2s; /* Smooth zoom-in effect */
+        }
+        .enlargeable-image:hover {
+            transform: scale(1.05); /* Zoom in slightly on hover */
+        }
+        .popup img {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -39,10 +113,10 @@
                 <li><a href="elements.html">Contact Us</a></li>
             </ul>
             <ul class="icons">
-                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61559302453891" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/cleanandsupplytrowbridge24?igsh=anJ2MGplbW52dWwy" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.tiktok.com/@clean.and.supply?_t=8ndRoCjv1hh&_r=1" class="icon brands alt fa-tiktok"><span class="label">Tiktok</span></a></li>
+                <li><a href="https://youtube.com/@cleanandsupplysouthwest?feature=shared" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
             </ul>
         </nav>
 
@@ -72,7 +146,7 @@
                 <p>   •	Product Information
                 <p>   •	Safety Data Sheets
                 <p>   •	Risk Assessments</p>
-                <img src="images/Cleaning Schedule.png" alt="Cleaning Schedule" style="width:500px; height:auto;">                                    
+                <img src="images/Cleaning Schedule.png" alt="Cleaning Schedule" class="enlargeable-image" style="width:500px; height:auto;">                                    
             </article>
 
             <!-- Our Story -->
@@ -148,27 +222,6 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <section>
-                <form method="post" action="#">
-                    <div class="fields">
-                        <div class="field">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name">
-                        </div>
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email">
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="3"></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message"></li>
-                    </ul>
-                </form>
-            </section>
             <section class="split contact">
                 <section class="alt">
                     <h3>Address</h3>
@@ -185,10 +238,10 @@
                 <section>
                     <h3>Social</h3>
                     <ul class="icons alt">
-                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61559302453891" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/cleanandsupplytrowbridge24?igsh=anJ2MGplbW52dWwy" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.tiktok.com/@clean.and.supply?_t=8ndRoCjv1hh&_r=1" class="icon brands alt fa-tiktok"><span class="label">Tiktok</span></a></li>
+                        <li><a href="https://youtube.com/@cleanandsupplysouthwest?feature=shared" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
                     </ul>
                 </section>
             </section>
@@ -196,9 +249,24 @@
 
         <!-- Copyright -->
         <div id="copyright">
-            <ul><li>&copy; Clean And Supply</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            <ul><li>&copy; Clean And Supply</li><li>Design by Elliot <a href=""></a></li></ul>
         </div>
 
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="popup-close">&times;</span>
+            <p>This website is under development and some things may not work as intended at this time.</p>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="imagePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img id="popupImage" src="" alt="Enlarged Image">
+        </div>
     </div>
 
     <!-- Scripts -->
@@ -209,6 +277,70 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Function to get a cookie by name
+        function getCookie(name) {
+            let value = "; " + document.cookie;
+            let parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        }
 
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to show the popup
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        // Function to close the popup
+        document.getElementById('popup-close').onclick = function() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Check if the popup has been shown before
+        window.onload = function() {
+            if (!getCookie('popupShown')) {
+                showPopup();
+                setCookie('popupShown', 'true', 1); // Cookie expires in 1 day
+            }
+        }
+    // JavaScript to handle image click and popup display
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const images = document.querySelectorAll('.enlargeable-image');
+        const popup = document.getElementById('imagePopup');
+        const popupImage = document.getElementById('popupImage');
+        const closeBtn = document.querySelector('.close');
+
+
+        images.forEach((image) => {
+                image.addEventListener('click', () => {
+                    popup.style.display = 'block';
+                    popupImage.src = image.src;
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                }
+            });
+        });
+    </script>
 </body>
 </html>
