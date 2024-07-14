@@ -16,7 +16,7 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: #fff; /* Change background color if needed */
+            background: #ffffff; /* Change background color if needed */
             padding: 10px; /* Add padding for better spacing */
             box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add shadow for header */
         }
@@ -81,23 +81,30 @@
             text-decoration: none;
             cursor: pointer;
         }
-        #search-bar-container {
-            position: fixed;
-            top: 60px;
-            right: 10px;
-            z-index: 100;
-            background-color: rgba(36, 36, 36, 0.418);
-            padding: 5px;
-            border-radius: 5px;
-        }
-        #search-bar {
-            width: 300px; /* Set width for the search bar */
-            padding: 5px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            color: rgb(9, 255, 0); /* Change font color to blue */
-        }
+    /* Existing styles... */
+
+    #search-bar-container {
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        z-index: 100;
+        background-color: rgba(36, 36, 36, 0.418);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #search-bar {
+        width: 300px;
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        color: rgb(9, 255, 0);
+    }
+
+    #search-results {
+        margin-top: 120px; /* Adjust based on your layout */
+    }
         .highlight {
             background-color: rgb(51, 255, 0); /* Highlight color */
         }
@@ -143,6 +150,30 @@
             font-weight: bold;
             margin-top: 10px;
         }
+        /* Pagination Styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        .pagination a {
+            margin: 0 5px;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+        .pagination a.active {
+            background-color: #333;
+            color: white;
+            border: 1px solid #333;
+        }
+        
     </style>
 </head>
 <body class="is-preload">
@@ -170,6 +201,10 @@
                 <p id="subtotal">total: £0.00</p>
                 <p id="vat-total">VAT (20%): £0.00</p>
             </div>
+        </div>
+        
+        <div id="main">
+            <div id="search-results"></div>
         </div>
 
         <!-- Main -->
@@ -276,7 +311,7 @@
                             <img src="images/Citrol - 1L.png" alt="Citrol" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
-                    </article>
+                    </article> 
                     <!-- Citrol -->
                     <article class="post" data-title="Citrol" data-category="Dishwashing 401" data-image="images/Citrol.png">
                         <h3><a href="#">Citrol</a></h3>
@@ -297,7 +332,7 @@
                             <span class="price">£3.28 SKU:490</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Hand Dish Ultra - 1L.png" alt="Citrol" />
+                            <img src="images/GREEN_R Hand Dish Ultra - 1L.png" alt="Green'R Hand Dish Ultra" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -309,7 +344,7 @@
                             <span class="price">£14.68 SKU:490</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Hand Dish Ultra - 5L.png" alt="Citrol" />
+                            <img src="images/GREEN_R Hand Dish Ultra - 5L.png" alt="Green'R Hand Dish Ultra" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -333,7 +368,7 @@
                             <span class="price">£12.94 SKU:7011</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/" alt="C4 Machine Dishwash" />
+                            <img src="images/C4.jpg" alt="C4 Machine Dishwash" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -381,7 +416,7 @@
                             <span class="price">£13.50 SKU:376</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Autodish S - 5L.png" alt="Rapier" />
+                            <img src="images/GREEN_R Autodish S - 5L.png" alt="Green'R Autodish S" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -393,7 +428,7 @@
                             <span class="price">£58.00 SKU:376</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Autodish S - 20L.png" alt="Rapier" />
+                            <img src="images/GREEN_R Autodish S - 20L.png" alt="Green'R Autodish S" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -453,7 +488,7 @@
                             <span class="price">£48.75 SKU:249</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/trak.png" alt="Trak" />
+                            <img src="images/Trak 20L.jpg" alt="Trak" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -489,7 +524,7 @@
                             <span class="price">£21.06 SKU:OSM-DTAB-100</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/" alt="Osmos Dishwasher Tablets" />
+                            <img src="images/Dishwasher Tablets.jpg" alt="Osmos Dishwasher Tablets" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>                                                         
@@ -630,7 +665,7 @@
                             <span class="price">£5.44 SKU:507</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Sanit +C - 1L.png" alt="Green'R Sanit +C" />
+                            <img src="images/GREEN_R Sanit +C - 1L.png" alt="Green'R Sanit +C" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -642,7 +677,7 @@
                             <span class="price">£16.92 SKU:507</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Sanit +C - 5L.png" alt="Green'R Sanit +C" />
+                            <img src="images/GREEN_R Sanit +C - 5L.png" alt="Green'R Sanit +C" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -654,7 +689,7 @@
                             <span class="price">£3.62 SKU:550</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R WC Fresh - 1L.png" alt="Green'R WC Fresh" />
+                            <img src="images/GREEN_R WC Fresh - 1L.png" alt="Green'R WC Fresh" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -666,7 +701,7 @@
                             <span class="price">£13.47 SKU:550</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R WC Fresh - 5L.png" alt="Green'R WC Fresh" />
+                            <img src="images/GREEN_R WC Fresh - 5L.png" alt="Green'R WC Fresh" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
@@ -894,7 +929,7 @@
                             <span class="price">£48.75 SKU:249</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Trak.png" alt="Trak" />
+                            <img src="images/Trak 20L.jpg" alt="Trak" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>                    
@@ -982,6 +1017,1046 @@
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
+                    <!-- Green'R Indus -->
+                    <article class="post" data-title="Green'R Indus 1L" data-category="Green'R Indus 338" data-image="images/Green'R Indus.png">
+                        <h3><a href="#">Green'R Indus 1L</a></h3>
+                        <header class="major">
+                            <p>Ecological Degreaser Concentrate 1L</p>
+                            <span class="price">£5.18 SKU:338</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/indus.png" alt="Green'R Indus" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Indus -->
+                    <article class="post" data-title="Green'R Indus 5L" data-category="Green'R Indus 338" data-image="images/Green'R Indus.png">
+                        <h3><a href="#">Green'R Indus 5L</a></h3>
+                        <header class="major">
+                            <p>Ecological Degreaser Concentrate 5L</p>
+                            <span class="price">£14.93 SKU:338</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/GREEN_R Indus - 5L.png" alt="Green'R Indus" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- DD10 -->
+                    <article class="post" data-title="DD10 5L" data-category="DD10 404" data-image="images/DD10.png">
+                        <h3><a href="#">DD10 5L</a></h3>
+                        <header class="major">
+                            <p>Detergent Degreaser</p>
+                            <span class="price">£10.94 SKU:404</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/DD10 - 5L.png" alt="DD10" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- UB10 -->
+                    <article class="post" data-title="UB10 5L" data-category="UB10 991" data-image="images/UB10.png">
+                        <h3><a href="#">UB10 5L</a></h3>
+                        <header class="major">
+                            <p>Degreaser - Super Concentrate</p>
+                            <span class="price">£12.94 SKU:991</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB10 - 2L.png" alt="UB10" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- PHOS -->
+                    <article class="post" data-title="PHOS 5L" data-category="PHOS 508" data-image="images/PHOS.png">
+                        <h3><a href="#">PHOS 5L</a></h3>
+                        <header class="major">
+                            <p>Food Plant Descaler</p>
+                            <span class="price">£15.73 SKU:508</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Phos - 5L.png" alt="PHOS" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Lance -->
+                     <article class="post" data-title="Lance 750ml" data-category="Lance 524" data-image="images/Lance.png">
+                        <h3><a href="#">Lance 750ml</a></h3>
+                        <header class="major">
+                            <p>Foaming Limescale Remover</p>
+                            <span class="price">£15.73 SKU:508</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Lance - 750ml.png" alt="PHOS" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Steelbrite -->
+                     <article class="post" data-title="Steelbrite 5L" data-category="Steelbrite 519" data-image="images/Steelbrite.png">
+                        <h3><a href="#">Steelbrite 5L</a></h3>
+                        <header class="major">
+                            <p>Stainless Steel Cleaner and Descaler</p>
+                            <span class="price">£16.72 SKU:519</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Steelbrite - 5L.png" alt="Steelbrite" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Dazzle -->
+                     <article class="post" data-title="Dazzle 750ml" data-category="Dazzle 715" data-image="images/Dazzle.png">
+                        <h3><a href="#">Dazzle 750ml</a></h3>
+                        <header class="major">
+                            <p>Stainless Steel Cleaner/Polish</p>
+                            <span class="price">£6.43 SKU:715</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Dazzle - 750ml.png" alt="Dazzle" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Versan -->
+                     <article class="post" data-title="Versan" data-category="Versan 260" data-image="images/Versan.png">
+                        <h3><a href="#">Versan 750ml</a></h3>
+                        <header class="major">
+                            <p>Broad Spectrum Surface Disinfectant</p>
+                            <span class="price">£4.53 SKU:260</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Versan - 1L.png" alt="Versan" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Versan -->
+                     <article class="post" data-title="Versan" data-category="Versan 260" data-image="images/Versan.png">
+                        <h3><a href="#">Versan 5L</a></h3>
+                        <header class="major">
+                            <p>Broad Spectrum Surface Disinfectant</p>
+                            <span class="price">£10.86 SKU:260</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Versan - 5L.png" alt="Versan" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                                                                                                                                                                                                
+                </div>                                                                                                                                                                                                    
+            <!-- Section for House Keeping Products -->
+            <section id="House Keeping Products" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>House Keeping Products</h2>
+                    </header>
+                    <!-- Clover Breeze -->
+                    <article class="post" data-title="Clover Breeze" data-category="House Keeping Products Clover Breeze 807" data-image="images/Clover Breeze.png">
+                        <h3><a href="#">Clover Breeze - Cherry 300ml</a></h3>
+                        <header class="major">
+                            <p>Water Soluble Essences</p>
+                            <span class="price">£2.69 SKU:807</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Breeze Cherry - 300ml.png" alt="Clover Breeze - Cherry 300ml" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Clover Breeze -->
+                     <article class="post" data-title="Clover Breeze" data-category="House Keeping Products Clover Breeze 801" data-image="images/Clover Breeze.png">
+                        <h3><a href="#">Clover Breeze - Lemon 300ml</a></h3>
+                        <header class="major">
+                            <p>Water Soluble Essences</p>
+                            <span class="price">£2.69 SKU:801</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Breeze Lemon - 300ml.png" alt="Clover Breeze - Lemon 300ml" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Clover Breeze -->
+                      <article class="post" data-title="Clover Breeze" data-category="House Keeping Products Clover Breeze 802" data-image="images/Clover Breeze.png">
+                        <h3><a href="#">Clover Breeze - Floral 300ml</a></h3>
+                        <header class="major">
+                            <p>Water Soluble Essences</p>
+                            <span class="price">£2.69 SKU:802</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Breeze Floral - 300ml.png" alt="Clover Breeze - Floral 300ml" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Clover Breeze -->
+                      <article class="post" data-title="Clover Breeze" data-category="House Keeping Products Clover Breeze 804" data-image="images/Clover Breeze.png">
+                        <h3><a href="#">Clover Breeze - Peach 300ml</a></h3>
+                        <header class="major">
+                            <p>Water Soluble Essences</p>
+                            <span class="price">£2.69 SKU:804</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Breeze Peach - 300ml.png" alt="Clover Breeze - Peach 300ml" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C1 -->
+                      <article class="post" data-title="C1" data-category="House Keeping Products C1 381" data-image="images/C1.png">
+                        <h3><a href="#">C1 1L</a></h3>
+                        <header class="major">
+                            <p>Interior Cleaner</p>
+                            <span class="price">£5.50 SKU:381</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C1 - 1ltr.png" alt="C1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C1 -->
+                      <article class="post" data-title="C1" data-category="House Keeping Products C1 381" data-image="images/C1.png">
+                        <h3><a href="#">C1 5L</a></h3>
+                        <header class="major">
+                            <p>Interior Cleaner</p>
+                            <span class="price">£17.97 SKU:381</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C1 - 5L.png" alt="C1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C2 -->
+                      <article class="post" data-title="C2" data-category="House Keeping Products C2 122" data-image="images/C2.png">
+                        <h3><a href="#">C2 1L</a></h3>
+                        <header class="major">
+                            <p>Floor Cleaner</p>
+                            <span class="price">£5.44 SKU:122</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C2 - 1ltr.png" alt="C2" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C2 -->
+                      <article class="post" data-title="C2" data-category="House Keeping Products C2 122" data-image="images/C2.png">
+                        <h3><a href="#">C2 5L</a></h3>
+                        <header class="major">
+                            <p>Floor Cleaner</p>
+                            <span class="price">£17.97 SKU:122</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C2 - 5L.png" alt="C2" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C3 -->
+                      <article class="post" data-title="C3" data-category="House Keeping Products C3 533" data-image="images/C3.png">
+                        <h3><a href="#">C3 1L</a></h3>
+                        <header class="major">
+                            <p>Washroom Cleaner</p>
+                            <span class="price">£5.56 SKU:533</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C3 - 1ltr.png" alt="C3" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C3 -->
+                      <article class="post" data-title="C3" data-category="House Keeping Products C3 533" data-image="images/C3.png">
+                        <h3><a href="#">C3 5L</a></h3>
+                        <header class="major">
+                            <p>Washroom Cleaner</p>
+                            <span class="price">£16.97 SKU:533</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C3 - 5L.png" alt="C3" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
+                      <!-- D1 -->
+                      <article class="post" data-title="D1" data-category="House Keeping Products D1 325" data-image="images/D1.png">
+                        <h3><a href="#">D1 1L</a></h3>
+                        <header class="major">
+                            <p>Cleaner Degreaser</p>
+                            <span class="price">£5.50 SKU:325</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/D1 - 1ltr.png" alt="D1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- D1 -->
+                      <article class="post" data-title="D1" data-category="House Keeping Products D1 325" data-image="images/D1.png">
+                        <h3><a href="#">D1 5L</a></h3>
+                        <header class="major">
+                            <p>Cleaner Degreaser</p>
+                            <span class="price">£15.45 SKU:325</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/D1 - 5L.png" alt="D1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- S1 -->
+                      <article class="post" data-title="S1" data-category="House Keeping Products S1 225" data-image="images/S1.png">
+                        <h3><a href="#">S1 1L</a></h3>
+                        <header class="major">
+                            <p>Odourless Sanitiser</p>
+                            <span class="price">£5.44 SKU:225</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/S1 - 1ltr.png" alt="S1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- S1 -->
+                      <article class="post" data-title="S1" data-category="House Keeping Products S1 225" data-image="images/S1.png">
+                        <h3><a href="#">S1 5L</a></h3>
+                        <header class="major">
+                            <p>Odourless Sanitiser</p>
+                            <span class="price">£15.33 SKU:225</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/S1 - 5L.png" alt="S1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- UB70 -->
+                       <article class="post" data-title="UB70" data-category="House Keeping Products UB70 997" data-image="images/UB70.png">
+                        <h3><a href="#">UB70 2L</a></h3>
+                        <header class="major">
+                            <p>Lemon Air Conditioner Concentrate</p>
+                            <span class="price">£11.91 SKU:997</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB70 - 2L.png" alt="UB70" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Swift -->
+                       <article class="post" data-title="Swift" data-category="House Keeping Products Swift 603" data-image="images/Swift.png">
+                        <h3><a href="#">Swift 750ml</a></h3>
+                        <header class="major">
+                            <p>Clean and Shine Furniture Polish</p>
+                            <span class="price">£4.86 SKU:603</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Swift - 750ml.png" alt="Swift" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Swift -->
+                      <article class="post" data-title="Swift" data-category="House Keeping Products Swift 603" data-image="images/Swift.png">
+                        <h3><a href="#">Swift 5L</a></h3>
+                        <header class="major">
+                            <p>Clean and Shine Furniture Polish</p>
+                            <span class="price">£17.80 SKU:603</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Swift - 5L.png" alt="Swift" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Metaglynt -->
+                      <article class="post" data-title="Metaglynt" data-category="House Keeping Products Metaglynt 708" data-image="images/Metaglynt.png">
+                        <h3><a href="#">Metaglynt 300ml</a></h3>
+                        <header class="major">
+                            <p>Metal Polish</p>
+                            <span class="price">£8.36 SKU:708</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Metaglynt.png" alt="Metaglynt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Dazzle -->
+                     <article class="post" data-title="Dazzle 750ml" data-category="Dazzle 715" data-image="images/Dazzle.png">
+                        <h3><a href="#">Dazzle 750ml</a></h3>
+                        <header class="major">
+                            <p>Stainless Steel Cleaner/Polish</p>
+                            <span class="price">£6.43 SKU:715</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Dazzle - 750ml.png" alt="Dazzle" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Leather Cleaner -->
+                     <article class="post" data-title="Leather Cleaner" data-category="Leather Cleaner 452" data-image="images/Leather Cleaner.png">
+                        <h3><a href="#">Leather Cleaner 300ml</a></h3>
+                        <header class="major">
+                            <p>Cleaner for Leather Items</p>
+                            <span class="price">£2.49 SKU:453</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Leather Cleaner - 300ml.png" alt="Leather Cleaner" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Brite -->
+                     <article class="post" data-title="Brite" data-category="Brite 701" data-image="images/Brite.png">
+                        <h3><a href="#">Brite 750ml</a></h3>
+                        <header class="major">
+                            <p>Window, Mirror and Plastic</p>
+                            <span class="price">£3.98 SKU:701</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Brite - 750ml.png" alt="Brite" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- Brite -->
+                     <article class="post" data-title="Brite" data-category="Brite 701" data-image="images/Brite.png">
+                        <h3><a href="#">Brite 5L</a></h3>
+                        <header class="major">
+                            <p>Window, Mirror and Plastic</p>
+                            <span class="price">£10.19 SKU:701</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Brite - 5L.png" alt="Brite" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- UB80 -->
+                     <article class="post" data-title="UB80" data-category="UB80 998" data-image="images/UB80.png">
+                        <h3><a href="#">UB80 2L</a></h3>
+                        <header class="major">
+                            <p>Concentrated Glass Cleaner</p>
+                            <span class="price">£12.60 SKU:998</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB80 - 2L.png" alt="UB80" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- UB90 -->
+                     <article class="post" data-title="UB90" data-category="UB90 999" data-image="images/UB90.png">
+                        <h3><a href="#">UB90 2L</a></h3>
+                        <header class="major">
+                            <p>Universal Room Cleaner</p>
+                            <span class="price">£10.94 SKU:999</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB90 - 2L.png" alt="UB90" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Green'R Multi -->
+                      <article class="post" data-title="Green'R Multi" data-category="Green'R Multi 460" data-image="images/Green'R Multi.png">
+                        <h3><a href="#">Green'R Multi 1L</a></h3>
+                        <header class="major">
+                            <p>All Purpose Cleaner</p>
+                            <span class="price">£5.44 SKU:460</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/GREEN_R Multi - 1L.png" alt="Green'R Multi" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Green'R Multi -->
+                      <article class="post" data-title="Green'R Multi" data-category="Green'R Multi 460" data-image="images/Green'R Multi.png">
+                        <h3><a href="#">Green'R Multi 5L</a></h3>
+                        <header class="major">
+                            <p>All Purpose Cleaner</p>
+                            <span class="price">£16.78 SKU:460</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/GREEN_R Multi - 5L.png" alt="Green'R Multi" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
+                      <!-- CleanIt -->
+                      <article class="post" data-title="CleanIt" data-category="CleanIt 497" data-image="images/CleanIt.png">
+                        <h3><a href="#">CleanIt 750ml</a></h3>
+                        <header class="major">
+                            <p>Interior Cleaner</p>
+                            <span class="price">£2.98 SKU:497</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/CleanIT - 750ml.png" alt="CleanIt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- CleanIt -->
+                      <article class="post" data-title="CleanIt" data-category="CleanI 397t" data-image="images/CleanIt.png">
+                        <h3><a href="#">CleanIt 5L</a></h3>
+                        <header class="major">
+                            <p>Interior Cleaner</p>
+                            <span class="price">£6.64 SKU:397</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/CleanIT - 5L.png" alt="CleanIt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- ScaleIt -->
+                       <article class="post" data-title="ScaleIt" data-category="ScaleIt 598" data-image="images/ScaleIt.png">
+                        <h3><a href="#">ScaleIt 1L</a></h3>
+                        <header class="major">
+                            <p>Sanitary Cleaner/Descaler</p>
+                            <span class="price">£2.71 SKU:598</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/ScaleIt - 1L.png" alt="ScaleIt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- ScaleIt -->
+                       <article class="post" data-title="ScaleIt" data-category="ScaleIt 598" data-image="images/ScaleIt.png">
+                        <h3><a href="#">ScaleIt 1L</a></h3>
+                        <header class="major">
+                            <p>Sanitary Cleaner/Descaler</p>
+                            <span class="price">£9.21 SKU:598</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/ScaleIT - 5L.png" alt="ScaleIt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- FloorIt -->
+                       <article class="post" data-title="FloorIt" data-category="FloorIt 498" data-image="images/FloorIt.png">
+                        <h3><a href="#">FloorIt 5L</a></h3>
+                        <header class="major">
+                            <p>Floor Cleaner</p>
+                            <span class="price">£6.81 SKU:498</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/FloorIT - 5L.png" alt="FloorIt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Air Freshener - Citrus  -->
+                       <article class="post" data-title="Air Freshener - Citrus" data-category="Air Freshener - Citrus 052085" data-image="images/Air Freshener - Citrus.png">
+                        <h3><a href="#">Air Freshener - Citrus 400ml</a></h3>
+                        <header class="major">
+                            <p>Air Freshener Aerosol</p>
+                            <span class="price">£3.25 SKU:052085</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Air Freshener - Citrus.png" alt="Air Freshener - Citrus" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Air Freshener - Cranberry  -->
+                       <article class="post" data-title="Air Freshener - Cranberry" data-category="Air Freshener - Cranberry 052094" data-image="images/Air Freshener - Cranberry.png">
+                        <h3><a href="#">Air Freshener - Cranberry 400ml</a></h3>
+                        <header class="major">
+                            <p>Air Freshener Aerosol</p>
+                            <span class="price">£3.25 SKU:052094</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Air Freshener - Cranberry.png" alt="Air Freshener - Cranberry" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Air Freshener - Vanilla  -->
+                       <article class="post" data-title="Air Freshener - Vanilla" data-category="Air Freshener - Vanilla 052069" data-image="images/Air Freshener - Vanilla.png">
+                        <h3><a href="#">Air Freshener - Vanilla 400ml</a></h3>
+                        <header class="major">
+                            <p>Air Freshener Aerosol</p>
+                            <span class="price">£3.25 SKU:052069</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Air Freshener - Vanilla.png" alt="Air Freshener - Vanilla" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+            <!-- Section for Infection Control -->
+            <section id="Infection Control" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>Infection Control</h2>
+                    </header>
+                    <!-- Chlor5 -->
+                    <article class="post" data-title="Chlor5" data-category="Chlor5 206" data-image="images/Chlor5.png">
+                        <h3><a href="#">Chlor5 5L</a></h3>
+                        <header class="major">
+                            <p>High Strength Disinfectant</p>
+                            <span class="price">£5.95 SKU:206</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Chlor 5 - 5L.png" alt="Chlor5" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- San Deo -->
+                    <article class="post" data-title="San Deo" data-category="San Deo 223" data-image="images/San Deo.png">
+                        <h3><a href="#">San Deo 5L</a></h3>
+                        <header class="major">
+                            <p>Candy Disinfectant/ Deodoriser</p>
+                            <span class="price">£7.94 SKU:223</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Fresh Deodoriser Concentrate - 5L.png" alt="San Deo" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- San Multi Lemon -->
+                    <article class="post" data-title="San Multi Lemon" data-category="San Multi Lemon 202" data-image="images/San Multi Lemon.png">
+                        <h3><a href="#">San Multi Lemon 5L</a></h3>
+                        <header class="major">
+                            <p>Daily Cleaner and Disinfectant</p>
+                            <span class="price">£7.44 SKU:223</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Fresh Wild Lemon - 5L.png" alt="San Multi Lemon" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                     <!-- San Multi Floral -->
+                     <article class="post" data-title="San Multi Floral" data-category="San Multi Floral 203" data-image="images/San Multi Floral.png">
+                        <h3><a href="#">San Multi Floral 5L</a></h3>
+                        <header class="major">
+                            <p>Daily Cleaner and Disinfectant</p>
+                            <span class="price">£7.94 SKU:203</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Fresh Floral Bouquet - 5L.png" alt="San Multi Floral" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- San Multi Forest -->
+                      <article class="post" data-title="San Multi Forest" data-category="San Multi Forest 204" data-image="images/San Multi Forest.png">
+                        <h3><a href="#">San Multi Forest 5L</a></h3>
+                        <header class="major">
+                            <p>Daily Cleaner and Disinfectant</p>
+                            <span class="price">£5.57 SKU:204</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Fresh Mountain Pine - 5L.png" alt="San Multi Forest" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Ultrafresh -->
+                      <article class="post" data-title="Ultrafresh" data-category="Ultrafresh 808" data-image="images/Ultrafresh.png">
+                        <h3><a href="#">Ultrafresh 1L</a></h3>
+                        <header class="major">
+                            <p>Cleaner and Disinfectant</p>
+                            <span class="price">£3.09 SKU:808</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Ultrafresh - 1L.png" alt="Ultrafresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Ultrafresh -->
+                       <article class="post" data-title="Ultrafresh" data-category="Ultrafresh 808" data-image="images/Ultrafresh.png">
+                        <h3><a href="#">Ultrafresh 5L</a></h3>
+                        <header class="major">
+                            <p>Cleaner and Disinfectant</p>
+                            <span class="price">£10.94 SKU:808</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Ultrafresh - 5L.png" alt="Ultrafresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Spray & Wipe -->
+                       <article class="post" data-title="Spray & Wipe" data-category="Spray & Wipe 211" data-image="images/Spray & Wipe.png">
+                        <h3><a href="#">Spray & Wipe 750ml</a></h3>
+                        <header class="major">
+                            <p>Fragranced Bactericidal Cleaner</p>
+                            <span class="price">£3.14 SKU:211</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Spray & Wipe - 750ml.png" alt="Spray & Wipe" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Spray & Wipe -->
+                       <article class="post" data-title="Spray & Wipe" data-category="Spray & Wipe 211" data-image="images/Spray & Wipe.png">
+                        <h3><a href="#">Spray & Wipe 5L</a></h3>
+                        <header class="major">
+                            <p>Fragranced Bactericidal Cleaner</p>
+                            <span class="price">£10.79 SKU:211</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Spray & Wipe - 5L.png" alt="Spray & Wipe" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- C3 -->
+                    <article class="post" data-title="C3" data-category="Infection Control C3 533" data-image="images/C3.webp">
+                        <h3><a href="#">C3</a></h3>
+                        <header class="major">
+                            <p>Washroom Cleaner 1L</p>
+                            <span class="price">£5.56 SKU:533</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C3 - 1ltr.png" alt="C3" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- C3 -->
+                    <article class="post" data-title="C3" data-category="Infection Control C3 533" data-image="images/C3.webp">
+                        <h3><a href="#">C3</a></h3>
+                        <header class="major">
+                            <p>Washroom Cleaner 5L</p>
+                            <span class="price">£16.97 SKU:533</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C3 - 5L.png" alt="C3" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Bio-dox -->
+                    <article class="post" data-title="Bio-dox" data-category="Bio-dox 213" data-image="images/Bio-dox.webp">
+                        <h3><a href="#">Bio-dox</a></h3>
+                        <header class="major">
+                            <p>Hygienic Hand Soap 300ml</p>
+                            <span class="price">£2.25 SKU:213</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bio Dox 300ml.png" alt="Bio-dox" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Bio-dox -->
+                    <article class="post" data-title="Bio-dox" data-category="Bio-dox 213" data-image="images/Bio-dox.webp">
+                        <h3><a href="#">Bio-dox</a></h3>
+                        <header class="major">
+                            <p>Hygienic Hand Soap 750ml</p>
+                            <span class="price">£3.02 SKU:213</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bio Dox - 750ml.png" alt="Bio-dox" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Bio-dox -->
+                    <article class="post" data-title="Bio-dox" data-category="Bio-dox 213" data-image="images/Bio-dox.webp">
+                        <h3><a href="#">Bio-dox</a></h3>
+                        <header class="major">
+                            <p>Hygienic Hand Soap 5L</p>
+                            <span class="price">£11.38 SKU:213</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bio Dox - 5L.png" alt="Bio-dox" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Ador Neutra -->
+                    <article class="post" data-title="Ador Neutra" data-category="Ador Neutra 208" data-image="images/Ador Neutra.webp">
+                        <h3><a href="#">Ador Neutra</a></h3>
+                        <header class="major">
+                            <p>Odor and Urine Neutraliser 750ml</p>
+                            <span class="price">£3.97 SKU:208</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Sanex - 750ml.png" alt="Ador Neutra" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Ador Neutra -->
+                    <article class="post" data-title="Ador Neutra" data-category="Ador Neutra 208" data-image="images/Ador Neutra.webp">
+                        <h3><a href="#">Ador Neutra</a></h3>
+                        <header class="major">
+                            <p>Odor and Urine Neutraliser 5L</p>
+                            <span class="price">£17.94 SKU:208</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Sanex - 5L.png" alt="Ador Neutra" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- 70% Hand Sanitiser -->
+                    <article class="post" data-title="70% Hand Sanitiser" data-category="70% Hand Sanitiser 077137" data-image="images/70% Hand Sanitiser.webp">
+                        <h3><a href="#">70% Hand Sanitiser</a></h3>
+                        <header class="major">
+                            <p>Hand Sanitiser Gel 500ml</p>
+                            <span class="price">£4.30 SKU:077137</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Hand Sanitiser 500ml.png" alt="70% Hand Sanitiser" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- 70% Hand Sanitiser -->
+                    <article class="post" data-title="70% Hand Sanitiser" data-category="70% Hand Sanitiser 077137" data-image="images/70% Hand Sanitiser.webp">
+                        <h3><a href="#">70% Hand Sanitiser</a></h3>
+                        <header class="major">
+                            <p>Hand Sanitiser Gel 5L</p>
+                            <span class="price">£17.97 SKU:077137</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/70% Hand Sanitiser.png" alt="70% Hand Sanitiser" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Alcohol Free Foam Hand Sanitiser -->
+                    <article class="post" data-title="Alcohol Free Foam Hand Sanitiser" data-category="Alcohol Free Foam Hand Sanitiser 074101" data-image="images/Alcohol Free Foam Hand Sanitiser.webp">
+                        <h3><a href="#">Alcohol Free Foam Hand Sanitiser</a></h3>
+                        <header class="major">
+                            <p>Hand Sanitiser Foam 5L</p>
+                            <span class="price">£15.74 SKU:074101</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Alcohol Free Foam Hand Sanitiser.png" alt="Alcohol Free Foam Hand Sanitiser" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+        </div>
+            <!-- Section for Floor Care -->
+            <section id="Floor Care" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>Floor Care</h2>
+                    </header>
+                    <!-- Diamond Extra -->
+                    <article class="post" data-title="Diamond Extra" data-category="Diamond Extra" data-image="images/Diamond Extra.png">
+                        <h3><a href="#">Diamond Extra</a></h3>
+                        <header class="major">
+                            <p>Wet Look Floor Polish (25%) 5L</p>
+                            <span class="price">£35.60 SKU:109</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Diamond Extra - 5L.png" alt="Diamond Extra" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Remove -->
+                    <article class="post" data-title="Remove" data-category="Remove" data-image="images/Remove.png">
+                        <h3><a href="#">Remove</a></h3>
+                        <header class="major">
+                            <p>Heavy Duty Floor Polish Stripper 5L</p>
+                            <span class="price">£9.68 SKU:108</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Remove - 5L.png" alt="Remove" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Zip Strip  -->
+                    <article class="post" data-title="Zip Strip" data-category="Zip Strip 365" data-image="images/Zip Strip.png">
+                        <h3><a href="#">Zip Strip</a></h3>
+                        <header class="major">
+                            <p>Rinse-Free Floor Polish Stripper 5L</p>
+                            <span class="price">£21.22 SKU:365</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Zip Strip - 5L.png" alt="Zip Strip" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- P.D.Q  -->
+                    <article class="post" data-title="P.D.Q" data-category="P.D.Q 110" data-image="images/P.D.Q.png">
+                        <h3><a href="#">P.D.Q</a></h3>
+                        <header class="major">
+                            <p>Floor Cleaner/Polish Maintainer 5L</p>
+                            <span class="price">£10.53 SKU:110</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/PDQ - 5L.png" alt="P.D.Q" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Renew TD  -->
+                    <article class="post" data-title="Renew TD" data-category="Renew TD 104" data-image="images/Renew TD.png">
+                        <h3><a href="#">Renew TD</a></h3>
+                        <header class="major">
+                            <p>Polymer Floor Maintainer 5L</p>
+                            <span class="price">£10.53 SKU:110</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Renew TD - 5L.png" alt="Renew TD" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- UB60  -->
+                    <article class="post" data-title="UB60" data-category="UB60 996" data-image="images/UB60.png">
+                        <h3><a href="#">UB60</h3>
+                        <header class="major">
+                            <p>Floor Maintainer 2L</p>
+                            <span class="price">£11.38 SKU:996</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/UB60 - 2L.png" alt="UB60" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Clover Gel Lemon  -->
+                    <article class="post" data-title="Clover Gel Lemon" data-category="Clover Gel Lemon 107" data-image="images/Clover Gel Lemon.png">
+                        <h3><a href="#">Clover Gel Lemon</h3>
+                        <header class="major">
+                            <p>Concentrated Floor Gel</p>
+                            <span class="price">£10.85 SKU:107</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Clover Gel Lemon - 5L.png" alt="Clover Gel Lemon" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Clover Gel Contract  -->
+                    <article class="post" data-title="Clover Gel Contract" data-category="Clover Gel Contract 105" data-image="images/Clover Gel Contract.png">
+                        <h3><a href="#">Clover Gel Contract</h3>
+                        <header class="major">
+                            <p>Pine Floor Gel</p>
+                            <span class="price">£8.85 SKU:105</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Clover Gel Contract - 5L.png" alt="Clover Gel Contract" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Impact  -->
+                    <article class="post" data-title="Impact" data-category="Impact 111" data-image="images/Impact.png">
+                        <h3><a href="#">Impact</h3>
+                        <header class="major">
+                            <p>Impact</p>
+                            <span class="price">£9.30 SKU:111</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Impact - 5L.png" alt="Impact" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- FloorIt  -->
+                    <article class="post" data-title="FloorIt" data-category="FloorIt 498" data-image="images/FloorIt.png">
+                        <h3><a href="#">FloorIt</h3>
+                        <header class="major">
+                            <p>FloorIt</p>
+                            <span class="price">£6.81 SKU:498</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/FloorIT - 5L.png" alt="FloorIt" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Comet  -->
+                    <article class="post" data-title="Comet" data-category="Comet 306" data-image="images/Comet.png">
+                        <h3><a href="#">Comet</h3>
+                        <header class="major">
+                            <p>Carpet Cleaner for Extraction Cleaning 1L</p>
+                            <span class="price">£2.76 SKU:306</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Comet - 1L.png" alt="Comet" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Comet  -->
+                    <article class="post" data-title="Comet" data-category="Comet 306" data-image="images/Comet.png">
+                        <h3><a href="#">Comet</h3>
+                        <header class="major">
+                            <p>Carpet Cleaner for Extraction Cleaning 5L</p>
+                            <span class="price">£10.90 SKU:306</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Comet - 5L.png" alt="Comet" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Orbit  -->
+                    <article class="post" data-title="Orbit" data-category="Orbit 359" data-image="images/Orbit.png">
+                        <h3><a href="#">Orbit</h3>
+                        <header class="major">
+                            <p>Neutral Extraction Cleaner for Carpets 5L</p>
+                            <span class="price">£13.74 SKU:359</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Orbit - 5L.png" alt="Orbit" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- SAS 20  -->
+                    <article class="post" data-title="SAS 20" data-category="SAS 20 442" data-image="images/SAS 20.png">
+                        <h3><a href="#">SAS 20</h3>
+                        <header class="major">
+                            <p>Spot and Stain Remover</p>
+                            <span class="price">£3.96 SKU:442</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/SAS20 - 750ml.png" alt="SAS 20" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Dry Foam -->
+                    <article class="post" data-title="Dry Foam" data-category="Dry Foam 444" data-image="images/Dry Foam.png">
+                        <h3><a href="#">Dry Foam</h3>
+                        <header class="major">
+                            <p>Dry Foam Carpet Shampoo</p>
+                            <span class="price">£12.31 SKU:444</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Dry Foam - 5L.png." alt="Dry Foam" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Ador Neutra -->
+                    <article class="post" data-title="Ador Neutra" data-category="Ador Neutra 208" data-image="images/Ador Neutra.webp">
+                        <h3><a href="#">Ador Neutra</a></h3>
+                        <header class="major">
+                            <p>Odor and Urine Neutraliser 750ml</p>
+                            <span class="price">£3.97 SKU:208</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Sanex - 750ml.png" alt="Ador Neutra" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Ador Neutra -->
+                    <article class="post" data-title="Ador Neutra" data-category="Ador Neutra 208" data-image="images/Ador Neutra.webp">
+                        <h3><a href="#">Ador Neutra</a></h3>
+                        <header class="major">
+                            <p>Odor and Urine Neutraliser 5L</p>
+                            <span class="price">£17.94 SKU:208</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Sanex - 5L.png" alt="Ador Neutra" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Detak -->
+                    <article class="post" data-title="Detak" data-category="Detak 702" data-image="images/Detak.png">
+                        <h3><a href="#">Detak</a></h3>
+                        <header class="major">
+                            <p>Chewing Gum Remover 300ml</p>
+                            <span class="price">£3.40 SKU:702</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Detak - 300ml.png" alt="Detak" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Detak -->
+                    <article class="post" data-title="Detak" data-category="Detak 702" data-image="images/Detak.png">
+                        <h3><a href="#">Detak</a></h3>
+                        <header class="major">
+                            <p>Chewing Gum Remover 5L</p>
+                            <span class="price">£28.04 SKU:702</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Detak - 5L.png" alt="Detak" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>               
+                    <!-- Viro-Sol -->
+                    <article class="post" data-title="Viro-Sol" data-category="Viro-Sol 326" data-image="images/Viro-Sol.png">
+                        <h3><a href="#">Viro-Sol</a></h3>
+                        <header class="major">
+                            <p>Citrus Cleaner and Degreaser 5L</p>
+                            <span class="price">£12.61 SKU:702</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Viro Sol - 5L.png" alt="Viro-Sol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Viro-Sol -->
+                    <article class="post" data-title="Viro-Sol" data-category="Viro-Sol 326" data-image="images/Viro-Sol.png">
+                        <h3><a href="#">Viro-Sol</a></h3>
+                        <header class="major">
+                            <p>Citrus Cleaner and Degreaser 20L</p>
+                            <span class="price">£39.59 SKU:702</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Viro-Sol 20L.jpg" alt="Viro-Sol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Viro-Sol -->
+                    <article class="post" data-title="Viro-Sol" data-category="Viro-Sol 326" data-image="images/Viro-Sol.png">
+                        <h3><a href="#">Viro-Sol</a></h3>
+                        <header class="major">
+                            <p>Citrus Cleaner and Degreaser 200L</p>
+                            <span class="price">£350.00 SKU:702</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Viro-Sol.png" alt="Viro-Sol" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
                     <!-- Ubik 2000 -->
                     <article class="post" data-title="Ubik 2000" data-category="Ubik 2000 301" data-image="images/Ubik 2000.png">
                         <h3><a href="#">Ubik 2000</a></h3>
@@ -1006,34 +2081,691 @@
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
-                    <!-- Green'R Indus -->
-                    <article class="post" data-title="Green'R Indus 1L" data-category="Green'R Indus 338" data-image="images/Green'R Indus.png">
-                        <h3><a href="#">Green'R Indus 1L</a></h3>
+                    <!-- Sola Lemon -->
+                    <article class="post" data-title="Sola Lemon" data-category="Sola Lemon 312" data-image="images/Sola Lemon.png">
+                        <h3><a href="#">Sola Lemon</a></h3>
                         <header class="major">
-                            <p>Ecological Degreaser Concentrate 1L</p>
-                            <span class="price">£5.18 SKU:338</span>
+                            <p>Hard Surface Cleaner 5L</p>
+                            <span class="price">£11.38 SKU:312</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Indus - .png" alt="Green'R Indus" />
+                            <img src="images/Sola Lemon - 5L.png" alt="Sola Lemon" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
                     </article>
-                    <!-- Green'R Indus -->
-                    <article class="post" data-title="Green'R Indus 5L" data-category="Green'R Indus 338" data-image="images/Green'R Indus.png">
-                        <h3><a href="#">Green'R Indus 5L</a></h3>
+                    <!-- Scrub Kleen -->
+                    <article class="post" data-title="Scrub Kleen" data-category="Scrub Kleen 308" data-image="images/Scrub Kleen.png">
+                        <h3><a href="#">Scrub Kleen</a></h3>
                         <header class="major">
-                            <p>Ecological Degreaser Concentrate 5L</p>
-                            <span class="price">£14.93 SKU:338</span>
+                            <p>Low Foam Cleaner 5L</p>
+                            <span class="price">£12.59 SKU:312</span>
                         </header>
                         <a href="#" class="image fit" onclick="openModal(event, this)">
-                            <img src="images/Copy of GREEN_R Indus- .png" alt="Green'R Indus" />
+                            <img src="images/Scrub Kleen - 5L.png" alt="Scrub Kleen" />
                         </a>
                         <button class="add-to-want-list-btn">Add to Want List</button>
-                    </article>                   
-                </div>
-            </section>
-        </div>
+                    </article>
+                    <!-- Scrub Kleen -->
+                    <article class="post" data-title="Scrub Kleen" data-category="Scrub Kleen 308" data-image="images/Scrub Kleen.png">
+                        <h3><a href="#">Scrub Kleen</a></h3>
+                        <header class="major">
+                            <p>Low Foam Cleaner 20L</p>
+                            <span class="price">£39.68 SKU:312</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Scrub Kleen" alt="Scrub Kleen" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- DD10 -->
+                    <article class="post" data-title="DD10" data-category="DD10 404" data-image="images/DD10.png">
+                        <h3><a href="#">DD10</a></h3>
+                        <header class="major">
+                            <p>Detergent Degreaser 5L</p>
+                            <span class="price">£10.94 SKU:404</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/DD10 - 5L.png" alt="DD10" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Spirit -->
+                    <article class="post" data-title="Spirit" data-category="Spirit 350" data-image="images/Spirit.png">
+                        <h3><a href="#">Spirit</a></h3>
+                        <header class="major">
+                            <p>Fragrant Multi Surface Cleaner 750ml</p>
+                            <span class="price">£2.96 SKU:350</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Spirit - 750ml.png" alt="Spirit" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Spirit -->
+                    <article class="post" data-title="Spirit" data-category="Spirit 350" data-image="images/Spirit.png">
+                        <h3><a href="#">Spirit</a></h3>
+                        <header class="major">
+                            <p>Fragrant Multi Surface Cleaner 5L</p>
+                            <span class="price">£6.92 SKU:350</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Spirit - 5L.png" alt="Spirit" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C1 -->
+                      <article class="post" data-title="C1" data-category="House Keeping Products C1 381" data-image="images/C1.png">
+                        <h3><a href="#">C1 1L</a></h3>
+                        <header class="major">
+                            <p>Interior Cleaner</p>
+                            <span class="price">£5.50 SKU:381</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C1 - 1ltr.png" alt="C1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C1 -->
+                      <article class="post" data-title="C1" data-category="House Keeping Products C1 381" data-image="images/C1.png">
+                        <h3><a href="#">C1 5L</a></h3>
+                        <header class="major">
+                            <p>Interior Cleaner</p>
+                            <span class="price">£17.97 SKU:381</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C1 - 5L.png" alt="C1" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- C2 -->
+                       <article class="post" data-title="C2" data-category="House Keeping Products C2 122" data-image="images/C2.png">
+                        <h3><a href="#">C2 1L</a></h3>
+                        <header class="major">
+                            <p>Floor Cleaner</p>
+                            <span class="price">£5.44 SKU:122</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C2 - 1ltr.png" alt="C2" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- C2 -->
+                      <article class="post" data-title="C2" data-category="House Keeping Products C2 122" data-image="images/C2.png">
+                        <h3><a href="#">C2 5L</a></h3>
+                        <header class="major">
+                            <p>Floor Cleaner</p>
+                            <span class="price">£17.97 SKU:122</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/C2 - 5L.png" alt="C2" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Green'R Multi -->
+                       <article class="post" data-title="Green'R Multi" data-category="Green'R Multi 460" data-image="images/Green'R Multi.png">
+                        <h3><a href="#">Green'R Multi 1L</a></h3>
+                        <header class="major">
+                            <p>All Purpose Cleaner</p>
+                            <span class="price">£5.44 SKU:460</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/GREEN_R Multi - 1L.png" alt="Green'R Multi" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                       <!-- Green'R Multi -->
+                      <article class="post" data-title="Green'R Multi" data-category="Green'R Multi 460" data-image="images/Green'R Multi.png">
+                        <h3><a href="#">Green'R Multi </a></h3>
+                        <header class="major">
+                            <p>All Purpose Cleaner 5L</p>
+                            <span class="price">£16.78 SKU:460</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/GREEN_R Multi - 5L.png" alt="Green'R Multi" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                      <!-- Defoamer -->
+                      <article class="post" data-title="Defoamer" data-category="Defoamer 445" data-image="images/Defoamer.png">
+                        <h3><a href="#">Defoamer</a></h3>
+                        <header class="major">
+                            <p>Concentrated Defoaming Agent</p>
+                            <span class="price">£16.78 SKU:460</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Defoamer - 5L.png" alt="Defoamer" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+            <!-- Section for Hand Hygiene -->
+            <section id="Hand Hygiene" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>Hand Hygiene</h2>
+                    </header>
+                    <!-- Savon Pearle -->
+                    <article class="post" data-title="Savon Pearle" data-category="Savon Pearle 402" data-image="images/Savon Pearle.jpg">
+                        <h3><a href="#">Savon Pearle</a></h3>
+                        <header class="major">
+                            <p>Luxury Hand Soap 300ml</p>
+                            <span class="price">£2.20 SKU:402</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Savon Pearle 300ml.png" alt="Savon Pearle" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Savon Pearle -->
+                    <article class="post" data-title="Savon Pearle" data-category="Savon Pearle 402" data-image="images/Savon Pearle.jpg">
+                        <h3><a href="#">Savon Pearle</a></h3>
+                        <header class="major">
+                            <p>Luxury Hand Soap 5L</p>
+                            <span class="price">£10.47 SKU:402</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Savon Pearle - 5L.png" alt="Savon Pearle" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Savon Blanc -->
+                    <article class="post" data-title="Savon Blanc" data-category="Savon Blanc 446" data-image="images/Savon Blanc.jpg">
+                        <h3><a href="#">Savon Blanc</a></h3>
+                        <header class="major">
+                            <p>Luxury Hand Soap 5L</p>
+                            <span class="price">£10.47 SKU:446</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Savon Blanc - 5L.png" alt="Savon Blanc" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Silk -->
+                    <article class="post" data-title="Silk" data-category="Silk 417" data-image="images/Silk.jpg">
+                        <h3><a href="#">Silk</a></h3>
+                        <header class="major">
+                            <p>Luxury Hand Soap 300ml</p>
+                            <span class="price">£2.22 SKU:417</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Silk 300ml.png" alt="Silk" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Silk -->
+                    <article class="post" data-title="Silk" data-category="Silk 417" data-image="images/Silk.jpg">
+                        <h3><a href="#">Silk</a></h3>
+                        <header class="major">
+                            <p>Luxury Hand Soap 5L</p>
+                            <span class="price">£13.95 SKU:417</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Silk - 5L.png" alt="Silk" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Bio-dox -->
+                    <article class="post" data-title="Bio-dox" data-category="Bio-dox 213" data-image="images/Bio-dox.webp">
+                        <h3><a href="#">Bio-dox</a></h3>
+                        <header class="major">
+                            <p>Hygienic Hand Soap 300ml</p>
+                            <span class="price">£2.25 SKU:213</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bio Dox 300ml.png" alt="Bio-dox" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Bio-dox -->
+                    <article class="post" data-title="Bio-dox" data-category="Bio-dox 213" data-image="images/Bio-dox.webp">
+                        <h3><a href="#">Bio-dox</a></h3>
+                        <header class="major">
+                            <p>Hygienic Hand Soap 750ml</p>
+                            <span class="price">£3.02 SKU:213</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bio Dox - 750ml.png" alt="Bio-dox" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Bio-dox -->
+                    <article class="post" data-title="Bio-dox" data-category="Bio-dox 213" data-image="images/Bio-dox.webp">
+                        <h3><a href="#">Bio-dox</a></h3>
+                        <header class="major">
+                            <p>Hygienic Hand Soap 5L</p>
+                            <span class="price">£11.38 SKU:213</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bio Dox - 5L.png" alt="Bio-dox" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Larox -->
+                    <article class="post" data-title="Larox" data-category="Larox 426" data-image="images/Larox.webp">
+                        <h3><a href="#">Larox</a></h3>
+                        <header class="major">
+                            <p>Hygienic Hand Soap 5L</p>
+                            <span class="price">£10.76 SKU:426</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Larox - 5L.png" alt="Larox" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Fresh -->
+                    <article class="post" data-title="Green'R Fresh" data-category="Green'R Fresh 473" data-image="images/Green'R Fresh.webp">
+                        <h3><a href="#">Green'R Fresh</a></h3>
+                        <header class="major">
+                            <p>Moisturising Hand Soap 300ml</p>
+                            <span class="price">£2.12 SKU:473</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/GREEN_R Fresh - 300ml.png" alt="Green'R Fresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Green'R Fresh -->
+                    <article class="post" data-title="Green'R Fresh" data-category="Green'R Fresh 473" data-image="images/Green'R Fresh.webp">
+                        <h3><a href="#">Green'R Fresh</a></h3>
+                        <header class="major">
+                            <p>Moisturising Hand Soap 5L</p>
+                            <span class="price">£11.06 SKU:473</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/GREEN_R Fresh - 5L.png" alt="Green'R Fresh" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- W15 Antibacterial Hand Soap -->
+                    <article class="post" data-title="W15 Antibacterial Hand Soap" data-category="W15 Antibacterial Hand Soap 7102" data-image="images/W15 Antibacterial Hand Soap.webp">
+                        <h3><a href="#">W15 Antibacterial Hand Soap</a></h3>
+                        <header class="major">
+                            <p>Hygiene Lotion Soap 5L</p>
+                            <span class="price">£9.93 SKU:7102</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/W15 Antibacterial Hand Soap.png" alt="W15 Antibacterial Hand Soap" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Senses Antibacterial Hand Soap -->
+                    <article class="post" data-title="Senses Antibacterial Hand Soap" data-category="Senses Antibacterial Hand Soap 074197" data-image="images/Senses Antibacterial Hand Soap.webp">
+                        <h3><a href="#">Senses Antibacterial Hand Soap</a></h3>
+                        <header class="major">
+                            <p>Fragrance-free foaming Hand Soap 5L</p>
+                            <span class="price">£12.29 SKU:074197</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Senses Antibacterial Hand Soap.png" alt="Senses Antibacterial Hand Soap" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Senses Antibacterial Hand Soap -->
+                    <article class="post" data-title="Senses Antibacterial Hand Soap" data-category="Senses Antibacterial Hand Soap 074197" data-image="images/Senses Antibacterial Hand Soap.webp">
+                        <h3><a href="#">Senses Antibacterial Hand Soap</a></h3>
+                        <header class="major">
+                            <p>Fragrance-free foaming Hand Soap 5L</p>
+                            <span class="price">£12.29 SKU:074197</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Senses Antibacterial Hand Soap.png" alt="Senses Antibacterial Hand Soap" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Senses Jasmine Antibacterial Hand Soap -->
+                    <article class="post" data-title="Senses Jasmine Antibacterial Hand Soap" data-category="Senses Jasmine Antibacterial Hand Soap" data-image="images/Senses Jasmine Antibacterial Hand Soap.webp">
+                        <h3><a href="#">Senses Jasmine Antibacterial Hand Soap</a></h3>
+                        <header class="major">
+                            <p>Blue Jasmine Hand Soap 5L</p>
+                            <span class="price">£10.53 SKU:074197</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Senses Jasmine Antibacterial Hand Soap.png" alt="Senses Jasmine Antibacterial Hand Soap" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- 70% Hand Sanitiser -->
+                    <article class="post" data-title="70% Hand Sanitiser" data-category="70% Hand Sanitiser 077137" data-image="images/70% Hand Sanitiser.webp">
+                        <h3><a href="#">70% Hand Sanitiser</a></h3>
+                        <header class="major">
+                            <p>Hand Sanitiser Gel 500ml</p>
+                            <span class="price">£4.30 SKU:077137</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Hand Sanitiser 500ml.png" alt="70% Hand Sanitiser" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- 70% Hand Sanitiser -->
+                    <article class="post" data-title="70% Hand Sanitiser" data-category="70% Hand Sanitiser 077137" data-image="images/70% Hand Sanitiser.webp">
+                        <h3><a href="#">70% Hand Sanitiser</a></h3>
+                        <header class="major">
+                            <p>Hand Sanitiser Gel 5L</p>
+                            <span class="price">£17.97 SKU:077137</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/70% Hand Sanitiser.png" alt="70% Hand Sanitiser" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Alcohol Free Foam Hand Sanitiser -->
+                    <article class="post" data-title="Alcohol Free Foam Hand Sanitiser" data-category="Alcohol Free Foam Hand Sanitiser 074101" data-image="images/Alcohol Free Foam Hand Sanitiser.webp">
+                        <h3><a href="#">Alcohol Free Foam Hand Sanitiser</a></h3>
+                        <header class="major">
+                            <p>Hand Sanitiser Foam 5L</p>
+                            <span class="price">£15.74 SKU:074101</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Alcohol Free Foam Hand Sanitiser.png" alt="Alcohol Free Foam Hand Sanitiser" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Barrier Cream -->
+                    <article class="post" data-title="Barrier Cream" data-category="Barrier Cream 409" data-image="images/Barrier Cream.webp">
+                        <h3><a href="#">Barrier Cream</a></h3>
+                        <header class="major">
+                            <p>Medicated Barrier Cream 300ml</p>
+                            <span class="price">£2.34 SKU:409</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Barrier Cream 300ml.png" alt="Barrier Cream" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Barrier Cream -->
+                    <article class="post" data-title="Barrier Cream" data-category="Barrier Cream 409" data-image="images/Barrier Cream.webp">
+                        <h3><a href="#">Barrier Cream</a></h3>
+                        <header class="major">
+                            <p>Medicated Barrier Cream 750ml</p>
+                            <span class="price">£3.17 SKU:409</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Barrier Cream - 750ml.png" alt="Barrier Cream" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Barrier Cream -->
+                    <article class="post" data-title="Barrier Cream" data-category="Barrier Cream 409" data-image="images/Barrier Cream.webp">
+                        <h3><a href="#">Barrier Cream</a></h3>
+                        <header class="major">
+                            <p>Medicated Barrier Cream 5L</p>
+                            <span class="price">£19.97 SKU:409</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Barrier Cream - 5L.png" alt="Barrier Cream" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                                                            
+                    <!-- Care4 -->
+                    <article class="post" data-title="Care4" data-category="Care4 434" data-image="images/Care4.webp">
+                        <h3><a href="#">Care4</a></h3>
+                        <header class="major">
+                            <p>Replenishing Cream 300ml</p>
+                            <span class="price">£2.38 SKU:434</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Care 4 - 300ml.png" alt="Care4" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Care4 -->
+                    <article class="post" data-title="Care4" data-category="Care4 434" data-image="images/Care4.webp">
+                        <h3><a href="#">Care4</a></h3>
+                        <header class="major">
+                            <p>Replenishing Cream 5L</p>
+                            <span class="price">£21.80 SKU:434</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Care 4 - 5L.png" alt="Care4" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Buster Extra -->
+                    <article class="post" data-title="Buster Extra" data-category="Buster Extra 415" data-image="images/Buster Extra.webp">
+                        <h3><a href="#">Buster Extra</a></h3>
+                        <header class="major">
+                            <p>Engineers Hand Cream 5L</p>
+                            <span class="price">£16.70 SKU:415</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Buster Extra - 5L.png" alt="Buster Extra" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                  
     </div>
+            <!-- Section for Paper Products -->
+            <section id="Paper Products" class="product-section">
+                <div class="product-column">
+                    <header class="major">
+                        <h2>Paper Products</h2>
+                    </header>
+                    <!-- Bliss 2-ply Toilet Rolls -->
+                    <article class="post" data-title="Bliss 2-ply Toilet Rolls" data-category="Bliss 2-ply Toilet Rolls BDQ2PLY4PK" data-image="images/Bliss 2-ply Toilet Rolls.png">
+                        <h3><a href="#">Bliss 2-ply Toilet Rolls</a></h3>
+                        <header class="major">
+                            <p>Toilet Rolls 10 x 4</p>
+                            <span class="price">£16.15 SKU:BDQ2PLY4PK</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bliss 2-ply Toilet Rolls.png" alt="Bliss 2-ply Toilet Rolls" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Bliss 3-ply Toilet Rolls -->
+                    <article class="post" data-title="Bliss 3-ply Toilet Rolls" data-category="Bliss 3-ply Toilet Rolls BTQ3PLY4PK" data-image="images/Bliss 3-ply Toilet Rolls.png">
+                        <h3><a href="#">Bliss 3-ply Toilet Rolls</a></h3>
+                        <header class="major">
+                            <p>Toilet Rolls 10 x 4</p>
+                            <span class="price">£19.67 SKU:BTQ3PLY4PK</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/Bliss 3-ply Toilet Rolls.png" alt="Bliss 3-ply Toilet Rolls" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Lucart Luxury Toilet Roll -->
+                    <article class="post" data-title="Lucart Luxury Toilet Roll" data-category="Lucart Luxury Toilet Roll 811D18" data-image="images/Lucart Luxury Toilet Roll.png">
+                        <h3><a href="#">Lucart Luxury Toilet Roll 2-Ply</a></h3>
+                        <header class="major">
+                            <p>Toilet Rolls 10 x 4</p>
+                            <span class="price">£16.15 SKU:811D18</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/811D18 2-ply TR.jpg" alt="Lucart Luxury Toilet Roll" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Lucart Luxury Toilet Roll -->
+                    <article class="post" data-title="Lucart Luxury Toilet Roll" data-category="Lucart Luxury Toilet Roll 811D21" data-image="images/Lucart Luxury Toilet Roll.png">
+                        <h3><a href="#">Lucart Luxury Toilet Roll 3-Ply</a></h3>
+                        <header class="major">
+                            <p>Toilet Rolls 10 x 4</p>
+                            <span class="price">£19.67 SKU:811D21</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/811D21 3-ply TR.jpg" alt="Lucart Luxury Toilet Roll" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- EcoNatural 6.3 Toilet Rolls -->
+                    <article class="post" data-title="EcoNatural 6.3 Toilet Rolls" data-category="EcoNatural 6.3 Toilet Rolls 811C73J" data-image="images/EcoNatural 6.3 Toilet Rolls.png">
+                        <h3><a href="#">EcoNatural 6.3 Toilet Rolls</a></h3>
+                        <header class="major">
+                            <p>Eco Toilet Rolls 12 x 6</p>
+                            <span class="price">£31.00 SKU:811C73J</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/811C73J EcoNatural TR.jpg" alt="EcoNatural 6.3 Toilet Rolls" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Mini Jumbo -->
+                    <article class="post" data-title="Mini Jumbo" data-category="Mini Jumbo 812350" data-image="images/Mini Jumbo.png">
+                        <h3><a href="#">Mini Jumbo</a></h3>
+                        <header class="major">
+                            <p>Recycled Jumbo Toilet Rolls 150m 80mm Core</p>
+                            <span class="price">£18.90 SKU:812350</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/812350 Mini Jumbo.jpg" alt="Mini Jumbo" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                                                                                                    
+                    <!-- Maxi Jumbo -->
+                    <article class="post" data-title="Maxi Jumbo" data-category="Maxi Jumbo 812395" data-image="images/Mini Jumbo.png">
+                        <h3><a href="#">Maxi Jumbo</a></h3>
+                        <header class="major">
+                            <p>Recycled Jumbo Toilet Rolls 150m 80mm Core</p>
+                            <span class="price">£18.90 SKU:812395</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/812395 Maxi Jumbo.jpg" alt="E Maxi Jumbo" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- EcoNatural Mini Jumbo -->
+                    <article class="post" data-title="EcoNatural Mini Jumbo" data-category="EcoNatural Mini Jumbo 812152P" data-image="images/EcoNatural Mini Jumbo.png">
+                        <h3><a href="#">EcoNatural Mini Jumbo</a></h3>
+                        <header class="major">
+                            <p>Eco Jumbo Toilet Rolls 150m 76mm Core</p>
+                            <span class="price">£24.99 SKU:812152P</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/812152 EcoNatural Mini Jumbo.jpg" alt="EcoNatural Mini Jumbo" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- EcoNatural Maxi Jumbo -->
+                    <article class="post" data-title="EcoNatural Maxi Jumbo" data-category="EcoNatural Maxi Jumbo 812140AP" data-image="images/EcoNatural Maxi Jumbo.png">
+                        <h3><a href="#">EcoNatural Maxi Jumbo</a></h3>
+                        <header class="major">
+                            <p>Eco Jumbo Toilet Rolls 300m 76mm Core</p>
+                            <span class="price">£24.99 SKU:812140AP</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/812140A EcoNatural Maxi Jumbo.jpg" alt="EcoNatural Maxi Jumbo" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Blue Centrefeed Roll -->
+                    <article class="post" data-title="Blue Centrefeed Roll" data-category="Blue Centrefeed Roll 852662" data-image="images/Blue Centrefeed Roll.png">
+                        <h3><a href="#">Blue Centrefeed Roll 2-Ply</a></h3>
+                        <header class="major">
+                            <p>Centrefeed Roll (6) 150m</p>
+                            <span class="price">£16.98 SKU:852665</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/852665 Blue Centrefeed.jpg" alt="Blue Centrefeed Roll" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
+                    <!-- White Centrefeed Roll -->
+                    <article class="post" data-title="White Centrefeed Roll" data-category="White Centrefeed Roll 852495" data-image="images/White Centrefeed Roll.png">
+                        <h3><a href="#">White Centrefeed Roll</a></h3>
+                        <header class="major">
+                            <p>Centrefeed Roll (6) 150m</p>
+                            <span class="price">£16.98 SKU:852495</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/852495 White Centrefeed.jpg" alt="White Centrefeed Roll" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- EcoNatural 135 Centrefeed Roll -->
+                    <article class="post" data-title="EcoNatural 135 Centrefeed Roll" data-category="EcoNatural 135 Centrefeed Roll 852226A" data-image="images/EcoNatural 135 Centrefeed Roll.png">
+                        <h3><a href="#">EcoNatural 135 Centrefeed Roll</a></h3>
+                        <header class="major">
+                            <p>Eco Centrefeed Roll (6) 125m</p>
+                            <span class="price">£26.50 SKU:852226A</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/852226A EcoNatural Centrefeed.jpg" alt="EcoNatural 135 Centrefeed Roll" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- C Fold Blue l-Ply Hand Towels -->
+                    <article class="post" data-title="C Fold Blue l-Ply Hand Towels" data-category="C Fold Blue l-Ply Hand Towels 862096E" data-image="images/C Fold Blue l-Ply Hand Towels.png">
+                        <h3><a href="#">C Fold Blue 1-Ply Hand Towels</a></h3>
+                        <header class="major">
+                            <p>Recycled Hand Towels Boxed 2640</p>
+                            <span class="price">£21.31 SKU:862096E</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/862096E C fold Blue.jpg" alt="C Fold Blue l-Ply Hand Towels" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- C Fold White 2-Ply Hand Towels -->
+                    <article class="post" data-title="C Fold White 2-Ply Hand Towels" data-category="C Fold White 2-Ply Hand Towels 862122" data-image="images/C Fold White 2-Ply Hand Towels.png">
+                        <h3><a href="#">C Fold White 2-Ply Hand Towels</a></h3>
+                        <header class="major">
+                            <p>Embossed Hand Towels Boxed 2400</p>
+                            <span class="price">£26.67 SKU:862122</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/862122 C Fold White.jpg" alt="C Fold White 2-Ply Hand Towels" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                                                             
+                    <!-- Z Fold White 2-Ply Hand Towels -->
+                    <article class="post" data-title="Z Fold White 2-Ply Hand Towels" data-category="Z Fold White 2-Ply Hand Towels 864083" data-image="images/Z Fold White 2-Ply Hand Towels.png">
+                        <h3><a href="#">Z Fold White 2-Ply Hand Towels</a></h3>
+                        <header class="major">
+                            <p>Hand Towels Boxed 3000</p>
+                            <span class="price">£27.90 SKU:864083</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/864083 Z Fold White.jpg" alt="Z Fold White 2-Ply Hand Towels" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- EcoNatural Z Fold 2-Ply Hand Towels -->
+                    <article class="post" data-title="EcoNatural Z Fold 2-Ply Hand Towels" data-category="EcoNatural Z Fold 2-Ply Hand Towels 864043B" data-image="images/EcoNatural Z Fold 2-Ply Hand Towels.png">
+                        <h3><a href="#">EcoNatural Z Fold 2-Ply Hand Towels</a></h3>
+                        <header class="major">
+                            <p>Eco Hand Towels Boxed 3000</p>
+                            <span class="price">£26.50 SKU:864043B</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/864043B EcoNatural Z Fold.jpg" alt="EcoNatural Z Fold 2-Ply Hand Towels" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- V Fold Blue 1-Ply Hand Towels -->
+                    <article class="post" data-title="V Fold Blue 1-Ply Hand Towels" data-category="V Fold Blue 1-Ply Hand Towels 863103E" data-image="images/V Fold Blue 1-Ply Hand Towels.png">
+                        <h3><a href="#">V Fold Blue 1-Ply Hand Towels</a></h3>
+                        <header class="major">
+                            <p>Recycled Hand Towels Boxed 3600</p>
+                            <span class="price">£20.73 SKU:863103E</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/863103E V Fold Blue.jpg" alt=" V Fold Blue 1-Ply Hand Towels" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
+                    <!-- EcoNatural V Fold 1-Ply Hand Towels -->
+                    <article class="post" data-title="EcoNatural V Fold 1-Ply Hand Towels" data-category="EcoNatural V Fold 1-Ply Hand Towels 863049" data-image="images/EcoNatural V Fold 1-Ply Hand Towels.png">
+                        <h3><a href="#">EcoNatural V Fold 1-Ply Hand Towels</a></h3>
+                        <header class="major">
+                            <p>Eco Hand Towels Boxed 3800</p>
+                            <span class="price">£29.99 SKU:863049</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/863049 EcoNatural V Fold.jpg" alt="EcoNatural V Fold 1-Ply Hand Towels" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>
+                    <!-- Cubed Facial Tissue -->
+                    <article class="post" data-title="Cubed Facial Tissue" data-category="Cubed Facial Tissue 841103" data-image="images/Cubed Facial Tissue.png">
+                        <h3><a href="#">Cubed Facial Tissue</a></h3>
+                        <header class="major">
+                            <p>2-ply White Cubed Facial Tissue boxed 20 x 70</p>
+                            <span class="price">£20.80 SKU:841103</span>
+                        </header>
+                        <a href="#" class="image fit" onclick="openModal(event, this)">
+                            <img src="images/841103 Cube Tissues.jpg" alt="Cubed Facial Tissue" />
+                        </a>
+                        <button class="add-to-want-list-btn">Add to Want List</button>
+                    </article>                    
 
             <!-- Modal -->
             <div id="imageModal" class="modal">
@@ -1050,7 +2782,7 @@
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
             <script>
-                const imagesDirectory = 'images/';
+                const imagesDirectory = 'clean\images';
                 const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
                 // Function to find the closest matching image file for each product
@@ -1068,6 +2800,58 @@
                         });
                     });
                 }
+                    const pages = Array.from({length: 16}, (_, i) => i === 0 ? 'generic.html' : `${i + 1}.html`);
+
+    function openModal(event, image) {
+        event.preventDefault();
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = image.querySelector("img").src;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+    }
+
+    function addToWantList(button) {
+        var article = button.closest('article');
+        var itemName = article.dataset.title;
+        var itemPriceText = article.querySelector('header.major > span.price').textContent;
+        var itemPrice = parseFloat(itemPriceText.match(/£([\d.]+)/)[1]);
+
+        var wantList = document.getElementById('want-list');
+        var itemExists = Array.from(wantList.children).some(li => li.textContent.includes(itemName));
+
+        if (!itemExists) {
+            var li = document.createElement('li');
+            li.innerHTML = `<span class="remove-btn" onclick="removeFromWantList(this)">❌</span> ${itemName}`;
+            wantList.appendChild(li);
+        }
+
+        updateTotals(itemPrice);
+    }
+
+    function removeFromWantList(button) {
+        var li = button.closest('li');
+        li.remove();
+        updateTotals(0);
+    }
+
+    function updateTotals(priceChange) {
+        var subtotalElement = document.getElementById('subtotal');
+        var vatTotalElement = document.getElementById('vat-total');
+
+        var subtotal = parseFloat(subtotalElement.textContent.match(/£([\d.]+)/)[1]);
+        subtotal += priceChange;
+
+        var vat = subtotal * 0.2;
+        var total = subtotal + vat;
+
+        subtotalElement.textContent = `total: £${subtotal.toFixed(2)}`;
+        vatTotalElement.textContent = `VAT (20%): £${vat.toFixed(2)}`;
+    }
 
                 // Open modal function
                 function openModal(event, image) {
