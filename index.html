@@ -275,6 +275,11 @@
             const walk = (x - startX) * 2;
             slider.scrollLeft = scrollLeft - walk;
         });
+
+        // Ensure first category ("Floor Cleaning") is fully visible on mobile
+        window.addEventListener('load', () => {
+            slider.scrollLeft = 0;
+        });
     </script>
 </body>
 </html>
