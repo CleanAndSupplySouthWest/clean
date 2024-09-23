@@ -64,11 +64,16 @@
             display: flex;
             justify-content: center;
             padding: 20px;
-            overflow-x: auto;
+            overflow-x: scroll;
             cursor: grab;
             position: relative;
             scroll-behavior: smooth;
             user-select: none; /* Prevent text selection */
+            width: 100%;
+        }
+
+        .categories-container::-webkit-scrollbar {
+            display: none; /* Hide the scrollbar for cleaner UI */
         }
         .categories-container::-webkit-scrollbar {
             height: 8px;
@@ -278,7 +283,8 @@
 
         // Ensure first category ("Floor Cleaning") is fully visible on mobile
         window.addEventListener('load', () => {
-            slider.scrollLeft = -50;
+            const container = document.getElementById('categoriesContainer');
+            container.scrollTo({ left: 0, behavior: 'smooth' });
         });
     </script>
 </body>
