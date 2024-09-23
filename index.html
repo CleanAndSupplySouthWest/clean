@@ -64,16 +64,11 @@
             display: flex;
             justify-content: center;
             padding: 20px;
-            overflow-x: scroll;
+            overflow-x: auto;
             cursor: grab;
             position: relative;
             scroll-behavior: smooth;
             user-select: none; /* Prevent text selection */
-            width: 100%;
-        }
-
-        .categories-container::-webkit-scrollbar {
-            display: none; /* Hide the scrollbar for cleaner UI */
         }
         .categories-container::-webkit-scrollbar {
             height: 8px;
@@ -279,12 +274,6 @@
             const x = e.pageX - slider.offsetLeft;
             const walk = (x - startX) * 2;
             slider.scrollLeft = scrollLeft - walk;
-        });
-
-        // Ensure first category ("Floor Cleaning") is fully visible on mobile
-        window.addEventListener('load', () => {
-            const container = document.getElementById('categoriesContainer');
-            container.scrollTo({ left: 0, behavior: 'smooth' });
         });
     </script>
 </body>
