@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washroom Cleaners</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Updated path to CSS -->
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: url('../images/2L Bottles.jpg') no-repeat center center; /* Updated path to background image */
+            background-size: cover;
+            color: #fff;
+            padding: 70px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-out forwards;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            animation: fadeInBackground 2s ease-out forwards;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            animation: fadeInText 2s ease-out forwards;
+        }
+        header .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header .home-button:hover {
+            background-color: #ddd;
+        }
+
+        #search-bar {
+            margin-top: 20px;
+            padding: 10px;
+            width: 50%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInBackground {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .main-content {
+            padding: 40px;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: left;
+            width: 250px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .product img {
+            max-width: 20%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .product p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 10px 0;
+        }
+        .product .price {
+            font-size: 1.2rem;
+            color: #000000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .product .size-select {
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        .product select {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .product .open-links {
+            margin-top: 10px;
+        }
+        .product .open-links a {
+            display: block;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .product .open-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer .social-icons {
+            margin: 10px 0;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        footer .copyright {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .product-container { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="home-button">Home</a> <!-- Home button -->
+        <h1>Clean And Supply Southwest</h1>
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" placeholder="Search for a product..." oninput="fuzzySearch()">
+    </header>
+    <main>
+        <div class="main-content">
+            <h2>Washroom Cleaners</h2>
+            <div class="product-container">
+                <!-- Product 1 -->
+                <div class="product" id="product1">
+                    <img src="../images/STC - 1L.png" alt="STC" id="product1-image"> <!-- Placeholder for image -->
+                    <h3>STC</h3>
+                    <p>A powerful cleaner that cuts through grime and leaves your bathroom sparkling clean.</p>
+                    <div class="price" id="product1-price">£2.92</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size1">Size:</label>
+                        <select id="size1" onchange="updateProduct('product1', this.value)">
+                            <option value="1L" data-price="2.92" data-image="../images/STC - 1L.png">1L - £2.92</option>
+                            <option value="5L" data-price="9.68" data-image="../images/STC - 5L.png">5L - £9.68</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/510_stc_sds.pdf" target="_blank" open>Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/510_stc_info.pdf" target="_blank" open>Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product" id="product2">
+                    <img src="../images/Acid Wash 80 - 1L.png" alt="Acid Wash 80" id="product2-image"> <!-- Placeholder for image -->
+                    <h3>Acid Wash 80</h3>
+                    <p>A highly concentrated acidic cleaner for the removal of severe water scale and rust marks. Not suitable for use on stainless steel.</p>
+                    <div class="price" id="product2-price">£3.97</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size2">Size:</label>
+                        <select id="size2" onchange="updateProduct('product2', this.value)">
+                            <option value="1L" data-price="3.97" data-image="../images/Acid Wash 80 - 1L.png">1L - £3.97</option>
+                            <option value="5L" data-price="11.26" data-image="../images/Acid Wash 80 - 5L.png">5L - £11.26</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/502_acidwash80_sds.pdf" target="_blank" open>Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/502_acidwash80_info.pdf" target="_blank" open>Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product" id="product3">
+                    <img src="../images/Urika - 1L.png" alt="Urika" id="product3-image"> <!-- Placeholder for image -->
+                    <h3>Urika</h3>
+                    <p>A highly effective cleaner and descaler formulated to remove severe water scale and body fats. Safe for use on stainless steel.</p>
+                    <div class="price" id="product3-price">£4.96</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size3">Size:</label>
+                        <select id="size3" onchange="updateProduct('product3', this.value)">
+                            <option value="1L" data-price="4.96" data-image="../images/Urika - 1L.png">1L - £4.96</option>
+                            <option value="5L" data-price="16.86" data-image="../images/Urika - 5L.png">5L - £16.86</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/525_urika_sds.pdf" target="_blank" open>Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/525_urika_info.pdf" target="_blank" open>Info Sheet</a>
+                    </div>
+                </div>                 
+                <!-- Product 4 -->
+                <div class="product" id="product4">
+                    <img src="../images/Zakol - 1L - Copy.png" alt="Zakol" id="product4-image"> <!-- Placeholder for image -->
+                    <h3>Zakol</h3>
+                    <p>The thick, blue, pin- fragranced formula clings to the toilet bowl and deodorises by removing scale even below the waterline.</p>
+                    <p>Not suitable for use on stainless steel.</p>
+                    <div class="price" id="product4-price">£4.96</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size4">Size:</label>
+                        <select id="size4" onchange="updateProduct('product4', this.value)">
+                            <option value="1L" data-price="4.96" data-image="../images/Zakol - 1L.png">1L - £4.96</option>
+                            <option value="5L" data-price="16.86" data-image="../images/Zakol - 5L.png">5L - £16.86</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/501_zakol_sds.pdf" target="_blank" open>Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/501_zakol_info.pdf" target="_blank" open>Info Sheet</a>
+                    </div>
+                </div>                    
+                <!-- Product 5 -->
+                <div class="product" id="product5">
+                    <img src="../images/GREEN_R WC Fresh - 1L.png" alt="Green'R WC Fresh" id="product5-image"> <!-- Placeholder for image -->
+                    <h3>Green'R WC Fresh</h3>
+                    <p>Ecological - Daily use toilet cleaner. Ready to use with a fresh scent. Cleans all toilets and urinals.</p>
+                    <div class="price" id="product5-price">£3.62</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size5">Size:</label>
+                        <select id="size5" onchange="updateProduct('product5', this.value)">
+                            <option value="1L" data-price="3.62" data-image="../images/GREEN_R WC Fresh - 1L.png">1L - £3.62</option>
+                            <option value="5L" data-price="13.47" data-image="../images/GREEN_R WC Fresh - 5L.png">5L - £13.47</option>
+                        </select>
+                    </div>                    
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/550_greenrwcfresh_sds.pdf.crdownload" target="_blank" open>Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/550_greenrwcfresh_info.pdf" target="_blank" open>Info Sheet</a>
+                    </div>
+                </div>                 
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Clean And Supply Southwest
+        </div>
+    </footer>
+    <script>
+        function updateProduct(productId, selectedValue) {
+            const priceElement = document.getElementById(`${productId}-price`);
+            const imageElement = document.getElementById(`${productId}-image`);
+            const selectedOption = document.querySelector(`#${productId} select option[value="${selectedValue}"]`);
+            const newPrice = selectedOption ? selectedOption.dataset.price : '0.00';
+            const newImage = selectedOption ? selectedOption.dataset.image : '';
+            priceElement.textContent = `£${newPrice}`;
+            imageElement.src = newImage;
+        }
+
+        function fuzzySearch() {
+            const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (levenshteinDistance(searchQuery, productName) <= 3 || productName.includes(searchQuery)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        function levenshteinDistance(a, b) {
+            const matrix = [];
+            let i, j;
+            
+            if (a.length == 0) return b.length;
+            if (b.length == 0) return a.length;
+
+            for (i = 0; i <= b.length; i++) {
+                matrix[i] = [i];
+            }
+
+            for (j = 0; j <= a.length; j++) {
+                matrix[0][j] = j;
+            }
+
+            for (i = 1; i <= b.length; i++) {
+                for (j = 1; j <= a.length; j++) {
+                    if (b.charAt(i - 1) == a.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1));
+                    }
+                }
+            }
+
+            return matrix[b.length][a.length];
+        }
+    </script>
+</body>
+</html>

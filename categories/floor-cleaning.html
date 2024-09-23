@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Cleaning Products</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: url('../images/2L Bottles.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 70px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            animation: fadeInBackground 2s ease-out forwards;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            animation: fadeInText 2s ease-out forwards;
+        }
+
+        header .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header .home-button:hover {
+            background-color: #ddd;
+        }
+
+        #search-bar {
+            margin-top: 20px;
+            padding: 10px;
+            width: 50%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInBackground {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: left;
+            width: 250px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .product img {
+            max-width: 20%;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .product .price {
+            font-size: 1.2rem;
+            color: #000000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product .size-select {
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .product select {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .product .open-links {
+            margin-top: 10px;
+        }
+
+        .product .open-links a {
+            display: block;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .product .open-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer .copyright {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="home-button">Home</a>
+        <h1>Clean And Supply Southwest</h1>
+        <input type="text" id="search-bar" placeholder="Search for a product..." oninput="fuzzySearch()">
+    </header>
+    <main>
+        <div class="main-content">
+            <h2>Floor Cleaning Products</h2>
+            <div class="product-container">
+                <!-- Product 1 -->
+                <div class="product" id="product1">
+                    <img src="../images/Diamond Extra - 5L.png" alt="Diamond Extra" id="product1-image">
+                    <h3>Diamond Extra</h3>
+                    <p>Acrylic-based polish with a deep gloss, wet-look finish, and excellent slip resistance. Ideal for non-porous floors.</p>
+                    <div class="price" id="product1-price">£35.60</div>
+                    <div class="size-select">
+                        <label for="size1">Size:</label>
+                        <select id="size1" onchange="updateProduct('product1', this.value)">
+                            <option value="5L" data-price="35.60" data-image="../images/Diamond Extra - 5L.png">5L - £35.60</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/DiamondExtra_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/DiamondExtra_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product" id="product2">
+                    <img src="../images/Zip Strip - 5L.png" alt="Zip Strip" id="product2-image">
+                    <h3>Zip Strip</h3>
+                    <p>Caustic-free, water-based stripper for metallised and non-metallised polishes. Rinse-free and efficient.</p>
+                    <div class="price" id="product2-price">£21.22</div>
+                    <div class="size-select">
+                        <label for="size2">Size:</label>
+                        <select id="size2" onchange="updateProduct('product2', this.value)">
+                            <option value="5L" data-price="21.22" data-image="../images/Zip Strip - 5L.png">5L - £21.22</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/ZipStrip_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/ZipStrip_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product" id="product3">
+                    <img src="../images/PDQ - 5L.png" alt="P.D.Q" id="product3-image">
+                    <h3>P.D.Q</h3>
+                    <p>Fragrant, yellow wax floor cleaner and maintainer. Removes scuffs and leaves a slip-resistant shine.</p>
+                    <div class="price" id="product3-price">£10.53</div>
+                    <div class="size-select">
+                        <label for="size3">Size:</label>
+                        <select id="size3" onchange="updateProduct('product3', this.value)">
+                            <option value="5L" data-price="10.53" data-image="../images/PDQ - 5L.png">5L - £10.53</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/PDQ_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/PDQ_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product" id="product4">
+                    <img src="../images/GREEN_R Multi - 1L.png" alt="Green’R Mult" id="product4-image">
+                    <h3>Green’R Multi</h3>
+                    <p>Ecological is a concentrated all-purpose cleaner for hard surfaces. Economical and effective on glass, chrome, marble, aluminium, and polished floors.</p>
+                    <div class="price" id="product4-price">£17.24</div>
+                    <div class="size-select">
+                        <label for="size4">Size:</label>
+                        <select id="size4" onchange="updateProduct('product4', this.value)">
+                            <option value="1L" data-price="17.24" data-image="../images/GREEN_R Multi - 1L.png">1L - £5.44</option>
+                            <option value="5L" data-price="17.24" data-image="../images/GREEN_R Multi - 5L.png">5L - £16.78</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/SelgieneExtreme_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/SelgieneExtreme_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product" id="product5">
+                    <img src="../images/C2 - 1ltr.png" alt="C2" id="product5-image">
+                    <h3>C2</h3>
+                    <p>C2 is a neutral, green floor cleaner for all hard surfaces. It dries quickly and evenly, leaving no patches or smears, and has a fresh lemon fragrance. Safe for polished floors, marble, linoleum, wood, PVC, concrete, tiles, and laminate.</p>
+                    <div class="price" id="product5-price">£10.92</div>
+                    <div class="size-select">
+                        <label for="size5">Size:</label>
+                        <select id="size5" onchange="updateProduct('product5', this.value)">
+                            <option value="1L" data-price="10.92" data-image="../images/C2 - 1ltr.png">1L - £5.44</option>
+                            <option value="5L" data-price="10.92" data-image="../images/C2 - 5l.png">5L - £17.97</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/SelgieneUltra_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/SelgieneUltra_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product" id="product6">
+                    <img src="../images/Defoamer - 5L.png" alt="Defoamer" id="product6-image">
+                    <h3>Defoamer</h3>
+                    <p>This specialised de-foaming agent controls foam in liquid recovery tanks of cleaning machines, addressing both detergent foam and residual foam. It helps optimise machinery capacity by eliminating foaming issues</p>
+                    <div class="price" id="product6-price">£8.67</div>
+                    <div class="size-select">
+                        <label for="size6">Size:</label>
+                        <select id="size6" onchange="updateProduct('product6', this.value)">
+                            <option value="5L" data-price="8.67" data-image="../images/Defoamer - 5L.png">5L - £13.61</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/ActOriginal_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/ActOriginal_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="product" id="product7">
+                    <img src="../images/Clover Gel Lemon - 5L.png" alt="Clover Gel Lemon " id="product7-image">
+                    <h3>Clover Gel Lemon</h3>
+                    <p>A viscous yellow liquid gel, which contains natural citrus extract oils to leave a lasting lemon freshness.</p>
+                    <div class="price" id="product7-price">£10.85</div>
+                    <div class="size-select">
+                        <label for="size7">Size:</label>
+                        <select id="size7" onchange="updateProduct('product7', this.value)">
+                            <option value="5L" data-price="10.85" data-image="../images/Clover Gel Lemon - 5L.png">5L - £10.85</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/107_clovergellemon_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/107_clovergellemon_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product" id="product8">
+                    <img src="../images/Scrub Kleen - 5L.png" alt="Scrub Kleen" id="product8-image">
+                    <h3>Scrub Kleen</h3>
+                    <p>A heavy duty, low foam, alkaline cleaner, designed especially for use with scrubber drier machines.</p>
+                    <div class="price" id="product8-price">£12.59</div>
+                    <div class="size-select">
+                        <label for="size8">Size:</label>
+                        <select id="size8" onchange="updateProduct('product8', this.value)">
+                            <option value="5L" data-price="12.59" data-image="../images/Scrub Kleen - 5L.png">5L - £12.59</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/308_scrubkleen_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/308_scrubkleen_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="product" id="product9">
+                    <img src="../images/UB60 - 2L.png" alt="UB60" id="product9-image">
+                    <h3>UB60</h3>
+                    <p>A super concentrated neutral floor cleaner and maintainer for use after dilution through the UltraBlend and Ultra Dose systems.</p>
+                    <div class="price" id="product9-price">£11.38</div>
+                    <div class="size-select">
+                        <label for="size9">Size:</label>
+                        <select id="size9" onchange="updateProduct('product9', this.value)">
+                            <option value="2L" data-price="11.38" data-image="../images/UB60 - 2L.png">2L - £11.38</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/996_ub60_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/996_ub60_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 10 -->
+                <div class="product" id="product10">
+                    <img src="../images/FloorIT - 5L.png" alt="FloorIt" id="product10-image">
+                    <h3>FloorIt</h3>
+                    <p>Versatile, low-foaming cleaner for all hard floors. Quick-drying formula prevents smears and leaves a fresh lemon scent. Safe for polished floors, marble, wood, and tiles.</p>
+                    <div class="price" id="product10-price">£6.81</div>
+                    <div class="size-select">
+                        <label for="size10">Size:</label>
+                        <select id="size10" onchange="updateProduct('product10', this.value)">
+                            <option value="5L" data-price="6.81" data-image="../images/FloorIT - 5L.png">5L - £6.81</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/FloorIt_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/FloorIt_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 11 -->
+                <div class="product" id="product11">
+                    <img src="../images/Comet - 1L.png" alt="Comet" id="product11-image">
+                    <h3>Comet</h3>
+                    <p>Low-foam detergent for spray extraction cleaning of carpets and upholstery. Also works as a pre-spotter for greasy stains. Ideal for hotels, offices, and cinemas.</p>
+                    <div class="price" id="product11-price">£2.76</div>
+                    <div class="size-select">
+                        <label for="size11">Size:</label>
+                        <select id="size11" onchange="updateProduct('product11', this.value)">
+                            <option value="1L" data-price="2.76" data-image="../images/Comet - 1L.png">1L - £2.76</option>
+                            <option value="5L" data-price="10.90" data-image="../images/Comet - 5L.png">5L - £10.90</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/Comet_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/Comet_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 12 -->
+                <div class="product" id="product12">
+                    <img src="../images/Dry Foam - 5L.png" alt="Dry Foam" id="product12-image">
+                    <h3>Dry Foam</h3>
+                    <p>Efficient carpet shampoo that cleans without over-wetting. Ideal for high-traffic areas, it lifts dirt quickly and prevents re-soiling.</p>
+                    <div class="price" id="product12-price">£12.31</div>
+                    <div class="size-select">
+                        <label for="size12">Size:</label>
+                        <select id="size12" onchange="updateProduct('product12', this.value)">
+                            <option value="5L" data-price="12.31" data-image="../images/Dry Foam - 5L.png">5L - £12.31</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/DryFoam_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/DryFoam_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 13 -->
+                <div class="product" id="product13">
+                    <img src="../images/Ador Neutra.png" alt="Ador Neutra" id="product13-image">
+                    <h3>Ador Neutra</h3>
+                    <p>A deodoriser, cleaner, and urine neutraliser in one. Perfect for care homes, it neutralizes odours and is safe for carpets, furniture, toilets, and more.</p>
+                    <div class="price" id="product13-price">£3.97</div>
+                    <div class="size-select">
+                        <label for="size13">Size:</label>
+                        <select id="size13" onchange="updateProduct('product13', this.value)">
+                            <option value="750ml" data-price="3.97" data-image="../images/Ador Neutra.png">750ml - £3.97</option>
+                            <option value="5L" data-price="17.94" data-image="../images/Ador Neutra.png">5L - £17.94</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/AdorNeutra_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/AdorNeutra_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 14 -->
+                <div class="product" id="product14">
+                    <img src="../images/Viro-Sol RTU - 5L.png" alt="Viro-Sol" id="product14-image">
+                    <h3>Viro-Sol</h3>
+                    <p>Powerful citrus-based cleaner and degreaser for tough stains in commercial settings. Suitable for scrubber driers. Avoid use on aluminium and sensitive surfaces.</p>
+                    <div class="price" id="product14-price">£12.61</div>
+                    <div class="size-select">
+                        <label for="size14">Size:</label>
+                        <select id="size14" onchange="updateProduct('product14', this.value)">
+                            <option value="5L" data-price="12.61" data-image="../images/Viro-Sol RTU - 5L.png">5L - £12.61</option>
+                            <option value="20L" data-price="39.59" data-image="../images/Viro-Sol 20L.jpg">20L - £39.59</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/ViroSol_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/ViroSol_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 15 -->
+                <div class="product" id="product15">
+                    <img src="../images/Ubik 2000 - 5L.png" alt="UBIK 2000" id="product15-image">
+                    <h3>UBIK 2000</h3>
+                    <p>Alkaline cleaner and degreaser for heavy grime in food environments. Ideal for kitchens and food processing facilities. Suitable for scrubber driers.</p>
+                    <div class="price" id="product15-price">£14.26</div>
+                    <div class="size-select">
+                        <label for="size15">Size:</label>
+                        <select id="size15" onchange="updateProduct('product15', this.value)">
+                            <option value="5L" data-price="14.26" data-image="../images/Ubik 2000 - 5L.png">5L - £14.26</option>
+                            <option value="20L" data-price="42.81" data-image="../images/Ubik 20L.jpg">20L - £42.81</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/UBIK2000_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/UBIK2000_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 16 -->
+                <div class="product" id="product16">
+                    <img src="../images/Sola Lemon - 5L.png" alt="Sola Lemon" id="product16-image">
+                    <h3>Sola Lemon</h3>
+                    <p>Concentrated cleaner for tough grime. Ideal for removing grease and stains from alkaline-resistant surfaces. Available in lemon or odourless.</p>
+                    <div class="price" id="product16-price">£11.38</div>
+                    <div class="size-select">
+                        <label for="size16">Size:</label>
+                        <select id="size16" onchange="updateProduct('product16', this.value)">
+                            <option value="5L" data-price="11.38" data-image="../images/Sola Lemon - 5L.png">5L - £11.38</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/SolaLemon_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/SolaLemon_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 17 -->
+                <div class="product" id="product17">
+                    <img src="../images/DD10 - 5L.png" alt="DD10" id="product17-image">
+                    <h3>DD10</h3>
+                    <p>pH-neutral degreaser for safely removing oils and grease from non-permeable surfaces. Solvent-free, ideal for food industry applications.</p>
+                    <div class="price" id="product17-price">£10.94</div>
+                    <div class="size-select">
+                        <label for="size17">Size:</label>
+                        <select id="size17" onchange="updateProduct('product17', this.value)">
+                            <option value="5L" data-price="10.94" data-image="../images/DD10 - 5L.png">5L - £10.94</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/DD10_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/DD10_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 18 -->
+                <div class="product" id="product18">
+                    <img src="../images/Spirit - 750ml.png" alt="Spirit" id="product18-image">
+                    <h3>Spirit</h3>
+                    <p>Concentrated cleaner for daily use on hard surfaces like marble, laminate, and tiles. Perfect for schools, hotels, and commercial spaces.</p>
+                    <div class="price" id="product18-price">£2.96</div>
+                    <div class="size-select">
+                        <label for="size18">Size:</label>
+                        <select id="size18" onchange="updateProduct('product18', this.value)">
+                            <option value="750ml" data-price="2.96" data-image="../images/Spirit - 750ml.png">750ml - £2.96</option>
+                            <option value="5L" data-price="6.92" data-image="../images/Spirit - 5L.png">5L - £6.92</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/Spirit_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/Spirit_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 19 -->
+                <div class="product" id="product19">
+                    <img src="../images/C1 - 1ltr.png" alt="C1" id="product19-image">
+                    <h3>C1</h3>
+                    <p>Heavy-duty cleaner and degreaser for a wide range of surfaces. Perfect for removing tough grime and stains.</p>
+                    <div class="price" id="product19-price">£5.50</div>
+                    <div class="size-select">
+                        <label for="size19">Size:</label>
+                        <select id="size19" onchange="updateProduct('product19', this.value)">
+                            <option value="1L" data-price="5.50" data-image="../images/C1 - 1ltr.png">1L - £5.50</option>
+                            <option value="5L" data-price="17.97" data-image="../images/C1 - 5l.png">5L - £17.97</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/Versatile_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/Versatile_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+                <!-- Product 20 -->
+                <div class="product" id="product20">
+                    <img src="../images/Clover Gel Contract - 5L.png" alt="Clover Gel Contract" id="product20-image">
+                    <h3>Clover Gel Contract</h3>
+                    <p>A viscous green liquid gel, which contains natural pine oils to leave a lasting pine freshness.</p>
+                    <div class="price" id="product20-price">£8.85</div>
+                    <div class="size-select">
+                        <label for="size20">Size:</label>
+                        <select id="size20" onchange="updateProduct('product20', this.value)">
+                            <option value="5L" data-price="8.85" data-image="../images/Clover Gel Contract - 5L.png">5L - £8.85</option>
+                        </select>
+                    </div>
+                    <div class="open-links">
+                        <a href="../safe_info_PDF/105_clovergelcontract_sds.pdf" target="_blank">Safety Data Sheet</a>
+                        <a href="../safe_info_PDF/105_clovergelcontract_info.pdf" target="_blank">Info Sheet</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="social-icons">
+                <!-- Social media icons can be added here -->
+            </div>
+            <div class="copyright">
+                &copy; 2024 Clean And Supply Southwest. All rights reserved.
+            </div>
+        </footer>
+    
+        <script>
+            // Fuzzy search function
+            function fuzzySearch() {
+                const query = document.getElementById('search-bar').value.toLowerCase();
+                const products = document.querySelectorAll('.product');
+                products.forEach(product => {
+                    const productName = product.querySelector('h3').textContent.toLowerCase();
+                    if (productName.includes(query)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+    
+            // Function to update product based on selected size (if needed)
+            function updateProduct(productId, selectedSize) {
+                const productElement = document.getElementById(productId);
+                const selectedOption = productElement.querySelector(`select option[value="${selectedSize}"]`);
+                const newPrice = selectedOption.dataset.price;
+                const newImage = selectedOption.dataset.image;
+    
+                // Update price
+                productElement.querySelector('.price').textContent = `£${newPrice}`;
+    
+                // Update image
+                productElement.querySelector('img').src = newImage;
+            }
+        </script>
+    </body>
+    
+    </html>

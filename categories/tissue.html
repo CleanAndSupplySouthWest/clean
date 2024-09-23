@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Products</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Updated path to CSS -->
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: url('../images/2L Bottles.jpg') no-repeat center center; /* Updated path to background image */
+            background-size: cover;
+            color: #fff;
+            padding: 70px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-out forwards;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            animation: fadeInBackground 2s ease-out forwards;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            animation: fadeInText 2s ease-out forwards;
+        }
+        header .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header .home-button:hover {
+            background-color: #ddd;
+        }
+
+        #search-bar {
+            margin-top: 20px;
+            padding: 10px;
+            width: 50%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInBackground {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .main-content {
+            padding: 40px;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: left;
+            width: 250px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .product img {
+            max-width: 50%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .product p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 10px 0;
+        }
+        .product .price {
+            font-size: 1.2rem;
+            color: #000000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .product .size-select {
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        .product select {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .product .open-links {
+            margin-top: 10px;
+        }
+        .product .open-links a {
+            display: block;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .product .open-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer .social-icons {
+            margin: 10px 0;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        footer .copyright {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .product-container { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="home-button">Home</a> <!-- Home button -->
+        <h1>Clean And Supply Southwest</h1>
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" placeholder="Search for a product..." oninput="fuzzySearch()">
+    </header>
+    <main>
+        <div class="main-content">
+            <h2>Paper Products</h2>
+            <div class="product-container">
+                <!-- Product 1 -->
+                <div class="product" id="product1">
+                    <img src="../images/852665 Blue Centrefeed.jpg" alt="blue roll Centrefeed" id="product1-image"> <!-- Placeholder for image -->
+                    <h3>Blue Centrefeed</h3>
+                    <p>Blue Roll at 150m x6.</p>
+                    <div class="price" id="product1-price">£16.98</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size1">Size:</label>
+                        <select id="size1" onchange="updateProduct('product1', this.value)">
+                            <option value="150m" data-price="16.98" data-image="../images/852665 Blue Centrefeed.jpg">150m x 6 - £16.98</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product" id="product2">
+                    <img src="../images/852495 White Centrefeed.jpg" alt="White Centrefeed" id="product2-image"> <!-- Placeholder for image -->
+                    <h3>White Centrefeed</h3>
+                    <p>White Centrefeed 150m x6.</p>
+                    <div class="price" id="product2-price">£16.98</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size2">Size:</label>
+                        <select id="size2" onchange="updateProduct('product2', this.value)">
+                            <option value="150m x6" data-price="16.98" data-image="../images/852495 White Centrefeed.jpg">150m x6 - £16.98</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product" id="product3">
+                    <img src="../images/812350 Mini Jumbo.jpg" alt="Mini Jumbo" id="product3-image"> <!-- Placeholder for image -->
+                    <h3>Mini Jumbo</h3>
+                    <p>2-Ply White, Recycled Jumbo Toilet Rolls 86mm core x 150m</p>
+                    <div class="price" id="product3-price">£18.90</div> <!-- Added price element -->
+                    <div class="size-select">
+                        <label for="size3">Size:</label>
+                        <select id="size3" onchange="updateProduct('product3', this.value)">
+                            <option value="150m x12" data-price="18.90" data-image="../images/812350 Mini Jumbo.jpg">150m x12 - £18.90</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Clean And Supply Southwest
+        </div>
+    </footer>
+    <script>
+        function updateProduct(productId, selectedValue) {
+            const priceElement = document.getElementById(`${productId}-price`);
+            const imageElement = document.getElementById(`${productId}-image`);
+            const selectedOption = document.querySelector(`#${productId} select option[value="${selectedValue}"]`);
+            const newPrice = selectedOption ? selectedOption.dataset.price : '0.00';
+            const newImage = selectedOption ? selectedOption.dataset.image : '';
+            priceElement.textContent = `£${newPrice}`;
+            imageElement.src = newImage;
+        }
+
+        function fuzzySearch() {
+            const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (levenshteinDistance(searchQuery, productName) <= 3 || productName.includes(searchQuery)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        function levenshteinDistance(a, b) {
+            const matrix = [];
+            let i, j;
+            
+            if (a.length == 0) return b.length;
+            if (b.length == 0) return a.length;
+
+            for (i = 0; i <= b.length; i++) {
+                matrix[i] = [i];
+            }
+
+            for (j = 0; j <= a.length; j++) {
+                matrix[0][j] = j;
+            }
+
+            for (i = 1; i <= b.length; i++) {
+                for (j = 1; j <= a.length; j++) {
+                    if (b.charAt(i - 1) == a.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1));
+                    }
+                }
+            }
+
+            return matrix[b.length][a.length];
+        }
+    </script>
+</body>
+</html>

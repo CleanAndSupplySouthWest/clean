@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean And Supply Southwest</title>
+    <style>
+        /* Existing styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: url('images/2L Bottles.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 70px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-out forwards;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            animation: fadeInBackground 2s ease-out forwards;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            animation: fadeInText 2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInBackground {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .welcome-message {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .categories-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: auto;
+            cursor: grab;
+            position: relative;
+            scroll-behavior: smooth;
+            user-select: none; /* Prevent text selection */
+        }
+        .categories-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .categories-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .categories-container::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+        .categories {
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+            user-select: none; /* Prevent text selection */
+        }
+        .category {
+            border: 1px solid #dddddd;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            min-width: 200px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            background: linear-gradient(to bottom, #ffffff00, #f0f0f0);
+            user-select: none; /* Prevent text selection */
+        }
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .category h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #333;
+            user-select: none; /* Prevent text selection */
+        }
+        .category p {
+            font-size: 1rem;
+            color: #666;
+            user-select: none; /* Prevent text selection */
+        }
+        /* Different background colors for each category */
+        .floor-cleaning { background-color: #f9c74f; }
+        .washroom-cleaning { background-color: #90be6d; }
+        .carpet-cleaning { background-color: #f94144; }
+        .food_hygiene { background-color: #577590; }
+        .tissue { background-color: #6a6d70; }
+        .about-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+        }
+        .about-section h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: #333;
+            text-align: center;
+        }
+        .about-section p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .about-section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        footer .social-icons {
+            margin: 10px 0;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        footer .copyright {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .categories { gap: 10px; }
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.5rem; }
+            .welcome-message { font-size: 1rem; }
+            .category h2, .about-section h2 { font-size: 1.2rem; }
+            .category p, .about-section p { font-size: 0.9rem; }
+            footer .social-icons a { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clean And Supply Southwest</h1>
+        <p class="welcome-message">Welcome to our store!</p>
+    </header>
+    <main>
+        <div class="categories-container">
+            <section class="categories">
+                <div class="category floor-cleaning" onclick="window.location.href='categories/floor-cleaning.html'">
+                    <h2>Floor Cleaning</h2>
+                    <p>Explore our range of floor cleaning products.</p>
+                </div>
+                <div class="category washroom-cleaning" onclick="window.location.href='categories/washroom-cleaning.html'">
+                    <h2>Washroom Cleaning</h2>
+                    <p>Find the best products for cleaning your bathrooms.</p>
+                </div>
+                <div class="category carpet-cleaning" onclick="window.location.href='categories/carpet-cleaning.html'">
+                    <h2>Carpet Cleaning</h2>
+                    <p>Discover our effective carpet cleaning solutions.</p>
+                </div>
+                <div class="category food_hygiene" onclick="window.location.href='categories/foodhygiene.html'">
+                    <h2>Food Hygiene</h2>
+                    <p>Browse our Food Hygiene selection.</p>
+                </div>
+                <div class="category tissue" onclick="window.location.href='categories/tissue.html'">
+                    <h2>Paper Products</h2>
+                    <p>Browse our Paper Products selection.</p>
+                </div>
+            </section>
+        </div>
+        <section class="about-section">
+            <h2>About Clean And Supply Southwest</h2>
+            <p>At our company, we specialise in providing a comprehensive range of high-quality cleaning equipment and supplies to businesses of all types throughout the Southwest.
+                Our product offerings include a wide selection of cleaning chemicals, paper products, and essential cleaning materials such as mops, sponges, buckets, and catering supplies—essentially everything you need to maintain cleanliness and hygiene.
+                We proudly serve a diverse clientele, including schools, pubs, restaurants, care homes, garages, and the food industry, ensuring that each customer receives the specific products they need.
+                Based in Andil House in Trowbridge, we are dedicated to delivering our products directly to your location, making it convenient and efficient for you to maintain a clean and professional environment.</p>
+            <img src="images/Front Entrance.jpg" alt="Image 1">
+            <h2>Our Services</h2>
+            <p>We offer a comprehensive range of services to our customers to ensure they have the knowledge and resources needed for effective and safe use of our products. Our commitment to customer support and education is reflected in the services we provide.These services are designed to enhance operational efficiency, ensure compliance with safety regulations, and promote best practices in cleaning and hygiene.
+                <p>Our Services: 
+                <p>   •	COSHH Training
+                <p>   •	Expert Advice
+                <p>   •	Cleaning Schedules
+                <p>   •	Chemical Training
+                <p>   •	How-to-use Videos
+                <p>   •	Free Samples
+                <p>   •	Product Information
+                <p>   •	Safety Data Sheets
+                <p>   •	Risk Assessments
+                <img src="images/Cleaning Schedule.png" alt="Image 2">
+                <h2>Our Story</h2>
+                <p>Clean and Supply Southwest was established in 2023 by Ian Clifford. For several joyful months, Ian and his daughter, Kaylie, operated the business together, building a foundation based on trust, quality, and family values.</p>
+                <p>In early 2024, our family faced a heart-wrenching challenge when Ian received a terminal cancer diagnosis and passed away a few months later. Despite the immense loss, Ian's wish was for his daughter, Kaylie, to lead the business and uphold his legacy.</p>
+                <p>Today, Kaylie dedicates herself to honouring her father's memory with unwavering hard work and dedication. She strives to ensure that Clean and Supply Southwest continues to embody the principles and values Ian cherished, serving our community with the same passion and commitment.</p>
+                <img src="images/Ian and Kaylie 2023.jpg" alt="Image 3">
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Clean And Supply Southwest
+        </div>
+    </footer>
+    <script>
+        // Existing JavaScript for slider
+        const slider = document.querySelector('.categories-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>
