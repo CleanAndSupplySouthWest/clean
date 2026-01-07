@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
       idleTimer = setTimeout(() => {
         isIdle = true
         checkForEasterEgg()
-      }, 40000)
+      }, 40000) // Changed from 120000ms (2 minutes) to 40000ms (40 seconds)
     }
   }
 
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize idle timer
   resetIdleTimer()
 
-  console.log("Easter egg system initialized! Wait 40 seconds while idle to see the magic ✨")
+  console.log("[v0] Easter egg system initialized! Wait 40 seconds while idle to see the magic ✨") // Updated console message to reflect new timing
 })
 
 // Utility functions
