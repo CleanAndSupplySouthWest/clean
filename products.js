@@ -20,7 +20,7 @@ const productsByBusinessType = {
         code: "302",
         category: "Dishwashing",
         price: 9.41,
-        image: "blast-beer-pipeline-cleaner.jpg",
+        image: "Blast - 5L.png",
       },
       {
         name: "Rapier 5L",
@@ -28,7 +28,7 @@ const productsByBusinessType = {
         code: "303",
         category: "Dishwashing",
         price: 14.84,
-        image: "rapier-dishwash-detergent.jpg",
+        image: "Rapier - 5L.png",
       },
       {
         name: "Citrol 5L",
@@ -36,7 +36,7 @@ const productsByBusinessType = {
         code: "401",
         category: "Dishwashing Detergents",
         price: 12.82,
-        image: "citrol-lemon-washing-liquid.jpg",
+        image: "Citrol - 5L.png",
       },
       {
         name: "C2 Floor Cleaner, 5L",
@@ -44,7 +44,7 @@ const productsByBusinessType = {
         code: "122",
         category: "Floor Cleaners",
         price: 18.81,
-        image: "c2-floor-cleaner.jpg",
+        image: "C2 - 5L.png",
       },
       {
         name: "Auto Glasswash 5L",
@@ -52,7 +52,7 @@ const productsByBusinessType = {
         code: "318",
         category: "Dishwashing",
         price: 16.8,
-        image: "auto-glasswash-detergent.jpg",
+        image: "Auto Glasswash - 5L.png",
       },
       {
         name: "Clarifi - 5L",
@@ -60,7 +60,7 @@ const productsByBusinessType = {
         code: "369",
         category: "Dishwashing",
         price: 13.66,
-        image: "clarifi-glass-renovator.jpg",
+        image: "Clarifi - 5L.png",
       },
     ],
     recommended: [
@@ -70,7 +70,7 @@ const productsByBusinessType = {
         code: "211B",
         category: "Disinfectants",
         price: 10.79,
-        image: "spray-wipe-disinfectant.jpg",
+        image: "Spray & Wipe - 5L.png",
       },
       {
         name: "Enchant 750ml",
@@ -78,15 +78,7 @@ const productsByBusinessType = {
         code: "816",
         category: "Air Fresheners/ Deodorisers",
         price: 3.84,
-        image: "enchant-air-freshener.jpg",
-      },
-      {
-        name: "Black Cocktail Napkins 23cm 2ply",
-        description: "Cocktail Napkins",
-        code: "232BK",
-        category: "Napkins",
-        price: 3.7,
-        image: "black-cocktail-napkins.jpg",
+        image: "Enchant - 750ml.png",
       },
       {
         name: "Centrefeed 2 ply White",
@@ -94,7 +86,7 @@ const productsByBusinessType = {
         code: "319",
         category: "Centrefeed",
         price: 16.98,
-        image: "centrefeed-white.jpg",
+        image: "852502.jpg",
       },
       {
         name: "Arosa - 750ml",
@@ -102,15 +94,7 @@ const productsByBusinessType = {
         code: "812",
         category: "Air Fresheners/ Deodorisers",
         price: 3.46,
-        image: "arosa-air-freshener.jpg",
-      },
-      {
-        name: "Magnum Refill (Citrus Grove) 270ml",
-        description: "Aerosol Fragrance refill",
-        code: "704C",
-        category: "Air Fresheners/ Deodorisers",
-        price: 4.26,
-        image: "magnum-refill-citrus.jpg",
+        image: "Arosa - 750ml.png",
       },
       {
         name: "Royal Cologne - 750ml",
@@ -118,7 +102,7 @@ const productsByBusinessType = {
         code: "811",
         category: "Air Fresheners/ Deodorisers",
         price: 3,
-        image: "royal-cologne-air-freshener.jpg",
+        image: "Royal Cologne - 750ml.png",
       },
     ],
   },
@@ -127,20 +111,12 @@ const productsByBusinessType = {
     description: "Food service cleaning and hygiene solutions",
     essential: [
       {
-        name: "Fairy Dishwasher Capsules",
-        description: "Lemon Dishwasher Capsules - 90",
-        code: "FAIRYDISH",
-        category: "Dishwashing",
-        price: 18.58,
-        image: "fairy-dishwasher-capsules.jpg",
-      },
-      {
         name: "D4 Concentrated washing up liquid 5L",
         description: "Concentrated detergent",
         code: "021432X5",
         category: "Dishwashing Detergents",
         price: 10.84,
-        image: "d4-concentrated-washing-up-liquid.jpg",
+        image: "D4.jpg",
       },
       {
         name: "Halo Cleaning Powder",
@@ -260,7 +236,7 @@ const productsByBusinessType = {
         code: "450",
         category: "Interior- All purpose/Multi-purpose",
         price: 2.96,
-        image: "spirit-multi-surface-cleaner.jpg",
+        image: "Spirit - 750ml.png",
       },
       {
         name: "Brite - 750ml",
@@ -268,7 +244,7 @@ const productsByBusinessType = {
         code: "701",
         category: "Polish & Glass",
         price: 3.98,
-        image: "brite-window-cleaner.jpg",
+        image: "Brite - 750ml.png",
       },
       {
         name: "Luxury Cube Facial Tissues",
@@ -292,7 +268,7 @@ const productsByBusinessType = {
         code: "77137",
         category: "Hand creams/ Gels",
         price: 3.85,
-        image: "hand-sanitiser-gel.jpg",
+        image: "70% Hand Sanitiser.png",
       },
       {
         name: "CleanIT 5L",
@@ -300,7 +276,7 @@ const productsByBusinessType = {
         code: "397",
         category: "Interior- All purpose/Multi-purpose",
         price: 6.68,
-        image: "cleanit-interior-cleaner.jpg",
+        image: "CleanIT - 5L.png",
       },
       {
         name: "Hand Towels - C Fold, 2 Ply White",
@@ -334,7 +310,7 @@ const productsByBusinessType = {
         code: "812",
         category: "Air Fresheners/ Deodorisers",
         price: 3.46,
-        image: "arosa-air-freshener.jpg",
+        image: "Arosa - 750ml.png",
       },
       {
         name: "Black Sacks",
@@ -350,7 +326,7 @@ const productsByBusinessType = {
         code: "603",
         category: "Polish & Glass",
         price: 5.08,
-        image: "swift-furniture-polish.jpg",
+        image: "Swift - 750ml.png",
       },
       {
         name: "Yellow Dusters",
@@ -359,13 +335,6 @@ const productsByBusinessType = {
         category: "Polish & Glass",
         price: 3.35,
         image: "yellow-dusters.jpg",
-      },
-      {
-        name: "Navigator A4 Paper",
-        description: "Office Paper",
-        code: "NAVIGATOR",
-        price: null,
-        image: "navigator-a4-paper.jpg",
       },
     ],
   },
@@ -379,7 +348,7 @@ const productsByBusinessType = {
         code: "313",
         category: "Automotive",
         price: 14.42,
-        image: "magnum-force-extra.jpg",
+        image: "Magnum Force Extra - 5L.png",
       },
       {
         name: "Truck Wash 80 20L",
@@ -387,7 +356,7 @@ const productsByBusinessType = {
         code: "307",
         category: "Automotive",
         price: 29.91,
-        image: "truck-wash-80.jpg",
+        image: "Truck Wash 80 - 20L.png",
       },
       {
         name: "Autogloss",
@@ -395,7 +364,7 @@ const productsByBusinessType = {
         code: "602",
         category: "Automotive",
         price: 27.24,
-        image: "autogloss.jpg",
+        image: "Autogloss - 5L.png",
       },
       {
         name: "Trim Shine 750ml",
@@ -403,7 +372,7 @@ const productsByBusinessType = {
         code: "604B",
         category: "Automotive",
         price: 4.02,
-        image: "trim-shine-750ml.jpg",
+        image: "Trim Shine - 750ml.png",
       },
       {
         name: "TFR & Polish, 5L",
@@ -411,7 +380,7 @@ const productsByBusinessType = {
         code: "316",
         category: "Automotive",
         price: 12.86,
-        image: "tfr-polish.jpg",
+        image: "TFR + Polish - 20L.png",
       },
       {
         name: "Activ F - 5L 403",
@@ -419,7 +388,7 @@ const productsByBusinessType = {
         code: "ACTIVF",
         category: "Automotive",
         price: 8.78,
-        image: "activ-f-neutral-detergent.jpg",
+        image: "Activ F - 5L.png",
       },
       {
         name: "Truck Wash 80 - 200L",
@@ -427,7 +396,7 @@ const productsByBusinessType = {
         code: "307B",
         category: "Automotive",
         price: 259.44,
-        image: "truck-wash-80-200l.jpg",
+        image: "Truck Wash 80 - 20L.png",
       },
       {
         name: "Trim Shine 5L",
@@ -435,7 +404,7 @@ const productsByBusinessType = {
         code: "604",
         category: "Automotive",
         price: 14.9,
-        image: "trim-shine-5l.jpg",
+        image: "Trim Shine - 750ml.png",
       },
     ],
     recommended: [
@@ -445,7 +414,7 @@ const productsByBusinessType = {
         code: "326",
         category: "Degreasers",
         price: 12.92,
-        image: "viro-sol.jpg",
+        image: "Viro Sol - 5L.png",
       },
       {
         name: "DD10 - 5L",
@@ -453,7 +422,7 @@ const productsByBusinessType = {
         code: "404",
         category: "Degreasers",
         price: 11.61,
-        image: "dd10.jpg",
+        image: "DD10 - 5L.png",
       },
       {
         name: "Disposable Car Seat Covers",
@@ -515,7 +484,7 @@ const productsByBusinessType = {
         code: "426",
         category: "Soaps",
         price: 11.26,
-        image: "larox-hand-soap.jpg",
+        image: "Larox - 5L.png",
       },
       {
         name: 'Hygiene Couch Rolls 3 Ply Blue 10"',
@@ -627,7 +596,7 @@ const productsByBusinessType = {
         code: "397",
         category: "Interior- All purpose/Multi-purpose",
         price: 6.68,
-        image: "cleanit-interior-cleaner.jpg",
+        image: "CleanIT - 5L.png",
       },
       {
         name: "Brite 5L",
@@ -635,7 +604,7 @@ const productsByBusinessType = {
         code: "701",
         category: "Polish & Glass",
         price: 10.19,
-        image: "brite-5l.jpg",
+        image: "Brite - 5L.png",
       },
       {
         name: "PDQ - 5L",
@@ -643,7 +612,7 @@ const productsByBusinessType = {
         code: "110",
         category: "Floor Cleaners",
         price: 11.56,
-        image: "pdq-floor-cleaner.jpg",
+        image: "PDQ - 5L.png",
       },
       {
         name: "Centrefeed 2 ply White",
@@ -651,7 +620,7 @@ const productsByBusinessType = {
         code: "319",
         category: "Centrefeed",
         price: 16.98,
-        image: "centrefeed-white.jpg",
+        image: "852502.jpg",
       },
       {
         name: "Standard Safety Cone",
@@ -667,7 +636,7 @@ const productsByBusinessType = {
         code: "111",
         category: "Floor Cleaners",
         price: 9.73,
-        image: "impact-floor-cleaner.jpg",
+        image: "Impact - 5L.png",
       },
       {
         name: "Floorit - 5L",
@@ -675,7 +644,7 @@ const productsByBusinessType = {
         code: "498",
         category: "Floor Cleaners",
         price: 7.02,
-        image: "floorit-floor-cleaner.jpg",
+        image: "FloorIT - 5L.png",
       },
     ],
     recommended: [
@@ -685,7 +654,7 @@ const productsByBusinessType = {
         code: "816",
         category: "Air Fresheners/ Deodorisers",
         price: 3.84,
-        image: "enchant-air-freshener.jpg",
+        image: "Enchant - 750ml.png",
       },
       {
         name: "Microfibre Cloth Yellow (1)",
@@ -739,7 +708,7 @@ const allProductsCatalog = [
     code: "997",
     category: "Air Conditioning",
     price: 11.91,
-    image: "ub70-lemon-air-conditioner.jpg",
+    image: "UB70 - 2L.png",
   },
 
   // Air Fresheners/ Deodorisers
@@ -749,8 +718,9 @@ const allProductsCatalog = [
     code: "812",
     category: "Air Fresheners/ Deodorisers",
     price: 3.46,
-    image: "arosa-air-freshener.jpg",
+    image: "Arosa - 750ml.png",
   },
+    // GOT THIS FAR WITH IMAGES
   {
     name: "Automatic Air Freshener Unit",
     description: "Automatic Air Freshener Dispenser",
@@ -829,7 +799,7 @@ const allProductsCatalog = [
     code: "816",
     category: "Air Fresheners/ Deodorisers",
     price: 3.84,
-    image: "enchant-air-freshener.jpg",
+    image: "Enchant - 750ml.png",
   },
   {
     name: "Lufra San Deo (Fresh Deodoriser Concentrate)",
@@ -838,22 +808,6 @@ const allProductsCatalog = [
     category: "Air Fresheners/ Deodorisers",
     price: 8.4,
     image: "lufra-san-deo.jpg",
-  },
-  {
-    name: "Magnum Refill (Citrus Grove) 270ml",
-    description: "Aerosol Fragrance refill",
-    code: "704C",
-    category: "Air Fresheners/ Deodorisers",
-    price: 4.26,
-    image: "magnum-refill-citrus.jpg",
-  },
-  {
-    name: "Magnum Refill (Mystique) 270ml",
-    description: "Aerosol Refill",
-    code: "MAGCASCADE",
-    category: "Air Fresheners/ Deodorisers",
-    price: 4.26,
-    image: "magnum-refill-mystique.jpg",
   },
 
   // All purpose cleaners
@@ -897,7 +851,7 @@ const allProductsCatalog = [
     code: "ACTIVF",
     category: "Automotive",
     price: 8.78,
-    image: "activ-f-neutral-detergent.jpg",
+    image: "Activ F - 5L.png",
   },
   {
     name: "Autogloss",
@@ -905,7 +859,7 @@ const allProductsCatalog = [
     code: "602",
     category: "Automotive",
     price: 27.24,
-    image: "autogloss.jpg",
+    image: "Autogloss - 5L.png",
   },
   {
     name: "Disposable Car Seat Covers",
@@ -921,7 +875,7 @@ const allProductsCatalog = [
     code: "313",
     category: "Automotive",
     price: 14.42,
-    image: "magnum-force-extra.jpg",
+    image: "Magnum Force Extra - 5L.png",
   },
   {
     name: "Trim Shine 750ml",
@@ -929,7 +883,7 @@ const allProductsCatalog = [
     code: "604B",
     category: "Automotive",
     price: 4.02,
-    image: "trim-shine-750ml.jpg",
+    image: "Trim Shine - 750ml.png",
   },
   {
     name: "Truck Wash 80 20L",
@@ -937,7 +891,7 @@ const allProductsCatalog = [
     code: "307",
     category: "Automotive",
     price: 29.91,
-    image: "truck-wash-80.jpg",
+    image: "Truck Wash 80 - 20L.png",
   },
 
   // Beerline Cleaners
@@ -1853,7 +1807,7 @@ const allProductsCatalog = [
     code: "319",
     category: "Centrefeed",
     price: 16.98,
-    image: "centrefeed-white.jpg",
+    image: "852502.jpg",
   },
   {
     name: "Mini Centrefeed Toilet Rolls 2 Ply White",
@@ -1879,7 +1833,7 @@ const allProductsCatalog = [
     code: "318",
     category: "Dishwashing",
     price: 16.8,
-    image: "auto-glasswash-detergent.jpg",
+    image: "Auto Glasswash - 5L.png",
   },
   {
     name: "Blast - 5L",
@@ -1887,7 +1841,7 @@ const allProductsCatalog = [
     code: "302",
     category: "Dishwashing",
     price: 9.41,
-    image: "blast-beer-pipeline-cleaner.jpg",
+    image: "Blast - 5L.png",
   },
   {
     name: "C4 Machine Dishwash",
@@ -1903,15 +1857,7 @@ const allProductsCatalog = [
     code: "369",
     category: "Dishwashing",
     price: 13.66,
-    image: "clarifi-glass-renovator.jpg",
-  },
-  {
-    name: "Fairy Dishwasher Capsules",
-    description: "Lemon Dishwasher Capsules - 90",
-    code: "FAIRYDISH",
-    category: "Dishwashing",
-    price: 18.58,
-    image: "fairy-dishwasher-capsules.jpg",
+    image: "Clarifi - 5L.png",
   },
   {
     name: "Rapier 5L",
@@ -1919,7 +1865,7 @@ const allProductsCatalog = [
     code: "303",
     category: "Dishwashing",
     price: 14.84,
-    image: "rapier-dishwash-detergent.jpg",
+    image: "Rapier - 5L.png",
   },
   {
     name: "Rinse Aid 5L",
@@ -1936,8 +1882,8 @@ const allProductsCatalog = [
     description: "Lemon Washing Up Liquid",
     code: "401",
     category: "Dishwashing Detergents",
-    price: 3.5,
-    image: "citrol-1l.jpg",
+    price: 3.50,
+    image: "Citrol - 1L.png",
   },
   {
     name: "Citrol 5L",
@@ -1945,7 +1891,7 @@ const allProductsCatalog = [
     code: "401",
     category: "Dishwashing Detergents",
     price: 12.82,
-    image: "citrol-lemon-washing-liquid.jpg",
+    image: "Citrol - 5L.png",
   },
   {
     name: "D1 Washing Up Liquid 500ml",
@@ -1969,7 +1915,7 @@ const allProductsCatalog = [
     code: "021432X5",
     category: "Dishwashing Detergents",
     price: 10.84,
-    image: "d4-concentrated-washing-up-liquid.jpg",
+    image: "D4.jpg",
   },
   {
     name: "Dish-Bac - 1L",
@@ -2011,7 +1957,7 @@ const allProductsCatalog = [
     code: "211B",
     category: "Disinfectants",
     price: 10.79,
-    image: "spray-wipe-disinfectant.jpg",
+    image: "Spray & Wipe - 5L.png",
   },
   {
     name: "Spray & Wipe - 750ml",
@@ -2019,7 +1965,7 @@ const allProductsCatalog = [
     code: "211",
     category: "Disinfectants",
     price: 3.14,
-    image: "spray-wipe-750ml.jpg",
+    image: "Spray & Wipe - 750ml.png",
   },
   {
     name: "Ultra AX - 750ml",
@@ -2077,7 +2023,7 @@ const allProductsCatalog = [
     code: "122",
     category: "Floor Cleaners",
     price: 5.7,
-    image: "c2-floor-cleaner-1l.jpg",
+    image: "C2 - 1ltr.png",
   },
   {
     name: "C2 Floor Cleaner, 5L",
@@ -2085,7 +2031,7 @@ const allProductsCatalog = [
     code: "122",
     category: "Floor Cleaners",
     price: 18.81,
-    image: "c2-floor-cleaner.jpg",
+    image: "C2 - 5L.png",
   },
   {
     name: "Clover Gel Contract Pine 5L",
@@ -2117,7 +2063,7 @@ const allProductsCatalog = [
     code: "498",
     category: "Floor Cleaners",
     price: 7.02,
-    image: "floorit-floor-cleaner.jpg",
+    image: "FloorIT - 5L.png",
   },
   {
     name: "Impact 5L",
@@ -2125,7 +2071,7 @@ const allProductsCatalog = [
     code: "111",
     category: "Floor Cleaners",
     price: 9.73,
-    image: "impact-floor-cleaner.jpg",
+    image: "Impact - 5L.png",
   },
   {
     name: "PDQ - 5L",
@@ -2133,7 +2079,7 @@ const allProductsCatalog = [
     code: "110",
     category: "Floor Cleaners",
     price: 11.56,
-    image: "pdq-floor-cleaner.jpg",
+    image: "PDQ - 5L.png",
   },
   {
     name: "Terra Floor Ultra 5L",
@@ -2233,7 +2179,7 @@ const allProductsCatalog = [
     code: "77137",
     category: "Hand creams/ Gels",
     price: 3.85,
-    image: "hand-sanitiser-gel.jpg",
+    image: "70% Hand Sanitiser.png",
   },
   {
     name: "70% Hand Sanitiser Gel - 5L",
@@ -2241,7 +2187,7 @@ const allProductsCatalog = [
     code: "77123",
     category: "Hand creams/ Gels",
     price: 17.97,
-    image: "hand-sanitiser-gel-5l.jpg",
+    image: "70% Hand Sanitiser.png",
   },
   {
     name: "Alcohol Free Foam Hand Sanitiser",
@@ -2249,7 +2195,7 @@ const allProductsCatalog = [
     code: "74101",
     category: "Hand creams/ Gels",
     price: 15.74,
-    image: "alcohol-free-foam-sanitiser.jpg",
+    image: "Alcohol Free Foam Hand Sanitiser.png",
   },
   {
     name: "Barrier Cream - 300ml",
@@ -2381,7 +2327,7 @@ const allProductsCatalog = [
     code: "426",
     category: "Soaps",
     price: 11.26,
-    image: "larox-hand-soap.jpg",
+    image: "Larox - 5L.png",
   },
   {
     name: "Luxury Liquid Soap 500ml",
@@ -2735,7 +2681,7 @@ const allProductsCatalog = [
     code: "701",
     category: "Polish & Glass",
     price: 3.98,
-    image: "brite-window-cleaner.jpg",
+    image: "Brite - 750ml.png",
   },
   {
     name: "Brite 5L",
@@ -2743,7 +2689,7 @@ const allProductsCatalog = [
     code: "701",
     category: "Polish & Glass",
     price: 10.19,
-    image: "brite-5l.jpg",
+    image: "Brite - 5L.png",
   },
   {
     name: "Dazzle - 750ml",
@@ -2775,7 +2721,7 @@ const allProductsCatalog = [
     code: "603",
     category: "Polish & Glass",
     price: 18.63,
-    image: "swift-5l.jpg",
+    image: "Swift - 5L.png",
   },
   {
     name: "Swift- 750ml",
@@ -2783,7 +2729,7 @@ const allProductsCatalog = [
     code: "603",
     category: "Polish & Glass",
     price: 5.08,
-    image: "swift-furniture-polish.jpg",
+    image: "Swift - 750ml.png",
   },
   {
     name: "Yellow Dusters",
@@ -2795,14 +2741,6 @@ const allProductsCatalog = [
   },
 
   // Napkins
-  {
-    name: "Black Cocktail Napkins 23cm 2ply",
-    description: "Cocktail Napkins",
-    code: "232BK",
-    category: "Napkins",
-    price: 3.7,
-    image: "black-cocktail-napkins.jpg",
-  },
   {
     name: "Napkins - Recycled 33cm 2 Ply",
     description: "Unbleached Recycled Premium Napkins - 33cm, 2 Ply - 2000",
@@ -2979,7 +2917,7 @@ const allProductsCatalog = [
     code: "404",
     category: "Degreasers",
     price: 11.61,
-    image: "dd10.jpg",
+    image: "DD10 - 5L.png",
   },
   {
     name: "Finito 750ml",
@@ -3003,7 +2941,7 @@ const allProductsCatalog = [
     code: "326",
     category: "Degreasers",
     price: 12.92,
-    image: "viro-sol.jpg",
+    image: "Viro Sol - 5L.png",
   },
   {
     name: "Viro-Sol RTU 750ml",
@@ -3011,7 +2949,7 @@ const allProductsCatalog = [
     code: "382",
     category: "Degreasers",
     price: 3.46,
-    image: "viro-sol-rtu.jpg",
+    image: "Viro-Sol RTU - 750ml.png",
   },
 
   // Interior- All purpose/Multi-purpose
@@ -3029,7 +2967,7 @@ const allProductsCatalog = [
     code: "397",
     category: "Interior- All purpose/Multi-purpose",
     price: 6.68,
-    image: "cleanit-interior-cleaner.jpg",
+    image: "CleanIT - 5L.png",
   },
   {
     name: "CleanIt 750ml",
@@ -3037,7 +2975,7 @@ const allProductsCatalog = [
     code: "497",
     category: "Interior- All purpose/Multi-purpose",
     price: 3.24,
-    image: "cleanit-750ml.jpg",
+    image: "CleanIT - 750ml.png",
   },
   {
     name: "Drastik - 750ml",
@@ -3061,7 +2999,7 @@ const allProductsCatalog = [
     code: "350",
     category: "Interior- All purpose/Multi-purpose",
     price: 6.92,
-    image: "spirit-5l.jpg",
+    image: "Spirit - 5L.png",
   },
   {
     name: "Spirit - 750ml",
@@ -3069,7 +3007,7 @@ const allProductsCatalog = [
     code: "450",
     category: "Interior- All purpose/Multi-purpose",
     price: 2.96,
-    image: "spirit-multi-surface-cleaner.jpg",
+    image: "Spirit - 750ml.png",
   },
   {
     name: "Top It - 750ml",
