@@ -12,7 +12,7 @@ const productsByBusinessType = {
         code: "0209PP",
         category: "Beerline Cleaners",
         price: 10.26,
-        image: "purple-beerline-cleaner.jpg",
+        image: "purple-beerline-cleaner.png",
       },
       {
         name: "Blast - 5L",
@@ -86,7 +86,7 @@ const productsByBusinessType = {
         code: "319",
         category: "Centrefeed",
         price: 16.98,
-        image: "852502.jpg",
+        image: "852502.png",
       },
       {
         name: "Arosa - 750ml",
@@ -116,7 +116,7 @@ const productsByBusinessType = {
         code: "021432X5",
         category: "Dishwashing Detergents",
         price: 10.84,
-        image: "D4.jpg",
+        image: "D4.png",
       },
       {
         name: "Halo Cleaning Powder",
@@ -124,7 +124,7 @@ const productsByBusinessType = {
         code: "PN902",
         category: "Catering Essentials",
         price: 5.3,
-        image: "halo-cleaning-powder.jpg",
+        image: "halo-cleaning-powder.png",
       },
       {
         name: "Senses Fragrance-free Antibacterial Hand Wash 5L",
@@ -132,7 +132,7 @@ const productsByBusinessType = {
         code: "077028X5",
         category: "Soaps",
         price: 10.53,
-        image: "senses-fragrance-free-antibacterial-hand-wash.jpg",
+        image: "senses-fragrance-free-antibacterial-hand-wash.png",
       },
       {
         name: "Blue detectable plasters",
@@ -140,7 +140,7 @@ const productsByBusinessType = {
         code: "BLPLASTERS",
         category: "Catering Essentials",
         price: 2.1,
-        image: "blue-detectable-plasters.jpg",
+        image: "blue-detectable-plasters.png",
       },
       {
         name: "Halo Milk Line 1L",
@@ -148,7 +148,7 @@ const productsByBusinessType = {
         code: "PN905",
         category: "Catering Essentials",
         price: 5.95,
-        image: "halo-milk-line.jpg",
+        image: "halo-milk-line.png",
       },
       {
         name: "Temperature Probe",
@@ -156,7 +156,7 @@ const productsByBusinessType = {
         code: "TP101",
         category: "Catering Essentials",
         price: 3.6,
-        image: "temperature-probe.jpg",
+        image: "temperature-probe.png",
       },
     ],
     recommended: [
@@ -166,7 +166,7 @@ const productsByBusinessType = {
         code: "10245H",
         category: "Catering Essentials",
         price: 10.91,
-        image: "cling-film-cutterbox.jpg",
+        image: "cling-film-cutterbox.png",
       },
       {
         name: 'Catering foil (18") Cutterbox',
@@ -174,7 +174,7 @@ const productsByBusinessType = {
         code: "588",
         category: "Catering Essentials",
         price: 11.96,
-        image: "catering-foil-cutterbox.jpg",
+        image: "catering-foil-cutterbox.png",
       },
       {
         name: "Nitrile Blue Pro Ultraflex Gloves, M",
@@ -182,7 +182,7 @@ const productsByBusinessType = {
         code: "1162",
         category: "Gloves",
         price: 4.71,
-        image: "nitrile-blue-pro-ultraflex-gloves.jpg",
+        image: "nitrile-blue-pro-ultraflex-gloves.png",
       },
       {
         name: "All Purpose Cloths - Blue",
@@ -190,7 +190,7 @@ const productsByBusinessType = {
         code: "104390",
         category: "Catering Essentials",
         price: 4.39,
-        image: "all-purpose-cloths-blue.jpg",
+        image: "all-purpose-cloths-blue.png",
       },
       {
         name: 'Baking Paper (18") - Cutterbox x75m',
@@ -198,7 +198,7 @@ const productsByBusinessType = {
         code: "585",
         category: "Catering Essentials",
         price: 15.34,
-        image: "baking-paper-cutterbox.jpg",
+        image: "baking-paper-cutterbox.png",
       },
       {
         name: '18" Piping Bags (100) on roll',
@@ -206,7 +206,7 @@ const productsByBusinessType = {
         code: "PIPING",
         category: "Catering Essentials",
         price: 12.42,
-        image: "piping-bags-roll.jpg",
+        image: "piping-bags-roll.png",
       },
       {
         name: "Barista Cloth- Orange",
@@ -214,7 +214,7 @@ const productsByBusinessType = {
         code: "104182",
         category: "Catering Essentials",
         price: 2.1,
-        image: "barista-cloth-orange.jpg",
+        image: "barista-cloth-orange.png",
       },
       {
         name: "Black Straws",
@@ -222,7 +222,7 @@ const productsByBusinessType = {
         code: "BLACSTRAW",
         category: "Catering Essentials",
         price: 3.95,
-        image: "black-straws.jpg",
+        image: "black-straws.png",
       },
     ],
   },
@@ -252,7 +252,7 @@ const productsByBusinessType = {
         code: "841103",
         category: "Tissue",
         price: 20.8,
-        image: "luxury-cube-facial-tissues.jpg",
+        image: "luxury-cube-facial-tissues.png",
       },
       {
         name: "Bulk Pack Toilet Tissue",
@@ -260,7 +260,7 @@ const productsByBusinessType = {
         code: "811D23",
         category: "Toilet Rolls",
         price: 22.25,
-        image: "bulk-pack-toilet-tissue.jpg",
+        image: "bulk-pack-toilet-tissue.png",
       },
       {
         name: "70% Hand Sanitiser Gel - 500ml",
@@ -284,7 +284,7 @@ const productsByBusinessType = {
         code: "862122",
         category: "Hand Towels",
         price: 26.67,
-        image: "hand-towels-c-fold.jpg",
+        image: "hand-towels-c-fold.png",
       },
     ],
     recommended: [
@@ -294,7 +294,7 @@ const productsByBusinessType = {
         code: "RH95",
         category: "Wipes",
         price: 2.4,
-        image: "vdu-wipes.jpg",
+        image: "vdu-wipes.png",
       },
       {
         name: "Microfibre Cloth Blue (1)",
@@ -302,7 +302,7 @@ const productsByBusinessType = {
         code: "BMICROFIBRE",
         category: "Cloths and Towels",
         price: 0.45,
-        image: "microfibre-cloth-blue.jpg",
+        image: "microfibre-cloth-blue.png",
       },
       {
         name: "Arosa - 750ml",
@@ -318,7 +318,7 @@ const productsByBusinessType = {
         code: "LD7080",
         category: "Sacks",
         price: 20.35,
-        image: "black-sacks.jpg",
+        image: "black-sacks.png",
       },
       {
         name: "Swift- 750ml",
@@ -334,7 +334,7 @@ const productsByBusinessType = {
         code: "700S.14.10",
         category: "Polish & Glass",
         price: 3.35,
-        image: "yellow-dusters.jpg",
+        image: "yellow-dusters.png",
       },
     ],
   },
@@ -430,7 +430,7 @@ const productsByBusinessType = {
         code: "DCARCOVERS",
         category: "Automotive",
         price: null,
-        image: "disposable-car-seat-covers.jpg",
+        image: "disposable-car-seat-covers.png",
       },
       {
         name: "SkyTech Blue Wiping Roll 2 Ply Recycled 26cm x 350m",
@@ -438,7 +438,7 @@ const productsByBusinessType = {
         code: "343",
         category: "Hand Towels",
         price: 28.93,
-        image: "skytech-blue-wiping-roll.jpg",
+        image: "skytech-blue-wiping-roll.png",
       },
       {
         name: "Senses Lemon Industrial Hand Cleaner 5L",
@@ -446,7 +446,7 @@ const productsByBusinessType = {
         code: "72978",
         category: "Soaps",
         price: 15.1,
-        image: "senses-lemon-industrial-hand-cleaner.jpg",
+        image: "senses-lemon-industrial-hand-cleaner.png",
       },
       {
         name: "Dermex Mechanic Soap (Buster Extra) 5L",
@@ -454,7 +454,7 @@ const productsByBusinessType = {
         code: "415",
         category: "Hand creams/ Gels",
         price: 17.48,
-        image: "dermex-mechanic-soap.jpg",
+        image: "dermex-mechanic-soap.png",
       },
     ],
   },
@@ -468,7 +468,7 @@ const productsByBusinessType = {
         code: "261",
         category: "Disinfectants",
         price: 17.73,
-        image: "ultra-xtreme.jpg",
+        image: "ultra-xtreme.png",
       },
       {
         name: "Antiviral Wipes Hycolin",
@@ -476,7 +476,7 @@ const productsByBusinessType = {
         code: "ANTIWIPES",
         category: "Covid",
         price: 2.78,
-        image: "antiviral-wipes-hycolin.jpg",
+        image: "antiviral-wipes-hycolin.png",
       },
       {
         name: "Larox - 5L",
@@ -492,7 +492,7 @@ const productsByBusinessType = {
         code: "BCR250403",
         category: "Hygiene/Medical Rolls",
         price: 42.9,
-        image: "hygiene-couch-rolls.jpg",
+        image: "hygiene-couch-rolls.png",
       },
       {
         name: "PRO Type IIR Facemasks disposable",
@@ -500,7 +500,7 @@ const productsByBusinessType = {
         code: "MASKS",
         category: "Covid",
         price: 2.65,
-        image: "pro-type-iir-facemasks.jpg",
+        image: "pro-type-iir-facemasks.png",
       },
       {
         name: "Ultra Ax 5L",
@@ -508,7 +508,7 @@ const productsByBusinessType = {
         code: "259B",
         category: "Sanitisers/ Bactericidal",
         price: 11.54,
-        image: "ultra-ax.jpg",
+        image: "ultra-ax.png",
       },
       {
         name: "Terra Floor Ultra 5L",
@@ -516,7 +516,7 @@ const productsByBusinessType = {
         code: "282",
         category: "Floor Cleaners",
         price: 12.88,
-        image: "terra-floor-ultra.jpg",
+        image: "terra-floor-ultra.png",
       },
     ],
     recommended: [
@@ -526,7 +526,7 @@ const productsByBusinessType = {
         code: "1163",
         category: "Gloves",
         price: 4.71,
-        image: "nitrile-blue-pro-ultraflex-gloves-l.jpg",
+        image: "nitrile-blue-pro-ultraflex-gloves-l.png",
       },
       {
         name: "Aprons blue (500)",
@@ -534,7 +534,7 @@ const productsByBusinessType = {
         code: "BAPRON",
         category: "Protective Wear",
         price: 40.32,
-        image: "aprons-blue.jpg",
+        image: "aprons-blue.png",
       },
       {
         name: "Alcohol-free Clinical Wipes",
@@ -542,7 +542,7 @@ const productsByBusinessType = {
         code: "686",
         category: "Wipes",
         price: 4.43,
-        image: "alcohol-free-clinical-wipes.jpg",
+        image: "alcohol-free-clinical-wipes.png",
       },
       {
         name: "Laundry Sanitiser - 5L",
@@ -550,7 +550,7 @@ const productsByBusinessType = {
         code: "238",
         category: "Laundry",
         price: 50.04,
-        image: "laundry-sanitiser.jpg",
+        image: "laundry-sanitiser.png",
       },
       {
         name: "KN95 MASKS (Individual)",
@@ -558,7 +558,7 @@ const productsByBusinessType = {
         code: "KN95",
         category: "Covid",
         price: 0.3,
-        image: "kn95-masks.jpg",
+        image: "kn95-masks.png",
       },
       {
         name: "V7 Antiviral Hand Soap 500ml",
@@ -566,7 +566,7 @@ const productsByBusinessType = {
         code: "ANTISOAP",
         category: "Covid",
         price: 1.92,
-        image: "v7-antiviral-hand-soap.jpg",
+        image: "v7-antiviral-hand-soap.png",
       },
       {
         name: "Blue Mesh Hairnets (100)",
@@ -574,7 +574,7 @@ const productsByBusinessType = {
         code: "19310",
         category: "Protective Wear",
         price: 7.95,
-        image: "blue-mesh-hairnets.jpg",
+        image: "blue-mesh-hairnets.png",
       },
       {
         name: "Overshoes, Blue (100)",
@@ -582,7 +582,7 @@ const productsByBusinessType = {
         code: "7557",
         category: "Protective Wear",
         price: 3.12,
-        image: "overshoes-blue.jpg",
+        image: "overshoes-blue.png",
       },
     ],
   },
@@ -620,7 +620,7 @@ const productsByBusinessType = {
         code: "319",
         category: "Centrefeed",
         price: 16.98,
-        image: "852502.jpg",
+        image: "852502.png",
       },
       {
         name: "Standard Safety Cone",
@@ -628,7 +628,7 @@ const productsByBusinessType = {
         code: "104383",
         category: "Buckets and Signs",
         price: 5.96,
-        image: "standard-safety-cone.jpg",
+        image: "standard-safety-cone.png",
       },
       {
         name: "Impact 5L",
@@ -662,7 +662,7 @@ const productsByBusinessType = {
         code: "YMICROFIBRE",
         category: "Cloths and Towels",
         price: 0.45,
-        image: "microfibre-cloth-yellow.jpg",
+        image: "microfibre-cloth-yellow.png",
       },
       {
         name: "Black Sacks",
@@ -670,7 +670,7 @@ const productsByBusinessType = {
         code: "LD7080",
         category: "Sacks",
         price: 20.35,
-        image: "black-sacks.jpg",
+        image: "black-sacks.png",
       },
       {
         name: "Hand Towels - C Fold, 2 Ply White",
@@ -678,7 +678,7 @@ const productsByBusinessType = {
         code: "862122",
         category: "Hand Towels",
         price: 26.67,
-        image: "hand-towels-c-fold.jpg",
+        image: "hand-towels-c-fold.png",
       },
       {
         name: "Wet Floor Sign Flat",
@@ -686,7 +686,7 @@ const productsByBusinessType = {
         code: "101423",
         category: "Buckets and Signs",
         price: 5.96,
-        image: "wet-floor-sign-flat.jpg",
+        image: "wet-floor-sign-flat.png",
       },
       {
         name: "Banana Cone Wet floor sign",
@@ -694,7 +694,7 @@ const productsByBusinessType = {
         code: "104557",
         category: "Buckets and Signs",
         price: 28.4,
-        image: "banana-cone-wet-floor-sign.jpg",
+        image: "banana-cone-wet-floor-sign.png",
       },
     ],
   },
@@ -727,7 +727,7 @@ const allProductsCatalog = [
     code: "948",
     category: "Air Fresheners/ Deodorisers",
     price: 25,
-    image: "automatic-air-freshener-unit.jpg",
+    image: "automatic-air-freshener-unit.png",
   },
   {
     name: "Bioshield- Lemon 1L",
@@ -735,7 +735,7 @@ const allProductsCatalog = [
     code: "205",
     category: "Air Fresheners/ Deodorisers",
     price: 3.28,
-    image: "bioshield-lemon.jpg",
+    image: "bioshield-lemon.png",
   },
   {
     name: "Breeze - Cherry 300ml",
@@ -743,7 +743,7 @@ const allProductsCatalog = [
     code: "807B",
     category: "Air Fresheners/ Deodorisers",
     price: 2.78,
-    image: "breeze-cherry.jpg",
+    image: "breeze-cherry.png",
   },
   {
     name: "Breeze - Floral 300ml",
@@ -751,7 +751,7 @@ const allProductsCatalog = [
     code: "802",
     category: "Air Fresheners/ Deodorisers",
     price: 2.78,
-    image: "breeze-floral.jpg",
+    image: "breeze-floral.png",
   },
   {
     name: "Breeze - Peach 300ml",
@@ -759,7 +759,7 @@ const allProductsCatalog = [
     code: "804",
     category: "Air Fresheners/ Deodorisers",
     price: 2.78,
-    image: "breeze-peach.jpg",
+    image: "breeze-peach.png",
   },
   {
     name: "Breeze Lemon 300ml",
@@ -767,7 +767,7 @@ const allProductsCatalog = [
     code: "801",
     category: "Air Fresheners/ Deodorisers",
     price: 2.78,
-    image: "breeze-lemon.jpg",
+    image: "breeze-lemon.png",
   },
   {
     name: "Cleen Air Freshener - Citrus (400ml)",
@@ -775,7 +775,7 @@ const allProductsCatalog = [
     code: "52085",
     category: "Air Fresheners/ Deodorisers",
     price: 3.25,
-    image: "cleen-air-freshener-citrus.jpg",
+    image: "cleen-air-freshener-citrus.png",
   },
   {
     name: "Cleen Air Freshener - Cranberry (400ml)",
@@ -783,7 +783,7 @@ const allProductsCatalog = [
     code: "52094",
     category: "Air Fresheners/ Deodorisers",
     price: 3.25,
-    image: "cleen-air-freshener-cranberry.jpg",
+    image: "cleen-air-freshener-cranberry.png",
   },
   {
     name: "Cleen Air Freshener - Vanilla (400ml)",
@@ -791,7 +791,7 @@ const allProductsCatalog = [
     code: "52069",
     category: "Air Fresheners/ Deodorisers",
     price: 3.45,
-    image: "cleen-air-freshener-vanilla.jpg",
+    image: "cleen-air-freshener-vanilla.png",
   },
   {
     name: "Enchant 750ml",
@@ -807,7 +807,7 @@ const allProductsCatalog = [
     code: "223",
     category: "Air Fresheners/ Deodorisers",
     price: 8.4,
-    image: "lufra-san-deo.jpg",
+    image: "lufra-san-deo.png",
   },
 
   // All purpose cleaners
@@ -825,7 +825,7 @@ const allProductsCatalog = [
     code: "999",
     category: "All purpose cleaners",
     price: 10.94,
-    image: "ub90-universal-room-cleaner.jpg",
+    image: "ub90-universal-room-cleaner.png",
   },
   {
     name: "Ubik 2000 20L",
@@ -833,7 +833,7 @@ const allProductsCatalog = [
     code: "301B",
     category: "All purpose cleaners",
     price: 42.81,
-    image: "ubik-2000-20l.jpg",
+    image: "ubik-2000-20l.png",
   },
   {
     name: "Ubik 2000- 5L",
@@ -841,7 +841,7 @@ const allProductsCatalog = [
     code: "301",
     category: "All purpose cleaners",
     price: 14.26,
-    image: "ubik-2000-5l.jpg",
+    image: "ubik-2000-5l.png",
   },
 
   // Automotive
@@ -867,7 +867,7 @@ const allProductsCatalog = [
     code: "DCARCOVERS",
     category: "Automotive",
     price: null,
-    image: "disposable-car-seat-covers.jpg",
+    image: "disposable-car-seat-covers.png",
   },
   {
     name: "Magnum Force Extra - 5L",
@@ -901,7 +901,7 @@ const allProductsCatalog = [
     code: "0209PP",
     category: "Beerline Cleaners",
     price: 10.26,
-    image: "purple-beerline-cleaner.jpg",
+    image: "purple-beerline-cleaner.png",
   },
 
   // Bins
@@ -911,7 +911,7 @@ const allProductsCatalog = [
     code: "CIGBIN",
     category: "Bins",
     price: 23.45,
-    image: "cigarette-bin.jpg",
+    image: "cigarette-bin.png",
   },
   {
     name: "Procycle Recycling Bin 80L",
@@ -919,7 +919,7 @@ const allProductsCatalog = [
     code: "105173",
     category: "Bins",
     price: 96.5,
-    image: "procycle-recycling-bin.jpg",
+    image: "procycle-recycling-bin.png",
   },
   {
     name: "Silver Bullet Bin Push 30L",
@@ -927,7 +927,7 @@ const allProductsCatalog = [
     code: "101679",
     category: "Bins",
     price: 24,
-    image: "silver-bullet-bin.jpg",
+    image: "silver-bullet-bin.png",
   },
   {
     name: "Swing Bin (White) Plastic",
@@ -935,7 +935,7 @@ const allProductsCatalog = [
     code: "5026W",
     category: "Bins",
     price: 14,
-    image: "swing-bin-white.jpg",
+    image: "swing-bin-white.png",
   },
 
   // Bottles and Heads
@@ -945,7 +945,7 @@ const allProductsCatalog = [
     code: "DIS66",
     category: "Bottles and Heads",
     price: 3.9,
-    image: "10ml-dosing-pump.jpg",
+    image: "10ml-dosing-pump.png",
   },
   {
     name: "1L bottles",
@@ -953,7 +953,7 @@ const allProductsCatalog = [
     code: "1LBOT",
     category: "Bottles and Heads",
     price: 1.65,
-    image: "1l-bottles.jpg",
+    image: "1l-bottles.png",
   },
   {
     name: "20L Bottle Cap Tap",
@@ -961,7 +961,7 @@ const allProductsCatalog = [
     code: "DIS76",
     category: "Bottles and Heads",
     price: 6.17,
-    image: "20l-bottle-cap-tap.jpg",
+    image: "20l-bottle-cap-tap.png",
   },
   {
     name: "300ml bottle with pump top (Thin)",
@@ -969,7 +969,7 @@ const allProductsCatalog = [
     code: "BOT300B",
     category: "Bottles and Heads",
     price: 1.29,
-    image: "300ml-bottle-pump-top.jpg",
+    image: "300ml-bottle-pump-top.png",
   },
   {
     name: "500ml Bottle (Round) with cap",
@@ -977,7 +977,7 @@ const allProductsCatalog = [
     code: "BOT300",
     category: "Bottles and Heads",
     price: 0.92,
-    image: "500ml-bottle-round.jpg",
+    image: "500ml-bottle-round.png",
   },
   {
     name: "5L Bottle Cap Tap",
@@ -985,7 +985,7 @@ const allProductsCatalog = [
     code: "DIS83",
     category: "Bottles and Heads",
     price: 5.56,
-    image: "5l-bottle-cap-tap.jpg",
+    image: "5l-bottle-cap-tap.png",
   },
   {
     name: "60ml Measuring Cup",
@@ -993,7 +993,7 @@ const allProductsCatalog = [
     code: "MEASURINGCUP",
     category: "Bottles and Heads",
     price: 0.69,
-    image: "60ml-measuring-cup.jpg",
+    image: "60ml-measuring-cup.png",
   },
   {
     name: "750ml Trigger Bottle Complete- Cleenol",
@@ -1001,7 +1001,7 @@ const allProductsCatalog = [
     code: "TBCC",
     category: "Bottles and Heads",
     price: 1.65,
-    image: "750ml-trigger-bottle.jpg",
+    image: "750ml-trigger-bottle.png",
   },
   {
     name: "Bottle Cap (500ml round bottle top)",
@@ -1009,7 +1009,7 @@ const allProductsCatalog = [
     code: "BOTCAP",
     category: "Bottles and Heads",
     price: 0.3,
-    image: "bottle-cap-500ml.jpg",
+    image: "bottle-cap-500ml.png",
   },
   {
     name: "Cleenol Trigger Heads",
@@ -1017,7 +1017,7 @@ const allProductsCatalog = [
     code: "CLNTRGH",
     category: "Bottles and Heads",
     price: 0.65,
-    image: "cleenol-trigger-heads.jpg",
+    image: "cleenol-trigger-heads.png",
   },
   {
     name: "Pelican Pump - 5L Cleenol",
@@ -1025,7 +1025,7 @@ const allProductsCatalog = [
     code: "136552",
     category: "Bottles and Heads",
     price: 1.5,
-    image: "pelican-pump-5l.jpg",
+    image: "pelican-pump-5l.png",
   },
   {
     name: "Pump for 5 Litre Bottle (30cc shot) CLOVER",
@@ -1033,7 +1033,7 @@ const allProductsCatalog = [
     code: "DIS77",
     category: "Bottles and Heads",
     price: 3.95,
-    image: "pump-5l-30cc.jpg",
+    image: "pump-5l-30cc.png",
   },
   {
     name: "Pump for 5 Litre Bottle (4ml shot)",
@@ -1041,7 +1041,7 @@ const allProductsCatalog = [
     code: "DIS40",
     category: "Bottles and Heads",
     price: 2.74,
-    image: "pump-5l-4ml.jpg",
+    image: "pump-5l-4ml.png",
   },
   {
     name: "Pump for 5L bottles",
@@ -1049,7 +1049,7 @@ const allProductsCatalog = [
     code: "DIS77",
     category: "Bottles and Heads",
     price: 3.95,
-    image: "pump-5l-bottles.jpg",
+    image: "pump-5l-bottles.png",
   },
   {
     name: "Pump for 5L Buster & Buster Extra",
@@ -1057,7 +1057,7 @@ const allProductsCatalog = [
     code: "DIS93",
     category: "Bottles and Heads",
     price: 7.39,
-    image: "pump-buster-extra.jpg",
+    image: "pump-buster-extra.png",
   },
   {
     name: "Push top Heads for thin 300ml bottles",
@@ -1065,7 +1065,7 @@ const allProductsCatalog = [
     code: "PTHFTB",
     category: "Bottles and Heads",
     price: 0.3,
-    image: "push-top-heads.jpg",
+    image: "push-top-heads.png",
   },
   {
     name: "Round Trigger Bottle 750ml",
@@ -1073,7 +1073,7 @@ const allProductsCatalog = [
     code: "BOT02",
     category: "Bottles and Heads",
     price: 1.1,
-    image: "round-trigger-bottle.jpg",
+    image: "round-trigger-bottle.png",
   },
   {
     name: "Sample bottles 250ml",
@@ -1081,7 +1081,7 @@ const allProductsCatalog = [
     code: "Bot49",
     category: "Bottles and Heads",
     price: 1.06,
-    image: "sample-bottles-250ml.jpg",
+    image: "sample-bottles-250ml.png",
   },
   {
     name: "Trigger head 750ml",
@@ -1089,7 +1089,7 @@ const allProductsCatalog = [
     code: "TRG05",
     category: "Bottles and Heads",
     price: 1.65,
-    image: "trigger-head-750ml.jpg",
+    image: "trigger-head-750ml.png",
   },
   {
     name: "White angled cap",
@@ -1097,7 +1097,7 @@ const allProductsCatalog = [
     code: "CAP32",
     category: "Bottles and Heads",
     price: 0.3,
-    image: "white-angled-cap.jpg",
+    image: "white-angled-cap.png",
   },
 
   // Brackets
@@ -1107,7 +1107,7 @@ const allProductsCatalog = [
     code: "DIS94",
     category: "Brackets",
     price: 2.56,
-    image: "pod-clover-bracket.jpg",
+    image: "pod-clover-bracket.png",
   },
 
   // Breaker
@@ -1117,7 +1117,7 @@ const allProductsCatalog = [
     code: "506B",
     category: "Exterior cleaner",
     price: 17.33,
-    image: "breaker-5l.jpg",
+    image: "breaker-5l.png",
   },
 
   // Brushware
@@ -1127,7 +1127,7 @@ const allProductsCatalog = [
     code: "102910",
     category: "Brushware",
     price: 4.95,
-    image: "12-soft-blue-broom.jpg",
+    image: "12-soft-blue-broom.png",
   },
   {
     name: '12" Soft Red Hygiene Broom Head',
@@ -1135,7 +1135,7 @@ const allProductsCatalog = [
     code: "102910",
     category: "Brushware",
     price: 4.95,
-    image: "12-soft-red-broom.jpg",
+    image: "12-soft-red-broom.png",
   },
   {
     name: '12" Soft Yellow Hygiene Broom Head',
@@ -1143,7 +1143,7 @@ const allProductsCatalog = [
     code: "102910",
     category: "Brushware",
     price: 4.95,
-    image: "12-soft-yellow-broom.jpg",
+    image: "12-soft-yellow-broom.png",
   },
   {
     name: '12" Stiff Blue Hygiene Broom Head',
@@ -1151,7 +1151,7 @@ const allProductsCatalog = [
     code: "102903",
     category: "Brushware",
     price: 4.95,
-    image: "12-stiff-blue-broom.jpg",
+    image: "12-stiff-blue-broom.png",
   },
   {
     name: '12" Stiff Red Hygiene Broom Head',
@@ -1159,7 +1159,7 @@ const allProductsCatalog = [
     code: "102903",
     category: "Brushware",
     price: 4.95,
-    image: "12-stiff-red-broom.jpg",
+    image: "12-stiff-red-broom.png",
   },
   {
     name: '12" Stiff Yellow Hygiene Broom Head',
@@ -1167,7 +1167,7 @@ const allProductsCatalog = [
     code: "102903",
     category: "Brushware",
     price: 4.95,
-    image: "12-stiff-yellow-broom.jpg",
+    image: "12-stiff-yellow-broom.png",
   },
   {
     name: "12'' Soft Green Hygiene Broom Head",
@@ -1175,7 +1175,7 @@ const allProductsCatalog = [
     code: "102910",
     category: "Brushware",
     price: 4.95,
-    image: "12-soft-green-broom.jpg",
+    image: "12-soft-green-broom.png",
   },
   {
     name: "12'' Stiff Green Hygiene Broom Head",
@@ -1183,7 +1183,7 @@ const allProductsCatalog = [
     code: "102903",
     category: "Brushware",
     price: 4.95,
-    image: "12-stiff-green-broom.jpg",
+    image: "12-stiff-green-broom.png",
   },
   {
     name: '18" Soft Blue Hygiene Broom Head',
@@ -1191,7 +1191,7 @@ const allProductsCatalog = [
     code: "104949",
     category: "Brushware",
     price: 8.89,
-    image: "18-soft-blue-broom.jpg",
+    image: "18-soft-blue-broom.png",
   },
   {
     name: '18" Soft Yellow Hygiene Broom Head',
@@ -1199,7 +1199,7 @@ const allProductsCatalog = [
     code: "104949",
     category: "Brushware",
     price: 8.89,
-    image: "18-soft-yellow-broom.jpg",
+    image: "18-soft-yellow-broom.png",
   },
   {
     name: '18" Stiff Blue Hygiene Broom Head',
@@ -1207,7 +1207,7 @@ const allProductsCatalog = [
     code: "104950",
     category: "Brushware",
     price: 8.89,
-    image: "18-stiff-blue-broom.jpg",
+    image: "18-stiff-blue-broom.png",
   },
   {
     name: '18" Stiff Green Hygiene Broom Head',
@@ -1215,7 +1215,7 @@ const allProductsCatalog = [
     code: "104950",
     category: "Brushware",
     price: 8.89,
-    image: "18-stiff-green-broom.jpg",
+    image: "18-stiff-green-broom.png",
   },
   {
     name: '18" Stiff Red Hygiene Broom Head',
@@ -1223,7 +1223,7 @@ const allProductsCatalog = [
     code: "104950",
     category: "Brushware",
     price: 8.89,
-    image: "18-stiff-red-broom.jpg",
+    image: "18-stiff-red-broom.png",
   },
   {
     name: "18'' Soft Green Hygiene Broom Head",
@@ -1231,7 +1231,7 @@ const allProductsCatalog = [
     code: "104949",
     category: "Brushware",
     price: 8.89,
-    image: "18-soft-green-broom.jpg",
+    image: "18-soft-green-broom.png",
   },
   {
     name: "18'' Soft Red Hygiene Broom Head",
@@ -1239,7 +1239,7 @@ const allProductsCatalog = [
     code: "104949",
     category: "Brushware",
     price: 8.89,
-    image: "18-soft-red-broom.jpg",
+    image: "18-soft-red-broom.png",
   },
   {
     name: "18'' Stiff Yellow Hygiene Broom Head",
@@ -1247,7 +1247,7 @@ const allProductsCatalog = [
     code: "102917",
     category: "Brushware",
     price: 8.89,
-    image: "18-stiff-yellow-broom.jpg",
+    image: "18-stiff-yellow-broom.png",
   },
   {
     name: "Cobweb Brush Head",
@@ -1255,7 +1255,7 @@ const allProductsCatalog = [
     code: "COBWEBBRUSH",
     category: "Brushware",
     price: 9.79,
-    image: "cobweb-brush-head.jpg",
+    image: "cobweb-brush-head.png",
   },
   {
     name: "Deck Scrub (Blue)",
@@ -1263,7 +1263,7 @@ const allProductsCatalog = [
     code: "102851",
     category: "Brushware",
     price: 2.47,
-    image: "deck-scrub-blue.jpg",
+    image: "deck-scrub-blue.png",
   },
   {
     name: "Desktop Dustpan and Brush",
@@ -1271,7 +1271,7 @@ const allProductsCatalog = [
     code: "DSKTPPAN",
     category: "Brushware",
     price: 1,
-    image: "desktop-dustpan-brush.jpg",
+    image: "desktop-dustpan-brush.png",
   },
   {
     name: "Dustpan & Brush (Blue)",
@@ -1279,7 +1279,7 @@ const allProductsCatalog = [
     code: "102940",
     category: "Brushware",
     price: 2.87,
-    image: "dustpan-brush-blue.jpg",
+    image: "dustpan-brush-blue.png",
   },
   {
     name: "Dustpan & Brush (Green)",
@@ -1287,7 +1287,7 @@ const allProductsCatalog = [
     code: "102940",
     category: "Brushware",
     price: 2.87,
-    image: "dustpan-brush-green.jpg",
+    image: "dustpan-brush-green.png",
   },
   {
     name: "Dustpan & Brush (Red)",
@@ -1295,7 +1295,7 @@ const allProductsCatalog = [
     code: "102940",
     category: "Brushware",
     price: 2.87,
-    image: "dustpan-brush-red.jpg",
+    image: "dustpan-brush-red.png",
   },
   {
     name: "Dustpan & Brush (Yellow)",
@@ -1303,7 +1303,7 @@ const allProductsCatalog = [
     code: "102940",
     category: "Brushware",
     price: 2.87,
-    image: "dustpan-brush-yellow.jpg",
+    image: "dustpan-brush-yellow.png",
   },
   {
     name: "Hygiene Brush Blue",
@@ -1311,7 +1311,7 @@ const allProductsCatalog = [
     code: "102995",
     category: "Brushware",
     price: 3.31,
-    image: "hygiene-brush-blue.jpg",
+    image: "hygiene-brush-blue.png",
   },
   {
     name: "Hygiene Brush Green",
@@ -1319,7 +1319,7 @@ const allProductsCatalog = [
     code: "102995",
     category: "Brushware",
     price: 3.31,
-    image: "hygiene-brush-green.jpg",
+    image: "hygiene-brush-green.png",
   },
   {
     name: "Hygiene Brush Red",
@@ -1327,7 +1327,7 @@ const allProductsCatalog = [
     code: "102995",
     category: "Brushware",
     price: 3.31,
-    image: "hygiene-brush-red.jpg",
+    image: "hygiene-brush-red.png",
   },
   {
     name: "Hygiene Brush Yellow",
@@ -1335,7 +1335,7 @@ const allProductsCatalog = [
     code: "102995",
     category: "Brushware",
     price: 3.31,
-    image: "hygiene-brush-yellow.jpg",
+    image: "hygiene-brush-yellow.png",
   },
   {
     name: "Hygiene Nail Brush Blue",
@@ -1343,7 +1343,7 @@ const allProductsCatalog = [
     code: "102995",
     category: "Brushware",
     price: 3.31,
-    image: "hygiene-nail-brush-blue.jpg",
+    image: "hygiene-nail-brush-blue.png",
   },
   {
     name: "Lobby Dustpan & Brush",
@@ -1351,7 +1351,7 @@ const allProductsCatalog = [
     code: "HB24B",
     category: "Brushware",
     price: 12.58,
-    image: "lobby-dustpan-brush.jpg",
+    image: "lobby-dustpan-brush.png",
   },
   {
     name: "Nail brush Blue",
@@ -1359,7 +1359,7 @@ const allProductsCatalog = [
     code: "102929B",
     category: "Brushware",
     price: 0.85,
-    image: "nail-brush-blue.jpg",
+    image: "nail-brush-blue.png",
   },
   {
     name: "Nail Brush Green",
@@ -1367,7 +1367,7 @@ const allProductsCatalog = [
     code: "102929G",
     category: "Brushware",
     price: 0.85,
-    image: "nail-brush-green.jpg",
+    image: "nail-brush-green.png",
   },
   {
     name: "Nail Brush Red",
@@ -1375,7 +1375,7 @@ const allProductsCatalog = [
     code: "102929R",
     category: "Brushware",
     price: 0.85,
-    image: "nail-brush-red.jpg",
+    image: "nail-brush-red.png",
   },
   {
     name: "Nail Brush Yellow",
@@ -1383,7 +1383,7 @@ const allProductsCatalog = [
     code: "102929",
     category: "Brushware",
     price: 0.85,
-    image: "nail-brush-yellow.jpg",
+    image: "nail-brush-yellow.png",
   },
   {
     name: "Roughneck Wire Brush",
@@ -1391,7 +1391,7 @@ const allProductsCatalog = [
     code: "SPD742",
     category: "Brushware",
     price: 2.1,
-    image: "roughneck-wire-brush.jpg",
+    image: "roughneck-wire-brush.png",
   },
   {
     name: "Scrubbing Brush - Yellow",
@@ -1399,7 +1399,7 @@ const allProductsCatalog = [
     code: "NHB03Y",
     category: "Brushware",
     price: 4.16,
-    image: "scrubbing-brush-yellow.jpg",
+    image: "scrubbing-brush-yellow.png",
   },
   {
     name: "Washable Grout Brush Blue",
@@ -1407,7 +1407,7 @@ const allProductsCatalog = [
     code: "102856",
     category: "Brushware",
     price: 3.12,
-    image: "grout-brush-blue.jpg",
+    image: "grout-brush-blue.png",
   },
   {
     name: "Washable Grout Brush Green",
@@ -1415,7 +1415,7 @@ const allProductsCatalog = [
     code: "102856G",
     category: "Brushware",
     price: 3.12,
-    image: "grout-brush-green.jpg",
+    image: "grout-brush-green.png",
   },
   {
     name: "Washable Grout Brush Red",
@@ -1423,7 +1423,7 @@ const allProductsCatalog = [
     code: "102856R",
     category: "Brushware",
     price: 3.12,
-    image: "grout-brush-red.jpg",
+    image: "grout-brush-red.png",
   },
   {
     name: "Washable Grout Brush Yellow",
@@ -1431,7 +1431,7 @@ const allProductsCatalog = [
     code: "102856Y",
     category: "Brushware",
     price: 3.12,
-    image: "grout-brush-yellow.jpg",
+    image: "grout-brush-yellow.png",
   },
   {
     name: "Washing Up Brush",
@@ -1439,7 +1439,7 @@ const allProductsCatalog = [
     code: "104969",
     category: "Brushware",
     price: 1.32,
-    image: "washing-up-brush.jpg",
+    image: "washing-up-brush.png",
   },
 
   // Buckets and Signs
@@ -1449,7 +1449,7 @@ const allProductsCatalog = [
     code: "104557",
     category: "Buckets and Signs",
     price: 28.4,
-    image: "banana-cone-wet-floor-sign.jpg",
+    image: "banana-cone-wet-floor-sign.png",
   },
   {
     name: "Bucket Speedy & Wringer 20L BLUE",
@@ -1457,7 +1457,7 @@ const allProductsCatalog = [
     code: "101248B",
     category: "Buckets and Signs",
     price: 39.9,
-    image: "bucket-speedy-wringer-blue.jpg",
+    image: "bucket-speedy-wringer-blue.png",
   },
   {
     name: "Bucket Speedy & Wringer 20L GREEN",
@@ -1465,7 +1465,7 @@ const allProductsCatalog = [
     code: "101248G",
     category: "Buckets and Signs",
     price: 39.9,
-    image: "bucket-speedy-wringer-green.jpg",
+    image: "bucket-speedy-wringer-green.png",
   },
   {
     name: "Bucket Speedy & Wringer 20L RED",
@@ -1473,7 +1473,7 @@ const allProductsCatalog = [
     code: "101248",
     category: "Buckets and Signs",
     price: 39.9,
-    image: "bucket-speedy-wringer-red.jpg",
+    image: "bucket-speedy-wringer-red.png",
   },
   {
     name: "Bucket Speedy & Wringer 20L YELLOW",
@@ -1481,7 +1481,7 @@ const allProductsCatalog = [
     code: "101248Y",
     category: "Buckets and Signs",
     price: 39.9,
-    image: "bucket-speedy-wringer-yellow.jpg",
+    image: "bucket-speedy-wringer-yellow.png",
   },
   {
     name: "Bucket, Round 9L Blue",
@@ -1489,7 +1489,7 @@ const allProductsCatalog = [
     code: "755B",
     category: "Buckets and Signs",
     price: 2.24,
-    image: "bucket-round-9l-blue.jpg",
+    image: "bucket-round-9l-blue.png",
   },
   {
     name: "Bucket, Round 9L Green",
@@ -1497,7 +1497,7 @@ const allProductsCatalog = [
     code: "755G",
     category: "Buckets and Signs",
     price: 2.24,
-    image: "bucket-round-9l-green.jpg",
+    image: "bucket-round-9l-green.png",
   },
   {
     name: "Bucket, Round 9L Red",
@@ -1505,7 +1505,7 @@ const allProductsCatalog = [
     code: "755R",
     category: "Buckets and Signs",
     price: 2.24,
-    image: "bucket-round-9l-red.jpg",
+    image: "bucket-round-9l-red.png",
   },
   {
     name: "Bucket, Round 9L Yellow",
@@ -1513,7 +1513,7 @@ const allProductsCatalog = [
     code: "755Y",
     category: "Buckets and Signs",
     price: 2.24,
-    image: "bucket-round-9l-yellow.jpg",
+    image: "bucket-round-9l-yellow.png",
   },
   {
     name: "Eco Wet Floor Sign",
@@ -1521,7 +1521,7 @@ const allProductsCatalog = [
     code: "105050",
     category: "Buckets and Signs",
     price: 5.4,
-    image: "eco-wet-floor-sign.jpg",
+    image: "eco-wet-floor-sign.png",
   },
   {
     name: "Standard Safety Cone",
@@ -1529,7 +1529,7 @@ const allProductsCatalog = [
     code: "104383",
     category: "Buckets and Signs",
     price: 5.96,
-    image: "standard-safety-cone.jpg",
+    image: "standard-safety-cone.png",
   },
   {
     name: "Wet Floor Sign Flat",
@@ -1537,7 +1537,7 @@ const allProductsCatalog = [
     code: "101423",
     category: "Buckets and Signs",
     price: 5.96,
-    image: "wet-floor-sign-flat.jpg",
+    image: "wet-floor-sign-flat.png",
   },
 
   // Carpet Cleaning
@@ -1547,7 +1547,7 @@ const allProductsCatalog = [
     code: "208B",
     category: "Carpet Cleaning",
     price: 18.88,
-    image: "ador-neutra-5l.jpg",
+    image: "ador-neutra-5l.png",
   },
   {
     name: "Ador Neutra (Sanex) - 750ml",
@@ -1555,7 +1555,7 @@ const allProductsCatalog = [
     code: "208",
     category: "Carpet Cleaning",
     price: 4.54,
-    image: "ador-neutra-750ml.jpg",
+    image: "ador-neutra-750ml.png",
   },
   {
     name: "Comet - 1L",
@@ -1563,7 +1563,7 @@ const allProductsCatalog = [
     code: "306",
     category: "Carpet Cleaning",
     price: 2.76,
-    image: "comet-1l.jpg",
+    image: "comet-1l.png",
   },
   {
     name: "Comet - 5L",
@@ -1571,7 +1571,7 @@ const allProductsCatalog = [
     code: "306B",
     category: "Carpet Cleaning",
     price: 11.4,
-    image: "comet-5l.jpg",
+    image: "comet-5l.png",
   },
   {
     name: "Defoamer - 5L",
@@ -1579,7 +1579,7 @@ const allProductsCatalog = [
     code: "445",
     category: "Carpet Cleaning",
     price: 14.24,
-    image: "defoamer-5l.jpg",
+    image: "defoamer-5l.png",
   },
   {
     name: "Dry Foam 5L",
@@ -1587,7 +1587,7 @@ const allProductsCatalog = [
     code: "444",
     category: "Carpet Cleaning",
     price: 12.88,
-    image: "dry-foam-5l.jpg",
+    image: "dry-foam-5l.png",
   },
   {
     name: "Henry Hoover Bags - 10",
@@ -1595,7 +1595,7 @@ const allProductsCatalog = [
     code: "HENRY",
     category: "Carpet Cleaning",
     price: 12.5,
-    image: "henry-hoover-bags.jpg",
+    image: "henry-hoover-bags.png",
   },
   {
     name: "Henry Turbo Head",
@@ -1603,7 +1603,7 @@ const allProductsCatalog = [
     code: "HENRYTURBO",
     category: "Carpet Cleaning",
     price: 25,
-    image: "henry-turbo-head.jpg",
+    image: "henry-turbo-head.png",
   },
   {
     name: "SAS 20 - 750ml",
@@ -1611,7 +1611,7 @@ const allProductsCatalog = [
     code: "442",
     category: "Carpet Cleaning",
     price: 4.52,
-    image: "sas-20-750ml.jpg",
+    image: "sas-20-750ml.png",
   },
 
   // Catering Essentials
@@ -1621,7 +1621,7 @@ const allProductsCatalog = [
     code: "PIPING",
     category: "Catering Essentials",
     price: 12.42,
-    image: "piping-bags-roll.jpg",
+    image: "piping-bags-roll.png",
   },
   {
     name: "All purpose anti-bacterial wipes YELLOW ROLL",
@@ -1629,7 +1629,7 @@ const allProductsCatalog = [
     code: "100247Y",
     category: "Catering Essentials",
     price: 9.89,
-    image: "antibacterial-wipes-yellow.jpg",
+    image: "antibacterial-wipes-yellow.png",
   },
   {
     name: "All purpose anti-bacterial wipes GREEN ROLL",
@@ -1637,7 +1637,7 @@ const allProductsCatalog = [
     code: "100247G",
     category: "Catering Essentials",
     price: 9.89,
-    image: "antibacterial-wipes-green.jpg",
+    image: "antibacterial-wipes-green.png",
   },
   {
     name: "All purpose anti-bacterial wipes RED ROLL",
@@ -1645,7 +1645,7 @@ const allProductsCatalog = [
     code: "100247R",
     category: "Catering Essentials",
     price: 9.89,
-    image: "antibacterial-wipes-red.jpg",
+    image: "antibacterial-wipes-red.png",
   },
   {
     name: "All Purpose Cloths - Blue",
@@ -1653,7 +1653,7 @@ const allProductsCatalog = [
     code: "104390",
     category: "Catering Essentials",
     price: 4.39,
-    image: "all-purpose-cloths-blue.jpg",
+    image: "all-purpose-cloths-blue.png",
   },
   {
     name: "All Purpose Cloths - Green",
@@ -1661,7 +1661,7 @@ const allProductsCatalog = [
     code: "104390",
     category: "Catering Essentials",
     price: 4.39,
-    image: "all-purpose-cloths-green.jpg",
+    image: "all-purpose-cloths-green.png",
   },
   {
     name: "All Purpose Cloths - Red",
@@ -1669,7 +1669,7 @@ const allProductsCatalog = [
     code: "104390",
     category: "Catering Essentials",
     price: 4.39,
-    image: "all-purpose-cloths-red.jpg",
+    image: "all-purpose-cloths-red.png",
   },
   {
     name: "All Purpose Cloths - Yellow",
@@ -1677,7 +1677,7 @@ const allProductsCatalog = [
     code: "104390",
     category: "Catering Essentials",
     price: 4.39,
-    image: "all-purpose-cloths-yellow.jpg",
+    image: "all-purpose-cloths-yellow.png",
   },
   {
     name: "All Purpose Wipes anti-bacterial BLUE ROLL",
@@ -1685,7 +1685,7 @@ const allProductsCatalog = [
     code: "100247B",
     category: "Catering Essentials",
     price: 9.89,
-    image: "antibacterial-wipes-blue.jpg",
+    image: "antibacterial-wipes-blue.png",
   },
   {
     name: 'Baking Paper (12")- Cutterbox 30cm x 75m',
@@ -1693,7 +1693,7 @@ const allProductsCatalog = [
     code: "13244B",
     category: "Catering Essentials",
     price: 9.16,
-    image: "baking-paper-12-cutterbox.jpg",
+    image: "baking-paper-12-cutterbox.png",
   },
   {
     name: 'Baking Paper (18") - Cutterbox x75m',
@@ -1701,7 +1701,7 @@ const allProductsCatalog = [
     code: "585",
     category: "Catering Essentials",
     price: 15.34,
-    image: "baking-paper-cutterbox.jpg",
+    image: "baking-paper-cutterbox.png",
   },
   {
     name: "Barista Cloth- Orange",
@@ -1709,7 +1709,7 @@ const allProductsCatalog = [
     code: "104182",
     category: "Catering Essentials",
     price: 2.1,
-    image: "barista-cloth-orange.jpg",
+    image: "barista-cloth-orange.png",
   },
   {
     name: "Black Straws",
@@ -1717,7 +1717,7 @@ const allProductsCatalog = [
     code: "BLACSTRAW",
     category: "Catering Essentials",
     price: 3.95,
-    image: "black-straws.jpg",
+    image: "black-straws.png",
   },
   {
     name: "Blue detectable plasters",
@@ -1725,7 +1725,7 @@ const allProductsCatalog = [
     code: "BLPLASTERS",
     category: "Catering Essentials",
     price: 2.1,
-    image: "blue-detectable-plasters.jpg",
+    image: "blue-detectable-plasters.png",
   },
   {
     name: 'Catering foil (12") Cutterbox x 75M',
@@ -1733,7 +1733,7 @@ const allProductsCatalog = [
     code: "11345B",
     category: "Catering Essentials",
     price: 9.55,
-    image: "catering-foil-12-cutterbox.jpg",
+    image: "catering-foil-12-cutterbox.png",
   },
   {
     name: 'Catering Foil (18") Cutterbox',
@@ -1741,7 +1741,7 @@ const allProductsCatalog = [
     code: "588",
     category: "Catering Essentials",
     price: 11.96,
-    image: "catering-foil-cutterbox.jpg",
+    image: "catering-foil-cutterbox.png",
   },
   {
     name: 'Cling Film (12") Cutterbox x 300m',
@@ -1749,7 +1749,7 @@ const allProductsCatalog = [
     code: "10230H",
     category: "Catering Essentials",
     price: 8.95,
-    image: "cling-film-12-cutterbox.jpg",
+    image: "cling-film-12-cutterbox.png",
   },
   {
     name: 'Cling Film (18") Cutterbox x 300m',
@@ -1757,7 +1757,7 @@ const allProductsCatalog = [
     code: "10245H",
     category: "Catering Essentials",
     price: 10.91,
-    image: "cling-film-cutterbox.jpg",
+    image: "cling-film-cutterbox.png",
   },
   {
     name: "Halo Cleaning Powder",
@@ -1765,7 +1765,7 @@ const allProductsCatalog = [
     code: "PN902",
     category: "Catering Essentials",
     price: 5.3,
-    image: "halo-cleaning-powder.jpg",
+    image: "halo-cleaning-powder.png",
   },
   {
     name: "Halo Milk Line 1L",
@@ -1773,7 +1773,7 @@ const allProductsCatalog = [
     code: "PN905",
     category: "Catering Essentials",
     price: 5.95,
-    image: "halo-milk-line.jpg",
+    image: "halo-milk-line.png",
   },
   {
     name: "Temperature Probe",
@@ -1781,7 +1781,7 @@ const allProductsCatalog = [
     code: "TP101",
     category: "Catering Essentials",
     price: 3.6,
-    image: "temperature-probe.jpg",
+    image: "temperature-probe.png",
   },
 
   // Centrefeed
@@ -1791,7 +1791,7 @@ const allProductsCatalog = [
     code: "852665",
     category: "Centrefeed",
     price: 16.98,
-    image: "blue-2ply-centrefeed.jpg",
+    image: "blue-2ply-centrefeed.png",
   },
   {
     name: "Centrefeed 1 Ply White 425",
@@ -1799,7 +1799,7 @@ const allProductsCatalog = [
     code: "FCFW19301",
     category: "Centrefeed",
     price: 21.65,
-    image: "centrefeed-1ply-white.jpg",
+    image: "centrefeed-1ply-white.png",
   },
   {
     name: "Centrefeed 2 ply White",
@@ -1807,7 +1807,7 @@ const allProductsCatalog = [
     code: "319",
     category: "Centrefeed",
     price: 16.98,
-    image: "852502.jpg",
+    image: "852502.png",
   },
   {
     name: "Mini Centrefeed Toilet Rolls 2 Ply White",
@@ -1815,7 +1815,7 @@ const allProductsCatalog = [
     code: "226",
     category: "Centrefeed",
     price: 23.9,
-    image: "mini-centrefeed-toilet-rolls.jpg",
+    image: "mini-centrefeed-toilet-rolls.png",
   },
   {
     name: "Sirius Mini Centrefeed 2ply White",
@@ -1823,7 +1823,7 @@ const allProductsCatalog = [
     code: "303",
     category: "Centrefeed",
     price: 23.5,
-    image: "sirius-mini-centrefeed.jpg",
+    image: "sirius-mini-centrefeed.png",
   },
 
   // Dishwashing
@@ -1849,7 +1849,7 @@ const allProductsCatalog = [
     code: "7011",
     category: "Dishwashing",
     price: 12.94,
-    image: "c4-machine-dishwash.jpg",
+    image: "c4-machine-dishwash.png",
   },
   {
     name: "Clarifi - 5L",
@@ -1873,7 +1873,7 @@ const allProductsCatalog = [
     code: "407",
     category: "Dishwashing",
     price: 12.86,
-    image: "rinse-aid-5l.jpg",
+    image: "rinse-aid-5l.png",
   },
 
   // Dishwashing Detergents
@@ -1907,7 +1907,7 @@ const allProductsCatalog = [
     code: "7035",
     category: "Dishwashing Detergents",
     price: 8.36,
-    image: "d3-green-washing-up-liquid.jpg",
+    image: "d3-green-washing-up-liquid.png",
   },
   {
     name: "D4 Concentrated washing up liquid 5L",
@@ -1915,7 +1915,7 @@ const allProductsCatalog = [
     code: "021432X5",
     category: "Dishwashing Detergents",
     price: 10.84,
-    image: "D4.jpg",
+    image: "D4.png",
   },
   {
     name: "Dish-Bac - 1L",
@@ -1923,7 +1923,7 @@ const allProductsCatalog = [
     code: "221",
     category: "Dishwashing Detergents",
     price: 3.82,
-    image: "dish-bac-1l.jpg",
+    image: "dish-bac-1l.png",
   },
   {
     name: "Dish-Bac 5L",
@@ -1931,7 +1931,7 @@ const allProductsCatalog = [
     code: "221",
     category: "Dishwashing Detergents",
     price: 13.48,
-    image: "dish-bac-5l.jpg",
+    image: "dish-bac-5l.png",
   },
 
   // Disinfectants
@@ -1941,7 +1941,7 @@ const allProductsCatalog = [
     code: "898",
     category: "Disinfectants",
     price: 10.44,
-    image: "freshnit-5l.jpg",
+    image: "freshnit-5l.png",
   },
   {
     name: "San Multi Lemon (Fresh Wild Lemon)",
@@ -1949,7 +1949,7 @@ const allProductsCatalog = [
     code: "202",
     category: "Disinfectants",
     price: 7.79,
-    image: "san-multi-lemon.jpg",
+    image: "san-multi-lemon.png",
   },
   {
     name: "Spray & Wipe - 5L",
@@ -1973,7 +1973,7 @@ const allProductsCatalog = [
     code: "259",
     category: "Disinfectants",
     price: 3.97,
-    image: "ultra-ax-750ml.jpg",
+    image: "ultra-ax-750ml.png",
   },
   {
     name: "Ultra Xtreme 1L",
@@ -1981,7 +1981,7 @@ const allProductsCatalog = [
     code: "259D",
     category: "Disinfectants",
     price: 9.19,
-    image: "ultra-xtreme-1l.jpg",
+    image: "ultra-xtreme-1l.png",
   },
   {
     name: "Ultra Xtreme 5L",
@@ -1989,7 +1989,7 @@ const allProductsCatalog = [
     code: "261",
     category: "Disinfectants",
     price: 17.73,
-    image: "ultra-xtreme.jpg",
+    image: "ultra-xtreme.png",
   },
   {
     name: "Versan - 5L",
@@ -1997,7 +1997,7 @@ const allProductsCatalog = [
     code: "260",
     category: "Disinfectants",
     price: 10.86,
-    image: "versan-5l.jpg",
+    image: "versan-5l.png",
   },
   {
     name: "Versan 1L",
@@ -2005,7 +2005,7 @@ const allProductsCatalog = [
     code: "260",
     category: "Disinfectants",
     price: 4.53,
-    image: "versan-1l.jpg",
+    image: "versan-1l.png",
   },
 
   // Floor Cleaners
@@ -2015,7 +2015,7 @@ const allProductsCatalog = [
     code: "205B",
     category: "Floor Cleaners",
     price: 11.68,
-    image: "bio-shield-lemon.jpg",
+    image: "bio-shield-lemon.png",
   },
   {
     name: "C2 Floor Cleaner, 1L",
@@ -2039,7 +2039,7 @@ const allProductsCatalog = [
     code: "105",
     category: "Floor Cleaners",
     price: 8.85,
-    image: "clover-gel-pine.jpg",
+    image: "clover-gel-pine.png",
   },
   {
     name: "Clover Gel Lemon - 5L",
@@ -2047,7 +2047,7 @@ const allProductsCatalog = [
     code: "107",
     category: "Floor Cleaners",
     price: 11.16,
-    image: "clover-gel-lemon.jpg",
+    image: "clover-gel-lemon.png",
   },
   {
     name: "Diamond Extra 5L",
@@ -2055,7 +2055,7 @@ const allProductsCatalog = [
     code: "109",
     category: "Floor Cleaners",
     price: 37.26,
-    image: "diamond-extra.jpg",
+    image: "diamond-extra.png",
   },
   {
     name: "Floorit - 5L",
@@ -2087,7 +2087,7 @@ const allProductsCatalog = [
     code: "282",
     category: "Floor Cleaners",
     price: 12.88,
-    image: "terra-floor-ultra.jpg",
+    image: "terra-floor-ultra.png",
   },
 
   // Gloves
@@ -2097,7 +2097,7 @@ const allProductsCatalog = [
     code: "Nitrileblack",
     category: "Gloves",
     price: 4.95,
-    image: "nitrile-black-gloves.jpg",
+    image: "nitrile-black-gloves.png",
   },
   {
     name: "Nitrile Blue Pro Ultraflex Gloves, M",
@@ -2105,7 +2105,7 @@ const allProductsCatalog = [
     code: "1162",
     category: "Gloves",
     price: 4.71,
-    image: "nitrile-blue-pro-ultraflex-gloves.jpg",
+    image: "nitrile-blue-pro-ultraflex-gloves.png",
   },
   {
     name: "PRO UltraFlex Blue Nitrile Gloves, L",
@@ -2113,7 +2113,7 @@ const allProductsCatalog = [
     code: "1163",
     category: "Gloves",
     price: 4.71,
-    image: "nitrile-blue-pro-ultraflex-gloves-l.jpg",
+    image: "nitrile-blue-pro-ultraflex-gloves-l.png",
   },
   {
     name: "PRO UltraFlex Blue Nitrile Gloves, XL",
@@ -2121,7 +2121,7 @@ const allProductsCatalog = [
     code: "1164",
     category: "Gloves",
     price: 4.71,
-    image: "nitrile-blue-pro-ultraflex-gloves-xl.jpg",
+    image: "nitrile-blue-pro-ultraflex-gloves-xl.png",
   },
   {
     name: "Rubber Gloves Blue Large",
@@ -2129,7 +2129,7 @@ const allProductsCatalog = [
     code: "CORG.B.L",
     category: "Gloves",
     price: 0.55,
-    image: "rubber-gloves-blue-large.jpg",
+    image: "rubber-gloves-blue-large.png",
   },
   {
     name: "Rubber Gloves Blue Medium",
@@ -2137,7 +2137,7 @@ const allProductsCatalog = [
     code: "CORG.B.M",
     category: "Gloves",
     price: 0.55,
-    image: "rubber-gloves-blue-medium.jpg",
+    image: "rubber-gloves-blue-medium.png",
   },
   {
     name: "Rubber Gloves Blue Small",
@@ -2145,7 +2145,7 @@ const allProductsCatalog = [
     code: "CORG.B.S",
     category: "Gloves",
     price: 0.55,
-    image: "rubber-gloves-blue-small.jpg",
+    image: "rubber-gloves-blue-small.png",
   },
   {
     name: "Vinyl Blue Medium Powder Free Gloves",
@@ -2153,7 +2153,7 @@ const allProductsCatalog = [
     code: "1261",
     category: "Gloves",
     price: 4.6,
-    image: "vinyl-blue-medium-gloves.jpg",
+    image: "vinyl-blue-medium-gloves.png",
   },
   {
     name: "Vinyl Blue Powder Free Gloves (L)",
@@ -2161,7 +2161,7 @@ const allProductsCatalog = [
     code: "1262",
     category: "Gloves",
     price: 4.6,
-    image: "vinyl-blue-large-gloves.jpg",
+    image: "vinyl-blue-large-gloves.png",
   },
   {
     name: "Vinyl Blue Powder Free Gloves (XL)",
@@ -2169,7 +2169,7 @@ const allProductsCatalog = [
     code: "1263",
     category: "Gloves",
     price: 4.6,
-    image: "vinyl-blue-xl-gloves.jpg",
+    image: "vinyl-blue-xl-gloves.png",
   },
 
   // Hand creams/ Gels
@@ -2203,7 +2203,7 @@ const allProductsCatalog = [
     code: "409",
     category: "Hand creams/ Gels",
     price: 2.46,
-    image: "barrier-cream-300ml.jpg",
+    image: "barrier-cream-300ml.png",
   },
   {
     name: "Barrier Cream - 5L",
@@ -2211,7 +2211,7 @@ const allProductsCatalog = [
     code: "409C",
     category: "Hand creams/ Gels",
     price: 21.34,
-    image: "barrier-cream-5l.jpg",
+    image: "barrier-cream-5l.png",
   },
   {
     name: "Care 4 - 300ml",
@@ -2219,7 +2219,7 @@ const allProductsCatalog = [
     code: "434",
     category: "Hand creams/ Gels",
     price: 2.5,
-    image: "care-4-300ml.jpg",
+    image: "care-4-300ml.png",
   },
   {
     name: "Care 4 - 5L",
@@ -2227,7 +2227,7 @@ const allProductsCatalog = [
     code: "434C",
     category: "Hand creams/ Gels",
     price: 22.81,
-    image: "care-4-5l.jpg",
+    image: "care-4-5l.png",
   },
   {
     name: "Dermex Mechanic Soap (Buster Extra) 5L",
@@ -2235,7 +2235,7 @@ const allProductsCatalog = [
     code: "415",
     category: "Hand creams/ Gels",
     price: 17.48,
-    image: "dermex-mechanic-soap.jpg",
+    image: "dermex-mechanic-soap.png",
   },
 
   // Hand Towels
@@ -2245,7 +2245,7 @@ const allProductsCatalog = [
     code: "PHS101",
     category: "Hand Towels",
     price: 23.02,
-    image: "autocut-hand-towel-1ply.jpg",
+    image: "autocut-hand-towel-1ply.png",
   },
   {
     name: "Autocut Hand Towel Rolls, 2 Ply",
@@ -2253,7 +2253,7 @@ const allProductsCatalog = [
     code: "367",
     category: "Hand Towels",
     price: 24.96,
-    image: "autocut-hand-towel-2ply.jpg",
+    image: "autocut-hand-towel-2ply.png",
   },
   {
     name: "Hand Towels - C Fold, 1 Ply Blue",
@@ -2261,7 +2261,7 @@ const allProductsCatalog = [
     code: "862096E",
     category: "Hand Towels",
     price: 21.31,
-    image: "hand-towels-c-fold-blue.jpg",
+    image: "hand-towels-c-fold-blue.png",
   },
   {
     name: "Hand Towels - C Fold, 2 Ply White",
@@ -2269,7 +2269,7 @@ const allProductsCatalog = [
     code: "862122",
     category: "Hand Towels",
     price: 26.67,
-    image: "hand-towels-c-fold.jpg",
+    image: "hand-towels-c-fold.png",
   },
   {
     name: "Hand Towels - Z Fold, 2 Ply White",
@@ -2277,7 +2277,7 @@ const allProductsCatalog = [
     code: "864083",
     category: "Hand Towels",
     price: 27.9,
-    image: "hand-towels-z-fold.jpg",
+    image: "hand-towels-z-fold.png",
   },
   {
     name: "Kitchen Rolls 2 Ply - 24",
@@ -2285,7 +2285,7 @@ const allProductsCatalog = [
     code: "821663",
     category: "Hand Towels",
     price: 15.85,
-    image: "kitchen-rolls-2ply.jpg",
+    image: "kitchen-rolls-2ply.png",
   },
   {
     name: "SkyTech Blue Wiping Roll 2 Ply Recycled 26cm x 350m",
@@ -2293,7 +2293,7 @@ const allProductsCatalog = [
     code: "343",
     category: "Hand Towels",
     price: 28.93,
-    image: "skytech-blue-wiping-roll.jpg",
+    image: "skytech-blue-wiping-roll.png",
   },
 
   // Soaps
@@ -2303,7 +2303,7 @@ const allProductsCatalog = [
     code: "213",
     category: "Soaps",
     price: 2.25,
-    image: "biodox-300ml.jpg",
+    image: "biodox-300ml.png",
   },
   {
     name: "Biodox - 5L",
@@ -2311,7 +2311,7 @@ const allProductsCatalog = [
     code: "213C",
     category: "Soaps",
     price: 11.38,
-    image: "biodox-5l.jpg",
+    image: "biodox-5l.png",
   },
   {
     name: "Citrus Hand Cleanser 500ml",
@@ -2319,7 +2319,7 @@ const allProductsCatalog = [
     code: "77234",
     category: "Soaps",
     price: 3.26,
-    image: "citrus-hand-cleanser.jpg",
+    image: "citrus-hand-cleanser.png",
   },
   {
     name: "Larox - 5L",
@@ -2335,7 +2335,7 @@ const allProductsCatalog = [
     code: "77037",
     category: "Soaps",
     price: 2.63,
-    image: "luxury-liquid-soap.jpg",
+    image: "luxury-liquid-soap.png",
   },
   {
     name: "Savon Blanc - 5L",
@@ -2343,7 +2343,7 @@ const allProductsCatalog = [
     code: "446",
     category: "Soaps",
     price: 10.63,
-    image: "savon-blanc.jpg",
+    image: "savon-blanc.png",
   },
   {
     name: "Savon Pearle - 300ml",
@@ -2351,7 +2351,7 @@ const allProductsCatalog = [
     code: "402",
     category: "Soaps",
     price: 2.2,
-    image: "savon-pearle-300ml.jpg",
+    image: "savon-pearle-300ml.png",
   },
   {
     name: "Savon Pearle - 5L",
@@ -2359,7 +2359,7 @@ const allProductsCatalog = [
     code: "402C",
     category: "Soaps",
     price: 10.63,
-    image: "savon-pearle-5l.jpg",
+    image: "savon-pearle-5l.png",
   },
   {
     name: "Senses Fragrance-free Antibacterial Hand Wash 5L",
@@ -2367,7 +2367,7 @@ const allProductsCatalog = [
     code: "077028X5",
     category: "Soaps",
     price: 10.53,
-    image: "senses-fragrance-free-antibacterial-hand-wash.jpg",
+    image: "senses-fragrance-free-antibacterial-hand-wash.png",
   },
   {
     name: "Senses Lemon Industrial Hand Cleaner 5L",
@@ -2375,7 +2375,7 @@ const allProductsCatalog = [
     code: "72978",
     category: "Soaps",
     price: 15.1,
-    image: "senses-lemon-industrial-hand-cleaner.jpg",
+    image: "senses-lemon-industrial-hand-cleaner.png",
   },
   {
     name: "Silk - 300ml",
@@ -2383,7 +2383,7 @@ const allProductsCatalog = [
     code: "417",
     category: "Soaps",
     price: 2.32,
-    image: "silk-300ml.jpg",
+    image: "silk-300ml.png",
   },
   {
     name: "Silk - 5L",
@@ -2391,7 +2391,7 @@ const allProductsCatalog = [
     code: "417C",
     category: "Soaps",
     price: 14.22,
-    image: "silk-5l.jpg",
+    image: "silk-5l.png",
   },
 
   // Toilet Rolls
@@ -2401,7 +2401,7 @@ const allProductsCatalog = [
     code: "BDQ2PLY4PK",
     category: "Toilet Rolls",
     price: 16.15,
-    image: "bliss-2ply-toilet-rolls.jpg",
+    image: "bliss-2ply-toilet-rolls.png",
   },
   {
     name: "Bliss 3-Ply Toilet Roll",
@@ -2409,7 +2409,7 @@ const allProductsCatalog = [
     code: "BTQ3PLY4PK",
     category: "Toilet Rolls",
     price: 19.67,
-    image: "bliss-3ply-toilet-rolls.jpg",
+    image: "bliss-3ply-toilet-rolls.png",
   },
   {
     name: "Bulk Pack Toilet Tissue",
@@ -2417,7 +2417,7 @@ const allProductsCatalog = [
     code: "811D23",
     category: "Toilet Rolls",
     price: 22.25,
-    image: "bulk-pack-toilet-tissue.jpg",
+    image: "bulk-pack-toilet-tissue.png",
   },
   {
     name: "Coreless Toilet Rolls 95mm x 96m",
@@ -2425,7 +2425,7 @@ const allProductsCatalog = [
     code: "229",
     category: "Toilet Rolls",
     price: 39.5,
-    image: "coreless-toilet-rolls.jpg",
+    image: "coreless-toilet-rolls.png",
   },
   {
     name: "Lucart 3-Ply Luxury Toilet Rolls",
@@ -2433,7 +2433,7 @@ const allProductsCatalog = [
     code: "811D21 Strong21",
     category: "Toilet Rolls",
     price: 19.5,
-    image: "lucart-3ply-luxury.jpg",
+    image: "lucart-3ply-luxury.png",
   },
   {
     name: 'Maxi Jumbo 3" (76mm) core x 300m',
@@ -2441,7 +2441,7 @@ const allProductsCatalog = [
     code: "812395",
     category: "Toilet Rolls",
     price: 18.9,
-    image: "maxi-jumbo-toilet-rolls.jpg",
+    image: "maxi-jumbo-toilet-rolls.png",
   },
   {
     name: 'Mini Jumbo 3" (76mm) core x 150m',
@@ -2449,7 +2449,7 @@ const allProductsCatalog = [
     code: "812350",
     category: "Toilet Rolls",
     price: 18.9,
-    image: "mini-jumbo-toilet-rolls.jpg",
+    image: "mini-jumbo-toilet-rolls.png",
   },
 
   // Washroom/Bathroom
@@ -2459,7 +2459,7 @@ const allProductsCatalog = [
     code: "502",
     category: "Washroom/Bathroom",
     price: 3.97,
-    image: "acid-wash-80-1l.jpg",
+    image: "Acid Wash 80 - 1L.png",
   },
   {
     name: "Acid Wash 80 - 5L",
@@ -2467,7 +2467,7 @@ const allProductsCatalog = [
     code: "502B",
     category: "Washroom/Bathroom",
     price: 11.75,
-    image: "acid-wash-80-5l.jpg",
+    image: "Acid Wash 80 - 5L.png",
   },
   {
     name: "Apeal - 750ml",
@@ -2475,7 +2475,7 @@ const allProductsCatalog = [
     code: "251",
     category: "Washroom/Bathroom",
     price: 3.91,
-    image: "apeal-750ml.jpg",
+    image: "apeal-750ml.png",
   },
   {
     name: "Apeal 5L",
@@ -2483,7 +2483,7 @@ const allProductsCatalog = [
     code: "251",
     category: "Washroom/Bathroom",
     price: 13.38,
-    image: "apeal-5l.jpg",
+    image: "apeal-5l.png",
   },
   {
     name: "C3 1L",
@@ -2491,7 +2491,7 @@ const allProductsCatalog = [
     code: "533B",
     category: "Washroom/Bathroom",
     price: 5.7,
-    image: "c3-washroom-cleaner-1l.jpg",
+    image: "c3-washroom-cleaner-1l.png",
   },
   {
     name: "C3 Washroom Cleaner 5L",
@@ -2499,7 +2499,7 @@ const allProductsCatalog = [
     code: "533",
     category: "Washroom/Bathroom",
     price: 18.81,
-    image: "c3-washroom-cleaner-5l.jpg",
+    image: "c3-washroom-cleaner-5l.png",
   },
   {
     name: "Lance - 750ml",
@@ -2507,7 +2507,7 @@ const allProductsCatalog = [
     code: "524",
     category: "Washroom/Bathroom",
     price: 3.74,
-    image: "lance-750ml.jpg",
+    image: "lance-750ml.png",
   },
   {
     name: "Scale-It - 1L",
@@ -2515,7 +2515,7 @@ const allProductsCatalog = [
     code: "598",
     category: "Washroom/Bathroom",
     price: 2.71,
-    image: "scale-it-1l.jpg",
+    image: "scale-it-1l.png",
   },
   {
     name: "Scale-It - 5L",
@@ -2523,7 +2523,7 @@ const allProductsCatalog = [
     code: "598B",
     category: "Washroom/Bathroom",
     price: 9.26,
-    image: "scale-it-5l.jpg",
+    image: "scale-it-5l.png",
   },
   {
     name: "STC - 1L",
@@ -2531,7 +2531,7 @@ const allProductsCatalog = [
     code: "510",
     category: "Washroom/Bathroom",
     price: 2.92,
-    image: "stc-1l.jpg",
+    image: "stc-1l.png",
   },
   {
     name: "STC 5L",
@@ -2539,7 +2539,7 @@ const allProductsCatalog = [
     code: "510",
     category: "Washroom/Bathroom",
     price: 9.96,
-    image: "stc-5l.jpg",
+    image: "stc-5l.png",
   },
   {
     name: "Thick Bleach 5L",
@@ -2547,7 +2547,7 @@ const allProductsCatalog = [
     code: "062392X5",
     category: "Washroom/Bathroom",
     price: 6.99,
-    image: "thick-bleach-5l.jpg",
+    image: "thick-bleach-5l.png",
   },
   {
     name: "Thick Bleach 750ml",
@@ -2555,7 +2555,7 @@ const allProductsCatalog = [
     code: "BLEACH750ML",
     category: "Washroom/Bathroom",
     price: 1.49,
-    image: "thick-bleach-750ml.jpg",
+    image: "thick-bleach-750ml.png",
   },
   {
     name: "Zakol - 1L",
@@ -2563,7 +2563,7 @@ const allProductsCatalog = [
     code: "501",
     category: "Washroom/Bathroom",
     price: 2.96,
-    image: "zakol-1l.jpg",
+    image: "zakol-1l.png",
   },
   {
     name: "Zakol - 5L",
@@ -2571,7 +2571,7 @@ const allProductsCatalog = [
     code: "501B",
     category: "Washroom/Bathroom",
     price: 10.42,
-    image: "zakol-5l.jpg",
+    image: "zakol-5l.png",
   },
 
   // Wipes
@@ -2581,7 +2581,7 @@ const allProductsCatalog = [
     code: "686",
     category: "Wipes",
     price: 4.43,
-    image: "alcohol-free-clinical-wipes.jpg",
+    image: "alcohol-free-clinical-wipes.png",
   },
   {
     name: "Cleenol Alcohol Wipes (200)",
@@ -2589,7 +2589,7 @@ const allProductsCatalog = [
     code: "13646AW",
     category: "Wipes",
     price: 3.9,
-    image: "cleenol-alcohol-wipes.jpg",
+    image: "cleenol-alcohol-wipes.png",
   },
   {
     name: "Cleenol Wipes FOOD SAFE (200)",
@@ -2597,7 +2597,7 @@ const allProductsCatalog = [
     code: "RH94",
     category: "Wipes",
     price: 3.27,
-    image: "cleenol-food-safe-wipes.jpg",
+    image: "cleenol-food-safe-wipes.png",
   },
   {
     name: "Disinfectant Surface Wipes",
@@ -2605,7 +2605,7 @@ const allProductsCatalog = [
     code: "Disinfectwipes",
     category: "Wipes",
     price: 2.48,
-    image: "disinfectant-surface-wipes.jpg",
+    image: "disinfectant-surface-wipes.png",
   },
   {
     name: "VDU Wipes",
@@ -2613,7 +2613,7 @@ const allProductsCatalog = [
     code: "RH95",
     category: "Wipes",
     price: 2.4,
-    image: "vdu-wipes.jpg",
+    image: "vdu-wipes.png",
   },
 
   // Sacks
@@ -2623,7 +2623,7 @@ const allProductsCatalog = [
     code: "6010",
     category: "Sacks",
     price: 19.3,
-    image: "black-compactor-sacks.jpg",
+    image: "black-compactor-sacks.png",
   },
   {
     name: "Black Sacks",
@@ -2631,7 +2631,7 @@ const allProductsCatalog = [
     code: "LD7080",
     category: "Sacks",
     price: 20.35,
-    image: "black-sacks.jpg",
+    image: "black-sacks.png",
   },
   {
     name: "Clear Sacks- Medium Duty",
@@ -2639,7 +2639,7 @@ const allProductsCatalog = [
     code: "7550",
     category: "Sacks",
     price: 21.72,
-    image: "clear-sacks-medium.jpg",
+    image: "clear-sacks-medium.png",
   },
   {
     name: "HD Pedal Bin Liners",
@@ -2647,7 +2647,7 @@ const allProductsCatalog = [
     code: "HDPEDAL",
     category: "Sacks",
     price: 16.8,
-    image: "hd-pedal-bin-liners.jpg",
+    image: "hd-pedal-bin-liners.png",
   },
   {
     name: "HD Swing Bin Liners",
@@ -2655,7 +2655,7 @@ const allProductsCatalog = [
     code: "HDSWING 7533",
     category: "Sacks",
     price: 16.9,
-    image: "hd-swing-bin-liners.jpg",
+    image: "hd-swing-bin-liners.png",
   },
   {
     name: "Mammoth Wheelie Bin Liners",
@@ -2663,7 +2663,7 @@ const allProductsCatalog = [
     code: "7561",
     category: "Sacks",
     price: 24.85,
-    image: "mammoth-wheelie-bin-liners.jpg",
+    image: "mammoth-wheelie-bin-liners.png",
   },
   {
     name: "Swing Bin Liners",
@@ -2671,7 +2671,7 @@ const allProductsCatalog = [
     code: "ECONSWING",
     category: "Sacks",
     price: 14.2,
-    image: "swing-bin-liners.jpg",
+    image: "swing-bin-liners.png",
   },
 
   // Polish & Glass
@@ -2697,7 +2697,7 @@ const allProductsCatalog = [
     code: "715",
     category: "Polish & Glass",
     price: 7.18,
-    image: "dazzle-750ml.jpg",
+    image: "dazzle-750ml.png",
   },
   {
     name: "Lambswool Duster",
@@ -2705,7 +2705,7 @@ const allProductsCatalog = [
     code: "101005",
     category: "Polish & Glass",
     price: 2.47,
-    image: "lambswool-duster.jpg",
+    image: "lambswool-duster.png",
   },
   {
     name: "Orange Dusters",
@@ -2713,7 +2713,7 @@ const allProductsCatalog = [
     code: "700A.20.10",
     category: "Polish & Glass",
     price: 7.06,
-    image: "orange-dusters.jpg",
+    image: "orange-dusters.png",
   },
   {
     name: "Swift 5L",
@@ -2737,7 +2737,7 @@ const allProductsCatalog = [
     code: "700S.14.10",
     category: "Polish & Glass",
     price: 3.35,
-    image: "yellow-dusters.jpg",
+    image: "yellow-dusters.png",
   },
 
   // Napkins
@@ -2747,7 +2747,7 @@ const allProductsCatalog = [
     code: "513",
     category: "Napkins",
     price: 29.68,
-    image: "napkins-recycled-33cm.jpg",
+    image: "napkins-recycled-33cm.png",
   },
   {
     name: "Napkins, 40cm, 2 ply white",
@@ -2755,7 +2755,7 @@ const allProductsCatalog = [
     code: "SPD1377",
     category: "Napkins",
     price: 36.46,
-    image: "napkins-40cm-white.jpg",
+    image: "napkins-40cm-white.png",
   },
 
   // Tissue
@@ -2765,7 +2765,7 @@ const allProductsCatalog = [
     code: "841103",
     category: "Tissue",
     price: 20.8,
-    image: "luxury-cube-facial-tissues.jpg",
+    image: "luxury-cube-facial-tissues.png",
   },
 
   // Protective Wear
@@ -2775,7 +2775,7 @@ const allProductsCatalog = [
     code: "BAPRON",
     category: "Protective Wear",
     price: 40.32,
-    image: "aprons-blue.jpg",
+    image: "aprons-blue.png",
   },
   {
     name: "Blue Mesh Hairnets (100)",
@@ -2783,7 +2783,7 @@ const allProductsCatalog = [
     code: "19310",
     category: "Protective Wear",
     price: 7.95,
-    image: "blue-mesh-hairnets.jpg",
+    image: "blue-mesh-hairnets.png",
   },
   {
     name: "Mob Caps - Blue (100)",
@@ -2791,7 +2791,7 @@ const allProductsCatalog = [
     code: "125B",
     category: "Protective Wear",
     price: 2.99,
-    image: "mob-caps-blue.jpg",
+    image: "mob-caps-blue.png",
   },
   {
     name: "Overshoes, Blue (100)",
@@ -2799,7 +2799,7 @@ const allProductsCatalog = [
     code: "7557",
     category: "Protective Wear",
     price: 3.12,
-    image: "overshoes-blue.jpg",
+    image: "overshoes-blue.png",
   },
   {
     name: "Oversleeves - Blue (100)",
@@ -2807,7 +2807,7 @@ const allProductsCatalog = [
     code: "16210",
     category: "Protective Wear",
     price: 3.53,
-    image: "oversleeves-blue.jpg",
+    image: "oversleeves-blue.png",
   },
 
   // Covid
@@ -2817,7 +2817,7 @@ const allProductsCatalog = [
     code: "V11",
     category: "Covid",
     price: 2.45,
-    image: "antiviral-spray-can.jpg",
+    image: "antiviral-spray-can.png",
   },
   {
     name: "Antiviral Wipes Hycolin",
@@ -2825,7 +2825,7 @@ const allProductsCatalog = [
     code: "ANTIWIPES",
     category: "Covid",
     price: 2.78,
-    image: "antiviral-wipes-hycolin.jpg",
+    image: "antiviral-wipes-hycolin.png",
   },
   {
     name: "KN95 MASKS (Individual)",
@@ -2833,7 +2833,7 @@ const allProductsCatalog = [
     code: "KN95",
     category: "Covid",
     price: 0.3,
-    image: "kn95-masks.jpg",
+    image: "kn95-masks.png",
   },
   {
     name: "PRO Type IIR Facemasks disposable",
@@ -2841,7 +2841,7 @@ const allProductsCatalog = [
     code: "MASKS",
     category: "Covid",
     price: 2.65,
-    image: "pro-type-iir-facemasks.jpg",
+    image: "pro-type-iir-facemasks.png",
   },
   {
     name: "V7 Antiviral Hand Soap 500ml",
@@ -2849,7 +2849,7 @@ const allProductsCatalog = [
     code: "ANTISOAP",
     category: "Covid",
     price: 1.92,
-    image: "v7-antiviral-hand-soap.jpg",
+    image: "v7-antiviral-hand-soap.png",
   },
 
   // Laundry
@@ -2859,7 +2859,7 @@ const allProductsCatalog = [
     code: "ARIELLLATAB",
     category: "Laundry",
     price: 18.25,
-    image: "ariel-laundry-tablets.jpg",
+    image: "ariel-laundry-tablets.png",
   },
   {
     name: "CrystalBrite Laundry Powder - Bio -10kg",
@@ -2867,7 +2867,7 @@ const allProductsCatalog = [
     code: "31118",
     category: "Laundry",
     price: 22.47,
-    image: "crystalbrite-bio-powder.jpg",
+    image: "crystalbrite-bio-powder.png",
   },
   {
     name: "CrystalBrite Laundry Powder - Non Bio 10kg",
@@ -2875,7 +2875,7 @@ const allProductsCatalog = [
     code: "31107",
     category: "Laundry",
     price: 22.47,
-    image: "crystalbrite-non-bio-powder.jpg",
+    image: "crystalbrite-non-bio-powder.png",
   },
   {
     name: "Laundry Sanitiser - 5L",
@@ -2883,7 +2883,7 @@ const allProductsCatalog = [
     code: "238",
     category: "Laundry",
     price: 50.04,
-    image: "laundry-sanitiser.jpg",
+    image: "laundry-sanitiser.png",
   },
   {
     name: "Puriti Fabric Conditioner - 5L",
@@ -2891,7 +2891,7 @@ const allProductsCatalog = [
     code: "421",
     category: "Laundry",
     price: 7.5,
-    image: "puriti-fabric-conditioner.jpg",
+    image: "puriti-fabric-conditioner.png",
   },
   {
     name: "Puriti Liquid Laundry Bio Detergent 5L",
@@ -2899,7 +2899,7 @@ const allProductsCatalog = [
     code: "405",
     category: "Laundry",
     price: 18.29,
-    image: "puriti-liquid-laundry-bio.jpg",
+    image: "puriti-liquid-laundry-bio.png",
   },
 
   // Degreasers
@@ -2909,7 +2909,7 @@ const allProductsCatalog = [
     code: "325",
     category: "Degreasers",
     price: 5.7,
-    image: "d1-degreaser-1l.jpg",
+    image: "d1-degreaser-1l.png",
   },
   {
     name: "DD10 - 5L",
@@ -2925,7 +2925,7 @@ const allProductsCatalog = [
     code: "420",
     category: "Degreasers",
     price: 3.88,
-    image: "finito-750ml.jpg",
+    image: "finito-750ml.png",
   },
   {
     name: "UB10 - 2L",
@@ -2933,7 +2933,7 @@ const allProductsCatalog = [
     code: "991",
     category: "Degreasers",
     price: 12.94,
-    image: "ub10-2l.jpg",
+    image: "ub10-2l.png",
   },
   {
     name: "Viro-Sol 5L",
@@ -2959,7 +2959,7 @@ const allProductsCatalog = [
     code: "381",
     category: "Interior- All purpose/Multi-purpose",
     price: 5.76,
-    image: "c1-interior-cleaner-1l.jpg",
+    image: "c1-interior-cleaner-1l.png",
   },
   {
     name: "CleanIT 5L",
@@ -2983,7 +2983,7 @@ const allProductsCatalog = [
     code: "252",
     category: "Interior- All purpose/Multi-purpose",
     price: 3.97,
-    image: "drastik-750ml.jpg",
+    image: "drastik-750ml.png",
   },
   {
     name: "Lemon Cream Cleaner - 300ml",
@@ -2991,7 +2991,7 @@ const allProductsCatalog = [
     code: "431",
     category: "Interior- All purpose/Multi-purpose",
     price: 1.6,
-    image: "lemon-cream-cleaner.jpg",
+    image: "lemon-cream-cleaner.png",
   },
   {
     name: "Spirit - 5L",
@@ -3015,7 +3015,7 @@ const allProductsCatalog = [
     code: "244",
     category: "Interior- All purpose/Multi-purpose",
     price: 3.56,
-    image: "top-it-750ml.jpg",
+    image: "top-it-750ml.png",
   },
 
   // Cloths and Towels
@@ -3025,7 +3025,7 @@ const allProductsCatalog = [
     code: "BMICROFIBRE",
     category: "Cloths and Towels",
     price: 0.45,
-    image: "microfibre-cloth-blue.jpg",
+    image: "microfibre-cloth-blue.png",
   },
   {
     name: "Microfibre Cloth Green (1)",
@@ -3033,7 +3033,7 @@ const allProductsCatalog = [
     code: "GMICROFIBRE",
     category: "Cloths and Towels",
     price: 0.45,
-    image: "microfibre-cloth-green.jpg",
+    image: "microfibre-cloth-green.png",
   },
   {
     name: "Microfibre Cloth Red (1)",
@@ -3041,7 +3041,7 @@ const allProductsCatalog = [
     code: "RMICROFIBRE",
     category: "Cloths and Towels",
     price: 0.45,
-    image: "microfibre-cloth-red.jpg",
+    image: "microfibre-cloth-red.png",
   },
   {
     name: "Microfibre Cloth Yellow (1)",
@@ -3049,7 +3049,7 @@ const allProductsCatalog = [
     code: "YMICROFIBRE",
     category: "Cloths and Towels",
     price: 0.45,
-    image: "microfibre-cloth-yellow.jpg",
+    image: "microfibre-cloth-yellow.png",
   },
   {
     name: "Microfibre Microglass Cloth, Large",
@@ -3057,7 +3057,7 @@ const allProductsCatalog = [
     code: "101221",
     category: "Cloths and Towels",
     price: 3.94,
-    image: "microfibre-microglass-cloth.jpg",
+    image: "microfibre-microglass-cloth.png",
   },
   {
     name: "Velette Wipes- Blue",
@@ -3065,7 +3065,7 @@ const allProductsCatalog = [
     code: "100245",
     category: "Cloths and Towels",
     price: 4.74,
-    image: "velette-wipes-blue.jpg",
+    image: "velette-wipes-blue.png",
   },
   {
     name: "Velette Wipes- Green",
@@ -3073,7 +3073,7 @@ const allProductsCatalog = [
     code: "100245",
     category: "Cloths and Towels",
     price: 4.74,
-    image: "velette-wipes-green.jpg",
+    image: "velette-wipes-green.png",
   },
   {
     name: "Velette Wipes- Red",
@@ -3081,7 +3081,7 @@ const allProductsCatalog = [
     code: "100245",
     category: "Cloths and Towels",
     price: 4.74,
-    image: "velette-wipes-red.jpg",
+    image: "velette-wipes-red.png",
   },
   {
     name: "Velette Wipes- Yellow",
@@ -3089,7 +3089,7 @@ const allProductsCatalog = [
     code: "100245",
     category: "Cloths and Towels",
     price: 4.74,
-    image: "velette-wipes-yellow.jpg",
+    image: "velette-wipes-yellow.png",
   },
 ]
 
